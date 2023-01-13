@@ -8,7 +8,7 @@ import ProfileImg from '../assets/profile.png'
 
 export const Landing = ({ setSelectedPage }) => {
 
-    const isAboveMediumScreens = useMediaQuery(("min-width :1060px"));
+    const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
   return (
     
@@ -19,7 +19,7 @@ export const Landing = ({ setSelectedPage }) => {
         <div className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32">
             {isAboveMediumScreens ? (
                 <div className=" z-0 ml-20 ">
-                    <img alt="profile"
+                    <img alt="profile.gif"
                     src={CoverGif}
                     />
                 </div>
@@ -44,7 +44,8 @@ export const Landing = ({ setSelectedPage }) => {
                     transition={{ duration: 0.5 }}
                     variants={{ hidden: { opacity: 0, x: -50 },
                                 visible: { opacity: 1, x: 0 },
-                }}>
+                }}
+                >
           <p className="text-6xl font-playfair z-10 text-center md:text-start">
             Muhammad {""}
             <span
