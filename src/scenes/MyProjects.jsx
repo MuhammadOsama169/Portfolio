@@ -1,15 +1,18 @@
 import { LineGradient } from "../components/LineGradient";
 import { motion } from "framer-motion";
-
+import homerunProject from "../assets/homerun-website.png"
 import renewbeProject from "../assets/renewbe-project.png"
 import superkickProject from "../assets/superkick-branding.png"
+import superkickLogo from "../assets/logo-superkick.png"
+import homerunLogo from "../assets/logo-homerun.png"
+import renewbeLogo from "../assets/logo-renewbe.png"
 import githubLogo from "../assets/github-logo.png"
 
 
 
 export const MyProjects = () => {
   return (
-    <section id="projects" className="pt-48 pb-48">
+    <section id="projects" className="pt-20 pb-48">
       {/* HEADINGS */}
       <motion.div
         className="md:w-2/5 mx-auto text-center"
@@ -75,22 +78,29 @@ export const MyProjects = () => {
       </div>
 
 
-      <div className="flex flex-col pt-20 ">
+      <div className="flex flex-col gap-10 pt-20 ">
       {/* PROJECT 1 */}
           <div className="flex flex-col md:flex-row gap-1 pb-5">
-            <div className=" md:basis-[40%] md:order-1"> 
-              <img  alt="RenewbeLogo.png" src={superkickProject} />
+            
+            <div className="md:basis-[40%] md:order-1"> 
+              <img  alt="SuperKickProject.png" src={superkickProject} />
             </div>
-            <div className="md:basis-[60%] px-10"> 
-            SuperKick Branding designs clear brand messaging to help your business stand out. For a business to stand out today the brand has to be unique and impactful.
-              <div className="flex flex-row gap-2 pt-5">
+
+            <div className="md:basis-[60%] px-10 ">
+
+            <div className=" md:basis-[40%] md:order-1 mb-3"> 
+              <img className="pt-10 md:pt-0" alt="SuperKickLogo.png" src={superkickLogo} />
+            </div>
+              <p> SuperKick Branding designs clear brand messaging to help your business stand out. For a business to stand out today the brand has to be unique and impactful.</p> 
+          
+              <div className="flex flex-col xs:flex-row gap-2 pt-5">
                 <a  href="https://superkickbranding.netlify.app/">
-                  <button className="bg-red p-5">Demo website</button> 
+                  <button className="bg-red p-3 w-full xs:p-3.5">Demo website</button> 
                 </a>
                 
                 <a target="_blank" href="https://github.com/MuhammadOsama169/project-outlaw">
-                  <button className="bg-white p-2 flex flex-row text-black">
-                    <img className="w-[40px] h-[40px]" alt="github.png" src={githubLogo}/>
+                  <button className="bg-white w-full p-[2px] flex flex-row text-black">
+                    <img className="pl-2 pt-3 h-auto flex justify-center align-middle w-[30px] xs:w-[40px] xs:h-[40px]" alt="github.png" src={githubLogo}/>
                     <p className="px-5 flex text-center h-12 items-center justify-center" >View Code</p>
                   </button> 
                 </a>
@@ -100,21 +110,25 @@ export const MyProjects = () => {
           </div>
           <div>
             {/* SECOND PROJECT */}
-            <div className="flex flex-col md:flex-row gap-1">
+            <div className="flex flex-col xs:flex-row gap-2 pt-5">
               <div className=" md:basis-[40%] md:order-2 lg:order-1"> 
-                <img alt="RenewbeLogo.png" src={renewbeProject} />
+                <img alt="HomerunProject.png" src={homerunProject} />
               </div>
+
               <div className="md:basis-[60%] px-10"> 
-              HomeRun: Is a E-commerce website with custom backend entries and secure payemnt linked with STRIPE payment method.
-                <div className="flex flex-row gap-2 pt-5">
+                <div className=" md:basis-[40%] md:order-1 mb-3"> 
+                  <img  className="pt-10 md:pt-0" alt="HomeRunLogo.png" src={homerunLogo} />
+                </div>
+                <p>HomeRun: Is a E-commerce website with custom backend entries and secure payemnt linked with STRIPE payment method. </p>
+                <div className="flex flex-col xs:flex-row gap-2 pt-5">
 
                 <a  href="https://superkickbranding.netlify.app/">
-                  <button className="bg-red p-5">Demo website</button> 
+                  <button className="bg-red p-3 w-full xs:p-3.5">Demo website</button> 
                 </a>
 
-                <a target="_blank" href="https://github.com/MuhammadOsama169/Renewbe">
-                  <button className="bg-white p-2 flex flex-row text-black">
-                        <img className="w-[40px] h-[40px]" alt="github.png" src={githubLogo}/>
+                <a target="_blank" href="https://github.com/MuhammadOsama169/HomeRun">
+                  <button className="bg-white w-full p-[2px] flex flex-row text-black">
+                        <img className="pl-2 pt-3 h-auto flex justify-center align-middle w-[30px] xs:w-[40px] xs:h-[40px]" alt="github.png" src={githubLogo}/>
                         <p className="px-5 flex text-center h-12 items-center justify-center" >View Code</p>
                   </button> 
                 </a>
@@ -125,21 +139,26 @@ export const MyProjects = () => {
           </div>
           <div>
             {/* THIRD PROJECT */}
-          <div className="flex flex-col md:flex-row gap-1 pt-5">
-            <div className=" md:basis-[40%] md:order-1"> 
-              <img alt="RenewbeLogo.png" src={renewbeProject} />
+          <div className="flex flex-col xs:flex-row gap-2 pt-5">
+            <div className=" md:basis-[40%] md:order-2"> 
+              <img  alt="RenewbeProject.png" src={renewbeProject} />
             </div>
-            <div className="md:basis-[60%] px-10"> 
-            Renewbe: A community-driven platform to support local clean energy, save money and help environmental NGOs Subscribe to use or rent a solar panel in a remote location to support clean energy in your country and save money from your electricity bill. Donate a fraction of your savings to an NGO of your choice, engage with their work and learn more about climate activism. Solarity will show you exactly how your donation and your use of renewable energy impacted the world. It will also help you live a more sustainable life and connect you with a community of fellow solar panel users.
-              <div className="flex flex-row gap-2 pt-5">
+
+            <div className="md:basis-[60%] px-10">
+              <div className="w-[250px] md:basis-[40%] md:order-1 mb-3"> 
+                <img  className="w-[200px] xs:w-auto pt-10 md:pt-0" alt="RenewbeLogo.png" src={renewbeLogo} />
+              </div>
+              <p> Renewbe: A community-driven platform to support local clean energy, save money and help environmental NGOs Subscribe to use or rent a solar panel in a remote location to support clean energy in your country and save money from your electricity bill.</p> 
+          
+              <div className="flex flex-col xs:flex-row gap-2 pt-5">
 
                 <a target="_blank" href="https://superkickbranding.netlify.app/">
-                  <button className="bg-red p-5">Demo website</button> 
+                  <button className="bg-red p-3 w-full xs:p-3.5">Demo website</button> 
                 </a>
 
                 <a target="_blank" href="https://github.com/MuhammadOsama169/Renewbe">
-                  <button className="bg-white p-2 flex flex-row text-black">
-                      <img className="w-[40px] h-[40px]" alt="github.png" src={githubLogo}/>
+                  <button className="bg-white w-full p-[2px] flex flex-row text-black">
+                      <img className="pl-2 pt-3 h-auto flex justify-center align-middle w-[30px] xs:w-[40px] xs:h-[40px]" alt="github.png" src={githubLogo}/>
                       <p className="px-5 flex text-center h-12 items-center justify-center" >View Code</p>
                   </button> 
                 </a>

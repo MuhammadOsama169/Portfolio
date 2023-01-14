@@ -6,7 +6,7 @@ import bernardPhoto from "../assets/bernard-photo.jfif"
 
 export const Testimonials = () => {
   return (
-    <section id="testimonials" className="pt-32 pb-16">
+    <section id="testimonials" className="pt-20 pb-16">
       {/* HEADING */}
       <motion.div
         className="md:w-1/3 text-center md:text-left"
@@ -50,7 +50,7 @@ export const Testimonials = () => {
             visible: { opacity: 1, scale: 1 },
           }}
         >
-        <div className="flex flex-col border-solid rounded-3xl bg-red pb-10 ">
+        <div className="flex flex-col border-solid rounded-3xl bg-blue pb-10 ">
           <img className="max-w-sm h-auto rounded-b-lg " alt="" src={marinPhoto}/>
           <div className="flex flex-row">
             <p className="font-playfair text-6xl">“</p>
@@ -109,7 +109,7 @@ export const Testimonials = () => {
             visible: { opacity: 1, scale: 1 },
           }}
         >
-        <div className="flex flex-col border-solid rounded-3xl bg-red pb-5 ">
+        <div className="flex flex-col border-solid rounded-3xl bg-blue pb-5 ">
           <img className="max-w-sm h-auto rounded-b-lg " alt="" src={bernardPhoto}/>
           <div className="flex flex-row">
             <p className="font-playfair text-6xl pl-2">“</p>

@@ -26,12 +26,7 @@ module.exports = {
       fontFamily: {
         playfair: ['Playfair Display', 'serif'],
         opensans: ['Open Sans', 'sans-serif'],
-      },
-      content: {
-        brush: "url('./assets/brush.png')",
-        person1: "url('./assets/juxhina-photo.png')",
-        person2: "url('./assets/bernard-photo.jfif')",
-        person3: "url('./assets/marina-photo.png')",
+        nunitosans: ['Nunito Sans', 'sans-serif'],
       },
     },
     screens: {

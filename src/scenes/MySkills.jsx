@@ -1,12 +1,14 @@
 import React from 'react'
 import { LineGradient } from '../components/LineGradient'
-import useMediaQuery from '../hooks/useMediaQuery'
 import {motion} from "framer-motion"
+import { Slider } from './Slider'
+
 
 export const MySkills = () => {
-    const isAboveLarge = useMediaQuery("(min-width: 1060px)");
+
   return (
-    <section id="skills" className="pt-10 pb-24">
+    <>
+    <section id="skills" className="pt-0 pb-24">
         <div className="md:flex md:justify-between md:gap-16 mt-32">
             <motion.div
                 className="md:w-1/3"          
@@ -21,23 +23,7 @@ export const MySkills = () => {
                 </p>
                 <LineGradient width="w-1/3"/>
             </motion.div>
-            <div className="mt-16 md:mt-0">
-          {isAboveLarge ? (
-            <div
-              className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10
-              before:w-full before:h-full before:border-2 before:border-blue before:z-[-1]"
-            >
-              <img
-                alt="skills"
-                className="z-10"
-                src="assets/skills-image.png"
-              />
-            </div>
-          ) : (
-            <img alt="skills" className="z-10" src="assets/skills-image.png" />
-          )}
         </div>
-      </div>
 
       {/* SKILLS */}
       <div className="md:flex md:justify-between mt-16 gap-32">
@@ -112,6 +98,26 @@ export const MySkills = () => {
 
         </motion.div>
         </div>
+        {/* TEXT */}
+        <p className="font-nunitosans font-semibold text-center pt-20">
+          I USE
+        </p>
+        <Slider/>
+        <p className="font-nunitosans text-center p-4 py-20 font-medium flex flex-col md:flex-row justify-center">
+          <span className="">
+            TO CREATE &nbsp;
+          </span>
+          <span className=" text-red font-bold text-2xl">
+          BEUTIFUL &nbsp; 
+          </span>
+          <span>
+            &
+          </span>
+          <span className=" font-bold text-2xl text-teal-400 hover:underline underline-offset-1">
+            &nbsp;RESPONSIVE WEBSITES
+          </span>
+        </p>
     </section>
+    </>
   )
 }

@@ -5,6 +5,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import SocialMediaIcons from '../components/SocialMediaIcons'
 import CoverGif from '../assets/cover.gif'
 import ProfileImg from '../assets/profile.png'
+import Typewriter from 'typewriter-effect';
 
 export const Landing = ({ setSelectedPage }) => {
 
@@ -46,18 +47,20 @@ export const Landing = ({ setSelectedPage }) => {
                                 visible: { opacity: 1, x: 0 },
                 }}
                 >
-          <p className="text-6xl font-playfair z-10 text-center md:text-start">
+
+          <p className="text-6xl font-playfair z-10 text-center md:text-start flex flex-col">
             Muhammad {""}
-            <span
-              className="xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush
-              before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1]"
-            >
-              Osama
-            </span>
+            <Typewriter
+              className="text-4xl"
+              options={{
+              strings: ['< Osama > '],
+              autoStart: true,
+              loop: true,
+              }}
+              />
           </p>
-          <p className="mt-10 mb-7 text-sm text-center md:text-start">
-            Adipiscing arcu, in aliquam fringilla cursus. Elit arcu elementum
-            viverra malesuada sem ac faucibus dolor. Sagittis scelerisque.
+          <p className="mt-10 pt-5 mb-7 text-lg text-center md:text-start">
+          Hi, I'm Muhammad! I a Full-Stack Developer mainly focusing on Frontend Devolpment.
           </p>
 
 
