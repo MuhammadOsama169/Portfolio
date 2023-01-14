@@ -13,6 +13,9 @@ module.exports = {
         'dark-grey': '#757575',
         'opaque-black': 'rgba(0,0,0,0.35)',
       },
+      boxShadow: {
+        '3xl': ' 0 10px 20px #ff005c',
+      },
       backgroundImage: (theme) => ({
         'gradient-rainbow':
           'linear-gradient(81.66deg, #00B5EE 7.21%, #FF45A4 45.05%, #FFBA00 78.07%)',
@@ -23,12 +26,7 @@ module.exports = {
       fontFamily: {
         playfair: ['Playfair Display', 'serif'],
         opensans: ['Open Sans', 'sans-serif'],
-      },
-      content: {
-        brush: "url('./assets/brush.png')",
-        person1: "url('./assets/person-1.png')",
-        person2: "url('./assets/person-2.png')",
-        person3: "url('./assets/person-3.png')",
+        nunitosans: ['Nunito Sans', 'sans-serif'],
       },
     },
     screens: {
