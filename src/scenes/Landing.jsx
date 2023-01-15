@@ -60,7 +60,7 @@ export const Landing = ({ setSelectedPage }) => {
               />
           </p>
           <p className="mt-10 pt-5 mb-7 text-lg text-center md:text-start">
-          Hi, I'm Muhammad! I a Full-Stack Developer mainly focusing on Frontend Devolpment.
+          Hi, I'm Muhammad! I am Full-Stack Developer mainly focusing on Frontend Devolpment.
           </p>
 
 
@@ -78,24 +78,16 @@ export const Landing = ({ setSelectedPage }) => {
           }}
         >
           <AnchorLink
-            className="bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold
+            className="bg-[#FF165D] text-white rounded-sm py-5 px-7 font-semibold
               hover:bg-blue hover:text-white transition duration-500"
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
             Contact Me
           </AnchorLink>
-          <AnchorLink
-            className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5"
-            onClick={() => setSelectedPage("contact")}
-            href="#contact"
-          >
-            <div className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center px-10 font-playfair">
-              Let's talk.
-            </div>
-          </AnchorLink>
-        </motion.div>
 
+        </motion.div>
+{/* SOCIAL MEDIAL SECTION */}
         <motion.div
           className="flex mt-5 justify-center md:justify-start"
           initial="hidden"

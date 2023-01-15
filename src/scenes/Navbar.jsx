@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import useMediaQuery from '../hooks/useMediaQuery';
+import { GooglyEyes } from './GooglyEyes';
 
 import MenuIcon from "../assets/menu-icon.svg"
 import CloseIcon from "../assets/close-icon.svg"
@@ -25,7 +26,7 @@ const Link =({page,selectedPage,setSelectedPage}) =>{
 export const Navbar = ({IsTopOfPage,selectedPage,setSelectedPage}) => {
     const [isMenuToggled, setIsMediaToggled]=useState(false);
     const isAboveSmallScreens =useMediaQuery("(min-width:768px)");
-    const NavBarBackground = IsTopOfPage ? "" : "bg-red";
+    const NavBarBackground = IsTopOfPage ? "" : "bg-neon";
 
   return (
     <nav className={`${NavBarBackground} z-40 w-full fixed top-0 py-6`}>
@@ -35,7 +36,8 @@ export const Navbar = ({IsTopOfPage,selectedPage,setSelectedPage}) => {
             {/* Desktop */}
 
             {isAboveSmallScreens ? (
-                <div className="flex justify-between gap-16 font-opensans font-semibold text-sm">
+                <div className="flex justify-between gap-16 font-opensans font-semibold text-sm items-center">
+
                     <Link 
                     page="Home"
                     selectedPage={selectedPage}
@@ -61,6 +63,7 @@ export const Navbar = ({IsTopOfPage,selectedPage,setSelectedPage}) => {
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                     />
+                    <GooglyEyes />
                 </div>
             ) : (<button 
                    className="rounded-full bg-red p-2" 
