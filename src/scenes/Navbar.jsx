@@ -2,6 +2,7 @@ import {useState} from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import useMediaQuery from '../hooks/useMediaQuery';
 import { GooglyEyes } from './GooglyEyes';
+import {motion} from 'framer-motion'
 
 import MenuIcon from "../assets/menu-icon.svg"
 import CloseIcon from "../assets/close-icon.svg"
@@ -11,7 +12,7 @@ import CloseIcon from "../assets/close-icon.svg"
 const Link =({page,selectedPage,setSelectedPage}) =>{
     const lowerCasePage = page.toLowerCase();
     return (
-        <AnchorLink className={`${selectedPage === lowerCasePage ? "text-yellow" : "" }
+        <AnchorLink className={`${selectedPage === lowerCasePage ? "text-gradient-rainblue" : "" }
         hover:text-yellow transition duration-500 `}
         href={`#${lowerCasePage}`}
         onClick={()=>(lowerCasePage)}
@@ -66,7 +67,7 @@ export const Navbar = ({IsTopOfPage,selectedPage,setSelectedPage}) => {
                     <GooglyEyes />
                 </div>
             ) : (<button 
-                   className="rounded-full bg-red p-2" 
+                   className="rounded-full bg-redhot p-2" 
                    onClick={()=> setIsMediaToggled(!isMenuToggled)}
                     >
                 <img alt="menu-icon" src={MenuIcon} />
@@ -76,19 +77,29 @@ export const Navbar = ({IsTopOfPage,selectedPage,setSelectedPage}) => {
             {/* Mobile View */}
 
             {!isAboveSmallScreens && isMenuToggled && (
-                <div className="fixed right-0 bottom-0 h-full bg-blue w-[300px]">
+                
+                <div className="fixed right-0 bottom-0 h-full bg-[#00337C] w-[200px] ss:w-[300px] ">
 
             {/* Close Icon */}
 
-                    <div className="flex justify-end p-12">
-                        <button onClick={()=> setIsMediaToggled(!isMenuToggled)}>
-                            <img alt="close icon" src={CloseIcon}/>
-                        </button>
-                    </div>
-                    <div className="flex flex-col gap-10 ml-[30%] text-2xl text-deep-blue">
+            <div className="flex justify-end p-12">
+                <button onClick={()=> setIsMediaToggled(!isMenuToggled)}>
+                    <img className=" h-[40px]" alt="close icon" src={CloseIcon}/>
+                </button>
+            </div>
+            
+            <motion.div
+            initial={{ x: "100%" }}
+            animate={{
+              x: 0
+            }}
+            exit={{
+              x: "100%"
+            }}
+            transition={{ type: "spring", bounce: 0, duration: 0.8 }}>
 
+            <div className="flex flex-col gap-10 ml-[25%] text-2xl text-white">
             {/* MENU ITEMS */}
-
                     <Link 
                     page="Home"
                     selectedPage={selectedPage}
@@ -114,7 +125,9 @@ export const Navbar = ({IsTopOfPage,selectedPage,setSelectedPage}) => {
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                     />
+                    
                     </div>
+                    </motion.div>
                 </div>
 
             )}
