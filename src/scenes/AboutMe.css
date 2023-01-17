@@ -9,8 +9,8 @@
       }
   
       .swiper {
-          width: 100vw;
-          height: 100px;
+          width: 100%;
+          height: auto;
           padding:0px;
           margin:0px !important;
           margin-right:0px;
@@ -35,9 +35,10 @@
         
         .swiper-slide img {
           display: block;
-          width: 100px;
-          height: 80px;
-          object-fit: fill;
+          width: auto;
+          height: 100%;
+          max-height: 500px;
+          object-fit: contain;
           margin:0px !important;
           animation: 150s linear 0s infinite normal none running ;
         }

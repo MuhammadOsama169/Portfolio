@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import useMediaQuery from '../hooks/useMediaQuery';
-import { GooglyEyes } from './GooglyEyes';
+import { GooglyEyes } from '../components/GooglyEyes';
 import {motion} from 'framer-motion'
 
 import MenuIcon from "../assets/menu-icon.svg"

@@ -1,7 +1,7 @@
 import React from 'react'
 import { LineGradient } from '../components/LineGradient'
 import {motion} from "framer-motion"
-import { Slider } from './Slider'
+import { Slider } from '../components/Slider'
 
 
 export const MySkills = () => {

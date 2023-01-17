@@ -16,7 +16,7 @@ module.exports = {
         'opaque-black': 'rgba(0,0,0,0.35)',
       },
       boxShadow: {
-        '3xl': ' 0 10px 20px #ff005c',
+        'shadow-custom': ' 5px 5px 40px 0 rgb(255 0 0 / 30%)',
       },
       backgroundImage: (theme) => ({
         'gradient-rainbow':
