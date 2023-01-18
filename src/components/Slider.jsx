@@ -21,7 +21,7 @@ import Img14 from "../assets/pstgres-logo.png";
 import Img15 from "../assets/MongoDB-Logo.jpg";
 
 
-import "./slider.css";
+import "./skills.css";
 
 export const Slider = () => {
   return (

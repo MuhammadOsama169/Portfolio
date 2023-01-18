@@ -1,7 +1,7 @@
-import React from 'react'
+import { React, useState } from 'react';
 import useMediaQuery from '../hooks/useMediaQuery'
 import {motion} from 'framer-motion'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { BasicModal } from '../components/BasicModal';
 import SocialMediaIcons from '../components/SocialMediaIcons'
 import CoverGif from '../assets/cover.gif'
 import ProfileImg from '../assets/profile.png'
@@ -11,6 +11,10 @@ export const Landing = ({ setSelectedPage }) => {
 
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
+      const [isShown, setIsShown] = useState(false);
+      const handleClick = (event) => {
+        setIsShown((current) => !current);
+      };
   return (
     
     <section
@@ -60,7 +64,7 @@ export const Landing = ({ setSelectedPage }) => {
               />
           </p>
           <p className="mt-10 pt-5 mb-7 text-lg text-center md:text-start">
-          Hi, I'm Muhammad! I a Full-Stack Developer mainly focusing on Frontend Devolpment.
+          Muhammad has 5 years+ of experience writing web apps in trave-related industries. She has extensive knowledge of JavaScript and browser APIs as well as significant experience with popular frameworks and libraries like React and Redux.
           </p>
 
 
@@ -77,25 +81,27 @@ export const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <AnchorLink
-            className="bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold
-              hover:bg-blue hover:text-white transition duration-500"
-            onClick={() => setSelectedPage("contact")}
-            href="#contact"
+
+
+          <button
+            className="bg-[#FF165D] text-white rounded-sm py-5 px-7 font-semibold
+              hover:bg-blue hover:text-white transition duration-500 shadow-[10px_20px_20px_rgba(255,0,0,30%)]"
+            onClick={handleClick}
           >
             Contact Me
-          </AnchorLink>
-          <AnchorLink
-            className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5"
-            onClick={() => setSelectedPage("contact")}
-            href="#contact"
-          >
-            <div className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center px-10 font-playfair">
-              Let's talk.
-            </div>
-          </AnchorLink>
-        </motion.div>
+          </button>
 
+        </motion.div>
+        {isShown && (
+              <div>
+                <BasicModal openModal={setIsShown} closeModal={handleClick} />
+              </div>
+            )}
+
+
+
+
+{/* SOCIAL MEDIAL SECTION */}
         <motion.div
           className="flex mt-5 justify-center md:justify-start"
           initial="hidden"

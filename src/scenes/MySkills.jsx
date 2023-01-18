@@ -1,7 +1,7 @@
 import React from 'react'
 import { LineGradient } from '../components/LineGradient'
 import {motion} from "framer-motion"
-import { Slider } from './Slider'
+import { Slider } from '../components/Slider'
 
 
 export const MySkills = () => {
@@ -19,7 +19,7 @@ export const MySkills = () => {
                 variants={{ hidden: { opacity: 0, x: -50 },visible: { opacity: 1, x: 0 },}}
             >
                 <p className="font-playfair font-semibold text-4xl mb-5">
-                    MY <span className="text-red">SKILLS</span>
+                    MY <span className="text-redhot">SKILLS</span>
                 </p>
                 <LineGradient width="w-1/3"/>
             </motion.div>
@@ -46,7 +46,7 @@ export const MySkills = () => {
                 Experienced
               </p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]" />
+            <div className="w-1/2 md:w-3/4 h-32 bg-[#00B8A9] absolute right-0 top-0 z-[-1]" />
           </div>
 
         </motion.div>
@@ -70,7 +70,7 @@ export const MySkills = () => {
                 Innovative
               </p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]" />
+            <div className="w-1/2 md:w-3/4 h-32 bg-[#3EC1D3] absolute right-0 top-0 z-[-1]" />
           </div>
 
         </motion.div>
@@ -93,7 +93,7 @@ export const MySkills = () => {
                 Imaginative
               </p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]" />
+            <div className="w-1/2 md:w-3/4 h-32 bg-[#FF165D] absolute right-0 top-0 z-[-1]" />
           </div>
 
         </motion.div>
@@ -102,19 +102,30 @@ export const MySkills = () => {
         <p className="font-nunitosans font-semibold text-center pt-20">
           I USE
         </p>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+        >
         <Slider/>
+        </motion.div>
         <p className="font-nunitosans text-center p-4 py-20 font-medium flex flex-col md:flex-row justify-center">
           <span className="">
             TO CREATE &nbsp;
           </span>
-          <span className=" text-red font-bold text-2xl">
+          <span className=" text-[#FF165D] font-bold text-2xl">
           BEUTIFUL &nbsp; 
           </span>
           <span>
             &
           </span>
-          <span className=" font-bold text-2xl text-teal-400 hover:underline underline-offset-1">
-            &nbsp;RESPONSIVE WEBSITES
+          <span className=" font-bold text-2xl text-[#6FE7DD] hover:underline underline-offset-1">
+            &nbsp; RESPONSIVE WEBSITES
           </span>
         </p>
     </section>

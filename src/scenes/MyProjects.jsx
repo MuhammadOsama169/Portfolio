@@ -10,6 +10,7 @@ import githubLogo from "../assets/github-logo.png"
 
 
 
+
 export const MyProjects = () => {
   return (
     <section id="projects" className="pt-20 pb-48">
@@ -25,19 +26,15 @@ export const MyProjects = () => {
           visible: { opacity: 1, y: 0 },
         }}
       >
-        <div>
+        <div className="mb-10">
           <p className="font-playfair font-semibold text-4xl">
-            <span className="text-red">PRO</span>JECTS
+            <span className="text-[#FF165D]">PRO</span>JECTS
           </p>
           <div className="flex justify-center mt-5">
             <LineGradient width="w-2/3" />
           </div>
         </div>
-        <p className="mt-10 mb-10">
-          Aliquam, amet dui feugiat facilisi dui. Aliquam aliquet integer ut
-          fames odio in at. At magna ornare dictum lectus. Purus massa morbi
-          purus nec eget eleifend ut elit.
-        </p>
+
       </motion.div>
 
       {/* PROJECTS */}
@@ -55,20 +52,20 @@ export const MyProjects = () => {
         >
           {/* ROW 1 */}
           <div
-            className="flex justify-center text-center items-center p-10 bg-red
+            className="flex justify-center text-center items-center p-10 rounded-l-lg bg-[#52057B]
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
           >
             BEAUTIFUL USER INTERFACES
           </div>
             
           <div
-            className="flex justify-center text-center items-center p-10 bg-blue
+            className="flex justify-center text-center items-center p-10 bg-[#00ADB5]
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
           >
             SMOOTH USER EXPERIENCE
           </div>
           <div
-            className="flex justify-center text-center items-center p-10 bg-red
+            className="flex justify-center text-center items-center p-10 rounded-r-lg bg-[#52057B]
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
           >
             DYANAMIC & STATIC
@@ -77,9 +74,18 @@ export const MyProjects = () => {
 
       </div>
 
-
+      <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0, duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+        >
       <div className="flex flex-col gap-10 pt-20 ">
-      {/* PROJECT 1 */}
+          {/* PROJECT 1 */}
           <div className="flex flex-col md:flex-row gap-1 pb-5">
             
             <div className="md:basis-[40%] md:order-1"> 
@@ -95,11 +101,12 @@ export const MyProjects = () => {
           
               <div className="flex flex-col xs:flex-row gap-2 pt-5">
                 <a  href="https://superkickbranding.netlify.app/">
-                  <button className="bg-red p-3 w-full xs:p-3.5">Demo website</button> 
+                  <button className="p-3 w-full xs:p-3.5 bg-[#FF165D] text-white rounded-sm py-5 px-7 font-semibold
+              hover:bg-blue hover:text-white transition duration-500">Demo website</button> 
                 </a>
                 
-                <a target="_blank" href="https://github.com/MuhammadOsama169/project-outlaw">
-                  <button className="bg-white w-full p-[2px] flex flex-row text-black">
+                <a target="_blank" rel="noreferrer" href="https://github.com/MuhammadOsama169/project-outlaw">
+                  <button className="bg-white w-full p-[2px] flex flex-row text-black hover:bg-blue hover:text-white transition duration-500">
                     <img className="pl-2 pt-3 h-auto flex justify-center align-middle w-[30px] xs:w-[40px] xs:h-[40px]" alt="github.png" src={githubLogo}/>
                     <p className="px-5 flex text-center h-12 items-center justify-center" >View Code</p>
                   </button> 
@@ -123,11 +130,12 @@ export const MyProjects = () => {
                 <div className="flex flex-col xs:flex-row gap-2 pt-5">
 
                 <a  href="https://superkickbranding.netlify.app/">
-                  <button className="bg-red p-3 w-full xs:p-3.5">Demo website</button> 
+                  <button className="p-3 w-full xs:p-3.5 bg-[#FF165D] text-white rounded-sm py-5 px-7 font-semibold
+              hover:bg-blue hover:text-white transition duration-500">Demo website</button> 
                 </a>
 
-                <a target="_blank" href="https://github.com/MuhammadOsama169/HomeRun">
-                  <button className="bg-white w-full p-[2px] flex flex-row text-black">
+                <a target="_blank" rel="noreferrer" href="https://github.com/MuhammadOsama169/HomeRun">
+                  <button className="bg-white w-full p-[2px] flex flex-row text-black hover:bg-blue hover:text-white transition duration-500">
                         <img className="pl-2 pt-3 h-auto flex justify-center align-middle w-[30px] xs:w-[40px] xs:h-[40px]" alt="github.png" src={githubLogo}/>
                         <p className="px-5 flex text-center h-12 items-center justify-center" >View Code</p>
                   </button> 
@@ -152,12 +160,13 @@ export const MyProjects = () => {
           
               <div className="flex flex-col xs:flex-row gap-2 pt-5">
 
-                <a target="_blank" href="https://superkickbranding.netlify.app/">
-                  <button className="bg-red p-3 w-full xs:p-3.5">Demo website</button> 
+                <a target="_blank" rel="noreferrer" href="https://superkickbranding.netlify.app/">
+                  <button className="p-3 w-full xs:p-3.5 bg-[#FF165D] text-white rounded-sm py-5 px-7 font-semibold
+              hover:bg-blue hover:text-white transition duration-500">Demo website</button> 
                 </a>
 
-                <a target="_blank" href="https://github.com/MuhammadOsama169/Renewbe">
-                  <button className="bg-white w-full p-[2px] flex flex-row text-black">
+                <a target="_blank" rel="noreferrer" href="https://github.com/MuhammadOsama169/Renewbe">
+                  <button className="bg-white w-full p-[2px] flex flex-row text-black hover:bg-blue hover:text-white transition duration-500">
                       <img className="pl-2 pt-3 h-auto flex justify-center align-middle w-[30px] xs:w-[40px] xs:h-[40px]" alt="github.png" src={githubLogo}/>
                       <p className="px-5 flex text-center h-12 items-center justify-center" >View Code</p>
                   </button> 
@@ -168,6 +177,8 @@ export const MyProjects = () => {
           </div>
           </div>
         </div>
+        </motion.div>
+
     </section>
   );
 };
