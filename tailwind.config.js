@@ -15,9 +15,7 @@ module.exports = {
         'dark-grey': '#757575',
         'opaque-black': 'rgba(0,0,0,0.35)',
       },
-      boxShadow: {
-        'shadow-custom': ' 5px 5px 40px 0 rgb(255 0 0 / 30%)',
-      },
+
       backgroundImage: (theme) => ({
         'gradient-rainbow':
           'linear-gradient(to right top, #ff165d, #ff5b2f, #fd9100, #ddc100, #a8eb12)',
@@ -39,6 +37,8 @@ module.exports = {
       lg: '1200px',
       xl: '1700px',
     },
+    prefix: 'tw-',
+    important: true,
   },
   plugins: [],
 };

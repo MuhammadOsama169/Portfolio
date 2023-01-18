@@ -9,8 +9,10 @@ import { MySkills } from './scenes/MySkills';
 import { MyProjects } from './scenes/MyProjects';
 import { Testimonials } from './scenes/Testimonials';
 import { SliderAboutMe } from './scenes/About';
+import { motion } from 'framer-motion';
 
 function App() {
+  // Scroll
   const [selectedPage, setSelectedPage] = useState('home');
   const isAboveMediumScreens = useMediaQuery('(min-width:1080px)');
 
@@ -28,6 +30,33 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // CURSOR
+  const [mousePosition, SetMousePosition] = useState({
+    x: 0,
+    y: 0,
+  });
+
+  useEffect(() => {
+    const mouseMove = (e) => {
+      SetMousePosition({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    };
+
+    window.addEventListener('mousemove', mouseMove);
+    return () => {
+      window.removeEventListener('mousemove', mouseMove);
+    };
+  }, []);
+
+  const variants = {
+    default: {
+      x: mousePosition.x - 16,
+      y: mousePosition.y - 16,
+    },
+  };
+
   return (
     <div className="app bg-deep-blue">
       <Navbar
@@ -35,6 +64,13 @@ function App() {
         setSelectedPage={setSelectedPage}
         IsTopOfPage={IsTopOfPage}
       />
+      {/* CURSOR */}
+      <motion.div
+        className="bg-[#fcba03] rounded-full h-[32px] w-[32px] fixed top-0 left-0 border-solid shadow-[inset_50_0_4px_#fae2a5] animate-pulse"
+        variants={variants}
+        animate="default"
+      ></motion.div>
+
       <div className=" w-5/6 mx-auto md:h-full">
         {isAboveMediumScreens && (
           <DotGroup
