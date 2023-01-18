@@ -4,7 +4,7 @@ import SocialMediaIcons from '../components/SocialMediaIcons'
 
 export const AboutMe = () => {
   return (
-    <section className="flex flex-row">
+    <section id="about" className="flex flex-row">
         <div>
             <img alt='ProfileImage' src={ProfileImg} />
         </div>
