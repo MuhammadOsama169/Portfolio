@@ -2,13 +2,13 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import useMediaQuery from './hooks/useMediaQuery';
 import { Navbar } from './scenes/Navbar';
-import { DotGroup } from './scenes/DotGroup';
+import DotGroup from './scenes/DotGroup';
 import { Landing } from './scenes/Landing';
 import { LineGradient } from './components/LineGradient';
 import { MySkills } from './scenes/MySkills';
 import { MyProjects } from './scenes/MyProjects';
 import { Testimonials } from './scenes/Testimonials';
-import { SliderAboutMe } from './scenes/About';
+import { SliderAboutMe } from './scenes/SliderAboutMe';
 import { motion } from 'framer-motion';
 
 function App() {
@@ -78,23 +78,53 @@ function App() {
             setSelectedPage={setSelectedPage}
           />
         )}
-        <Landing setSelectedPage={selectedPage} />
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage('home')}
+        >
+          <Landing setSelectedPage={setSelectedPage} />
+        </motion.div>
       </div>
       <LineGradient />
       <div className=" w-5/6 mx-auto md:h-full">
-        <MySkills />
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage('skills')}
+        >
+          <MySkills setSelectedPage={setSelectedPage} />
+        </motion.div>
       </div>
       <LineGradient />
       <div className=" w-5/6 mx-auto ">
-        <MyProjects />
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage('projects')}
+        >
+          <MyProjects setSelectedPage={setSelectedPage} />
+        </motion.div>
       </div>
       <LineGradient />
       <div className=" w-5/6 mx-auto ">
-        <Testimonials />
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage('testimonials')}
+        >
+          <Testimonials setSelectedPage={setSelectedPage} />
+        </motion.div>
       </div>
       <LineGradient />
       <div className=" w-5/6 mx-auto ">
-        <SliderAboutMe />
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage('about')}
+        >
+          <SliderAboutMe setSelectedPage={setSelectedPage} />
+        </motion.div>
       </div>
     </div>
   );

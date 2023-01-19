@@ -39,20 +39,20 @@ export const Landing = ({ setSelectedPage }) => {
 
 
 
-            {/* MAIN SECTION */}
-            <div className="z-30 basis-2/5 mt-12 md:mt-32">
-                {/* HEADING */}
-                <motion.div           
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.5 }}
-                    transition={{ duration: 0.5 }}
-                    variants={{ hidden: { opacity: 0, x: -50 },
-                                visible: { opacity: 1, x: 0 },
-                }}
-                >
+{/* MAIN SECTION */}
+        <div className="z-30 basis-2/5 mt-12 md:mt-32">
+          {/* HEADING */}
+          <motion.div           
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{ hidden: { opacity: 0, x: -50 },
+                    visible: { opacity: 1, x: 0 },
+          }}
+          >
 
-          <p className="text-6xl font-playfair z-10 text-center md:text-start flex flex-col">
+          <span className="text-6xl font-playfair z-10 text-center md:text-start flex flex-col">
             Muhammad {""}
             <Typewriter
               className="text-4xl"
@@ -62,7 +62,7 @@ export const Landing = ({ setSelectedPage }) => {
               loop: true,
               }}
               />
-          </p>
+          </span>
           <p className="mt-10 pt-5 mb-7 text-lg text-center md:text-start">
           Muhammad has 5 years+ of experience writing web apps in trave-related industries. She has extensive knowledge of JavaScript and browser APIs as well as significant experience with popular frameworks and libraries like React and Redux.
           </p>
@@ -115,7 +115,7 @@ export const Landing = ({ setSelectedPage }) => {
         >
           <SocialMediaIcons />
         </motion.div>
-            </div>
+        </div>
     </section>
   )
 }

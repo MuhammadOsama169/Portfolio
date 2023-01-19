@@ -53,17 +53,17 @@ export const SliderAboutMe = () => {
           className="mySwiper"
         >
           <SwiperSlide className="flex flex-col">
-          <p className=" mb-[20px] font-light md:text-3xl flex flex-row">Tech lead for Renewbe , Co-founder and <p className="text-redhot font-medium">&nbsp; Developer &nbsp;</p> for Renewbe</p>
+          <p className=" mb-[20px] font-light md:text-3xl flex flex-row">Tech lead for Renewbe , Co-founder and <span className="text-redhot font-medium">&nbsp; Developer &nbsp;</span> for Renewbe</p>
             <img src={Img1} alt="" />
             
           </SwiperSlide>
           <SwiperSlide className="flex flex-col">
-          <p className=" mb-[20px] font-light md:text-3xl flex flex-row">Experience in working with <p className="text-blue font-medium">&nbsp; Teams.</p></p>
+          <p className=" mb-[20px] font-light md:text-3xl flex flex-row">Experience in working with <span className="text-blue font-medium">&nbsp; Teams.</span></p>
             <img src={Img3} alt="" />
 
           </SwiperSlide>
           <SwiperSlide className="flex flex-col">
-          <p className=" mb-[20px] font-light md:text-3xl flex flex-row">Participated in <p className="text-blue font-medium">&nbsp; Climathon Zurich &nbsp;</p> with other team mates</p>
+          <p className=" mb-[20px] font-light md:text-3xl flex flex-row">Participated in <span className="text-blue font-medium">&nbsp; Climathon Zurich &nbsp;</span> with other team mates</p>
             <img src={Img4} alt="" />
           </SwiperSlide >
           <SwiperSlide className="flex flex-col">
@@ -72,7 +72,7 @@ export const SliderAboutMe = () => {
            
           </SwiperSlide>
           <SwiperSlide className="flex flex-col"> 
-          <p className=" mb-[20px] font-light md:text-3xl flex flex-row"><p className="text-redhot font-medium">&nbsp; Tech Lead &nbsp;</p> for Hult Prize Austria</p>
+          <p className=" mb-[20px] font-light md:text-3xl flex flex-row"><span className="text-redhot font-medium">&nbsp; Tech Lead &nbsp;</span> for Hult Prize Austria</p>
             <img src={Img6} alt="" />
             
           </SwiperSlide>
