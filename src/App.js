@@ -8,7 +8,7 @@ import { LineGradient } from './components/LineGradient';
 import { MySkills } from './scenes/MySkills';
 import { MyProjects } from './scenes/MyProjects';
 import { Testimonials } from './scenes/Testimonials';
-import { SliderAboutMe } from './scenes/About';
+import { SliderAboutMe } from './scenes/SliderAboutMe';
 import { motion } from 'framer-motion';
 
 function App() {
@@ -82,8 +82,8 @@ function App() {
           margin="0 0 -200px 0"
           amount="all"
           onViewportEnter={() => setSelectedPage('home')}
-        >
-          <Landing setSelectedPage={selectedPage} />
+
+          <Landing setSelectedPage={setSelectedPage} />
         </motion.div>
       </div>
       <LineGradient />
@@ -93,7 +93,7 @@ function App() {
           amount="all"
           onViewportEnter={() => setSelectedPage('skills')}
         >
-          <MySkills />
+          <MySkills setSelectedPage={setSelectedPage} />
         </motion.div>
       </div>
       <LineGradient />
@@ -104,7 +104,7 @@ function App() {
           amount="all"
           onViewportEnter={() => setSelectedPage('projects')}
         >
-          <MyProjects />
+          <MyProjects setSelectedPage={setSelectedPage} />
         </motion.div>
       </div>
       <LineGradient />
@@ -115,7 +115,7 @@ function App() {
           amount="all"
           onViewportEnter={() => setSelectedPage('testimonials')}
         >
-          <Testimonials />
+          <Testimonials setSelectedPage={setSelectedPage} />
         </motion.div>
       </div>
       <LineGradient />
@@ -126,7 +126,7 @@ function App() {
           amount="all"
           onViewportEnter={() => setSelectedPage('about')}
         >
-          <SliderAboutMe />
+          <SliderAboutMe setSelectedPage={setSelectedPage} />
         </motion.div>
       </div>
     </div>
