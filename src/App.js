@@ -69,7 +69,7 @@ function App() {
 
       {/* CURSOR */}
       <motion.div
-        className="bg-[#fcba03] rounded-full h-[32px] w-[32px] fixed top-0 left-0 border-solid shadow-[inset_50_0_4px_#fae2a5] animate-pulse"
+        className="bg-[#fcba03] rounded-full h-[32px] w-[32px] fixed top-0 left-0 z-auto border-solid shadow-[0_0_4px_#fcba03] animate-pulse"
         variants={variants}
         animate="default"
       ></motion.div>
@@ -84,7 +84,7 @@ function App() {
           margin="0 0 -200px 0"
           amount="all"
           onViewportEnter={() => setSelectedPage('home')}
-        >
+
           <Landing setSelectedPage={setSelectedPage} />
         </motion.div>
       </div>
@@ -99,6 +99,7 @@ function App() {
         </motion.div>
       </div>
       <LineGradient />
+
       <div className=" w-5/6 mx-auto ">
         <motion.div
           margin="0 0 -200px 0"
@@ -109,6 +110,7 @@ function App() {
         </motion.div>
       </div>
       <LineGradient />
+
       <div className=" w-5/6 mx-auto ">
         <motion.div
           margin="0 0 -200px 0"
@@ -119,6 +121,7 @@ function App() {
         </motion.div>
       </div>
       <LineGradient />
+
       <div className=" w-5/6 mx-auto ">
         <motion.div
           margin="0 0 -200px 0"
