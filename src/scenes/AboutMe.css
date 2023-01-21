@@ -2,13 +2,13 @@
     .margin-gap {
       margin-top: 4.4%;
   }}
-      .container{
-        height:100px;
+  .container-1 .swiper-container{
+        height:auto;
         width:100%;
         overflow:hidden;
       }
   
-      .swiper {
+      .container-1 .swiper {
           width: 100%;
           height: auto;
           padding:0px;
@@ -16,7 +16,7 @@
           margin-right:0px;
         }
         
-        .swiper-slide {
+        .container-1 .swiper-slide {
 
           /* Center slide text vertically */
           display: -webkit-box;
@@ -33,11 +33,13 @@
           align-items: center;
         }
         
-        .swiper-slide img {
+        .container-1 .swiper-slide img {
           display: block;
           width: auto;
-          height: 100%;
+          height: auto;
           max-height: 500px;
+          max-width: auto;
+          background-repeat: no-repeat;
           object-fit: contain;
           margin:0px !important;
           animation: 150s linear 0s infinite normal none running ;

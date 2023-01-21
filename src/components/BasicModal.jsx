@@ -12,7 +12,7 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: 'auto',
-  bgcolor: '#1F1F1F',
+  bgcolor: '#181D31',
   color: 'white',
   border: 'none',
   boxShadow: 24,
@@ -36,7 +36,7 @@ export const BasicModal = ({ openModal, closeModal }) => {
 
           <div className="flex flex-col p-3 ">
             <p className="font-playfair text-3xl text-center"> <span className="text-blue">Thank you</span> for going this far!. Now take the last step and <span className="text-[#FF165D] font-semibold">Reach me out!</span></p>
-            <button className="bg-[#FF165D] text-white rounded-sm py-5 px-7 mt-5 font-semibold
+            <button  className="bg-[#FF165D] text-white rounded-sm py-5 px-7 mt-5 font-semibold
               hover:bg-deep-blue hover:text-white transition duration-500 ">
               m.osama169@gmail.com
             </button>

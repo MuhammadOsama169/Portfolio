@@ -17,7 +17,7 @@ import "./AboutMe.css";
 export const SliderAboutMe = () => {
   return (
       <section id="about" className="margin-gap">
-              <motion.div
+        <motion.div
         className="md:w-2/5 mx-auto text-center"
         initial="hidden"
         whileInView="visible"
@@ -29,8 +29,8 @@ export const SliderAboutMe = () => {
         }}
       >
         <div className="mb-10">
-          <p className="font-playfair font-semibold text-4xl">
-          My<span className="text-[#FFD700]">&nbsp;ACHIEVEMENTS</span>
+          <p className="font-playfair font-semibold text-4xl  dark:text-white text-black">
+          My<span className="dark:text-[#FFD700] text-[#FF165D]">&nbsp;ACHIEVEMENTS</span>
           </p>
           <div className="flex justify-center mt-5">
             <LineGradient width="w-2/3" />
@@ -38,6 +38,7 @@ export const SliderAboutMe = () => {
         </div>
 
       </motion.div>
+      <div className="container-1">
         <Swiper
           spaceBetween={30}
           centeredSlides
@@ -50,33 +51,35 @@ export const SliderAboutMe = () => {
           }}
           navigation
           modules={[Autoplay, Pagination, Navigation]}
-          className="mySwiper"
+          className="mySwiper "
         >
-          <SwiperSlide className="flex flex-col">
-          <p className=" mb-[20px] font-light md:text-3xl flex flex-row">Tech lead for Renewbe , Co-founder and <span className="text-redhot font-medium">&nbsp; Developer &nbsp;</span> for Renewbe</p>
-            <img src={Img1} alt="" />
+          <SwiperSlide className="flex flex-col ">
+          <p className=" mb-[20px] font-light md:text-3xl  dark:text-white text-black text-center md:text-left">Tech lead for Renewbe , Co-founder and <span className="text-redhot font-medium">&nbsp; Developer &nbsp;</span> for Renewbe</p>
+            <img className="swiper-first-slide" src={Img1} alt="" />
             
           </SwiperSlide>
           <SwiperSlide className="flex flex-col">
-          <p className=" mb-[20px] font-light md:text-3xl flex flex-row">Experience in working with <span className="text-blue font-medium">&nbsp; Teams.</span></p>
-            <img src={Img3} alt="" />
+          <p className=" mb-[50px] md:mb-[20px] font-light md:text-3xl  dark:text-white text-black">Experience in working with <span className="text-blue font-medium">&nbsp; Teams.</span></p>
+            <img  src={Img3} alt="" />
 
           </SwiperSlide>
           <SwiperSlide className="flex flex-col">
-          <p className=" mb-[20px] font-light md:text-3xl flex flex-row">Participated in <span className="text-blue font-medium">&nbsp; Climathon Zurich &nbsp;</span> with other team mates</p>
+          <p className=" mb-[20px] font-light md:text-3xl dark:text-white text-black">Participated in <span className="text-blue font-medium">&nbsp; Climathon Zurich &nbsp;</span> with other team mates</p>
             <img src={Img4} alt="" />
           </SwiperSlide >
           <SwiperSlide className="flex flex-col">
-          <p className=" mb-[20px] font-light md:text-3xl">Renewbe compnay I<b className="text-redhot font-medium">&nbsp;Co-founded &nbsp;</b>won <b className="text-[#FFD700] font-medium">&nbsp;First Prize&nbsp;</b>in the European Forum Alpbach along with seed fund, Renewbe was the first prize winner during the European Forum Alpbach</p>
+          <p className=" mb-[20px] font-light md:text-3xl  dark:text-white text-black text-center">Renewbe compnay I<b className="text-redhot font-medium">&nbsp;Co-founded &nbsp;</b>won <b className="text-[#FFD700] font-medium">&nbsp;First Prize&nbsp;</b>in the European Forum Alpbach along with seed fund, Renewbe was the first prize winner during the European Forum Alpbach</p>
             <img src={Img5} alt="" />
            
           </SwiperSlide>
           <SwiperSlide className="flex flex-col"> 
-          <p className=" mb-[20px] font-light md:text-3xl flex flex-row"><span className="text-redhot font-medium">&nbsp; Tech Lead &nbsp;</span> for Hult Prize Austria</p>
+          <p className=" mb-[20px] font-light md:text-3xl  dark:text-white text-black"><span className="text-redhot font-medium">&nbsp; Tech Lead &nbsp;</span> for Hult Prize Austria</p>
             <img src={Img6} alt="" />
             
           </SwiperSlide>
         </Swiper>
+      </div>
+
       </section>
   );
 };

@@ -2,6 +2,7 @@
 module.exports = {
   content: ['./src/**/*.{html,js,jsx}'],
   mode: 'jit',
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -17,8 +18,8 @@ module.exports = {
       },
 
       backgroundImage: (theme) => ({
-        'gradient-rainbow':
-          'linear-gradient(to right top, #ff165d, #ff5b2f, #fd9100, #ddc100, #a8eb12)',
+        'gradient-purple':
+          'linear-gradient(90deg, #BC5090 0%, #D74A49 21.01%, #D74A49 81.94%, #BC5090 99.65%);',
 
         'gradient-rainblue':
           'linear-gradient(to right top, #ff165d, #ff5b2f, #fd9100, #ddc100, #a8eb12)',
