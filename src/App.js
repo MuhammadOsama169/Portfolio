@@ -84,7 +84,7 @@ function App() {
           margin="0 0 -200px 0"
           amount="all"
           onViewportEnter={() => setSelectedPage('home')}
-
+        >
           <Landing setSelectedPage={setSelectedPage} />
         </motion.div>
       </div>
