@@ -27,7 +27,7 @@ export const MyProjects = () => {
         }}
       >
         <div className="mb-10">
-          <p className="font-playfair font-semibold text-4xl">
+          <p className="font-playfair font-semibold text-4xl  dark:text-white text-black">
             <span className="text-[#FF165D]">PRO</span>JECTS
           </p>
           <div className="flex justify-center mt-5">
@@ -52,20 +52,20 @@ export const MyProjects = () => {
         >
           {/* ROW 1 */}
           <div
-            className="flex justify-center text-center items-center p-10 rounded-l-lg bg-[#52057B]
+            className="flex justify-center text-center items-center p-10 rounded-l-lg bg-[#bc5090]
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
           >
             BEAUTIFUL USER INTERFACES
           </div>
             
           <div
-            className="flex justify-center text-center items-center p-10 bg-[#00ADB5]
+            className="flex justify-center text-center items-center p-10 bg-gradient-purple
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
           >
             SMOOTH USER EXPERIENCE
           </div>
           <div
-            className="flex justify-center text-center items-center p-10 rounded-r-lg bg-[#52057B]
+            className="flex justify-center text-center items-center p-10 rounded-r-lg bg-[#bc5090]
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
           >
             DYANAMIC & STATIC
@@ -94,10 +94,10 @@ export const MyProjects = () => {
 
             <div className="md:basis-[60%] px-10 ">
 
-            <div className=" md:basis-[40%] md:order-1 mb-3"> 
+            <div className=" md:basis-[40%] md:order-1 mb-3 "> 
               <img className="pt-10 md:pt-0" alt="SuperKickLogo.png" src={superkickLogo} />
             </div>
-              <p> SuperKick Branding designs clear brand messaging to help your business stand out. For a business to stand out today the brand has to be unique and impactful.</p> 
+              <p className="dark:text-white text-black text-xl"> SuperKick Branding designs clear brand messaging to help your business stand out. For a business to stand out today the brand has to be unique and impactful.</p> 
           
               <div className="flex flex-col xs:flex-row gap-2 pt-5">
                 <a  href="https://superkickbranding.netlify.app/">
@@ -106,9 +106,9 @@ export const MyProjects = () => {
                 </a>
                 
                 <a target="_blank" rel="noreferrer" href="https://github.com/MuhammadOsama169/project-outlaw">
-                  <button className="bg-white w-full p-[2px] flex flex-row text-black hover:bg-blue hover:text-white transition duration-500">
-                    <img className="pl-2 pt-3 h-auto flex justify-center align-middle w-[30px] xs:w-[40px] xs:h-[40px]" alt="github.png" src={githubLogo}/>
-                    <p className="px-5 flex text-center h-12 items-center justify-center" >View Code</p>
+                  <button className="bg-white w-full p-3 flex flex-row text-black hover:bg-blue hover:text-white transition duration-500 text-center align-middle items-center justify-center">
+                    <img className="w-[30px] xs:w-[30px] xs:h-[27px] mr-2" alt="github.png" src={githubLogo}/>
+                    View Code
                   </button> 
                 </a>
 
@@ -126,7 +126,7 @@ export const MyProjects = () => {
                 <div className=" md:basis-[40%] md:order-1 mb-3"> 
                   <img  className="pt-10 md:pt-0" alt="HomeRunLogo.png" src={homerunLogo} />
                 </div>
-                <p>HomeRun: Is a E-commerce website with custom backend entries and secure payemnt linked with STRIPE payment method. </p>
+                <p className="dark:text-white text-black text-xl">HomeRun: Is a E-commerce website with custom backend entries and secure payemnt linked with STRIPE payment method. </p>
                 <div className="flex flex-col xs:flex-row gap-2 pt-5">
 
                 <a  href="https://superkickbranding.netlify.app/">
@@ -135,10 +135,10 @@ export const MyProjects = () => {
                 </a>
 
                 <a target="_blank" rel="noreferrer" href="https://github.com/MuhammadOsama169/HomeRun">
-                  <button className="bg-white w-full p-[2px] flex flex-row text-black hover:bg-blue hover:text-white transition duration-500">
-                        <img className="pl-2 pt-3 h-auto flex justify-center align-middle w-[30px] xs:w-[40px] xs:h-[40px]" alt="github.png" src={githubLogo}/>
-                        <p className="px-5 flex text-center h-12 items-center justify-center" >View Code</p>
-                  </button> 
+                  <button className="bg-white w-full p-3 flex flex-row text-black hover:bg-blue hover:text-white transition duration-500 text-center align-middle items-center justify-center">
+                      <img className="w-[30px] xs:w-[30px] xs:h-[27px] mr-2" alt="github.png" src={githubLogo}/>
+                      View Code
+                    </button> 
                 </a>
 
                 </div>
@@ -156,7 +156,7 @@ export const MyProjects = () => {
               <div className="w-[250px] md:basis-[40%] md:order-1 mb-3"> 
                 <img  className="w-[200px] xs:w-auto pt-10 md:pt-0" alt="RenewbeLogo.png" src={renewbeLogo} />
               </div>
-              <p> Renewbe: A community-driven platform to support local clean energy, save money and help environmental NGOs Subscribe to use or rent a solar panel in a remote location to support clean energy in your country and save money from your electricity bill.</p> 
+              <p className="dark:text-white text-black text-xl"> Renewbe: A community-driven platform to support local clean energy, save money and help environmental NGOs Subscribe to use or rent a solar panel in a remote location to support clean energy in your country and save money from your electricity bill.</p> 
           
               <div className="flex flex-col xs:flex-row gap-2 pt-5">
 
@@ -166,10 +166,10 @@ export const MyProjects = () => {
                 </a>
 
                 <a target="_blank" rel="noreferrer" href="https://github.com/MuhammadOsama169/Renewbe">
-                  <button className="bg-white w-full p-[2px] flex flex-row text-black hover:bg-blue hover:text-white transition duration-500">
-                      <img className="pl-2 pt-3 h-auto flex justify-center align-middle w-[30px] xs:w-[40px] xs:h-[40px]" alt="github.png" src={githubLogo}/>
-                      <p className="px-5 flex text-center h-12 items-center justify-center" >View Code</p>
-                  </button> 
+                  <button className="bg-white w-full p-3 flex flex-row text-black hover:bg-blue hover:text-white transition duration-500 text-center align-middle items-center justify-center">
+                      <img className="w-[30px] xs:w-[30px] xs:h-[27px] mr-2" alt="github.png" src={githubLogo}/>
+                      View Code
+                    </button> 
                 </a>
 
               </div>

@@ -23,7 +23,7 @@ export const Testimonials = () => {
           TESTIMONIALS
         </p>
         <LineGradient width="mx-auto w-2/5" />
-        <p className="mt-10 mb-14 text-l">
+        <p className="mt-10 mb-14 text-l text-xl dark:text-white text-black">
           Here's What People are Saying About My Work. 
         </p>
       </motion.div>
@@ -55,7 +55,7 @@ export const Testimonials = () => {
           <div className="flex flex-row">
             <p className="font-playfair text-6xl">“</p>
 
-            <p className="text-center text-xl mt-5">
+            <p className="text-center text-xl mt-5 ">
             Muhammad extraordinarily contributed to the successful results. I thus can recommend Muhammad as an enduring, focused, and creative team player that is essential for successful innovation challenges.
             </p>
           </div>

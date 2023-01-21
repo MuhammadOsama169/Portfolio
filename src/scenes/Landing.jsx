@@ -52,7 +52,7 @@ export const Landing = ({ setSelectedPage }) => {
           }}
           >
 
-          <span className="text-6xl font-playfair z-10 text-center md:text-start flex flex-col">
+          <span className="text-6xl font-playfair z-10 text-center md:text-start flex flex-col  dark:text-white text-black">
             Muhammad {""}
             <Typewriter
               className="text-4xl"
@@ -63,14 +63,14 @@ export const Landing = ({ setSelectedPage }) => {
               }}
               />
           </span>
-          <p className="mt-10 pt-5 mb-7 text-lg text-center md:text-start">
+          <p className="mt-10 pt-5 mb-7 text-lg text-center md:text-start  dark:text-white text-black">
           Muhammad has 5 years+ of experience writing web apps in trave-related industries. She has extensive knowledge of JavaScript and browser APIs as well as significant experience with popular frameworks and libraries like React and Redux.
           </p>
 
 
         </motion.div>
-                {/* CALL TO ACTIONS */}
-                <motion.div
+        {/* CALL TO ACTIONS */}
+          <motion.div
           className="flex mt-5 justify-center md:justify-start"
           initial="hidden"
           whileInView="visible"

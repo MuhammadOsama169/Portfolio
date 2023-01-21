@@ -10,6 +10,8 @@ import { MyProjects } from './scenes/MyProjects';
 import { Testimonials } from './scenes/Testimonials';
 import { SliderAboutMe } from './scenes/SliderAboutMe';
 import { motion } from 'framer-motion';
+import { RiMoonClearFill, RiSunFill } from 'react-icons/ri';
+import './App.css';
 
 function App() {
   // Scroll
@@ -58,19 +60,19 @@ function App() {
   };
 
   return (
-    <div className="app bg-deep-blue">
+    <div className={`dark:bg-deep-blue bg-[#e8eef1]`}>
       <Navbar
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
         IsTopOfPage={IsTopOfPage}
       />
+
       {/* CURSOR */}
       <motion.div
         className="bg-[#fcba03] rounded-full h-[32px] w-[32px] fixed top-0 left-0 border-solid shadow-[inset_50_0_4px_#fae2a5] animate-pulse"
         variants={variants}
         animate="default"
       ></motion.div>
-
       <div className=" w-5/6 mx-auto md:h-full">
         {isAboveMediumScreens && (
           <DotGroup

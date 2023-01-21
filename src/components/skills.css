@@ -32,4 +32,13 @@
           -webkit-align-items: center;
           align-items: center;
         }
+          .swiper-slide img {
+          display: block;
+          width: auto;
+          height: 100%;
+          max-height: 100px;
+          object-fit: contain;
+          margin:0px !important;
+          animation: 150s linear 0s infinite normal none running ;
+        }
         

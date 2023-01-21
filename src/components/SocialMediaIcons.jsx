@@ -1,18 +1,18 @@
-import Linkdin from '../assets/linkedin.png'
-import Gmail from '../assets/gmail.png'
-import Instagram from '../assets/instagram.png'
-import Github from '../assets/github-white.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub,faLinkedin, faInstagram, faFacebook } from '@fortawesome/fontawesome-free-brands'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+
 
 const SocialMediaIcons = () => {
     return (
       <div className="flex justify-center md:justify-start my-10 gap-7">
         <a
-          className="hover:opacity-[0.99] transition duration-500 hover:scale-[1.5]"
+          className="hover:opacity-[0.99] transition duration-500 hover:scale-[1.5] "
           href="https://www.linkedin.com/in/muhammad-osama-688123162/"
           target="_blank"
           rel="noreferrer"
         >
-          <img alt="linkedin-link" src={Linkdin} />
+          <FontAwesomeIcon icon={faLinkedin} className="w-[50px] h-[50px] text-black dark:text-white " />
         </a>
         <a
           className="hover:opacity-[0.99] transition duration-500 hover:scale-[1.5]"
@@ -20,7 +20,15 @@ const SocialMediaIcons = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img alt="twitter-link" src={Gmail} />
+            <FontAwesomeIcon icon={faEnvelope} className="w-[50px] h-[50px]  text-black dark:text-white" />
+        </a>
+        <a
+          className="hover:opacity-[0.99] transition duration-500 hover:scale-[1.5] "
+          href="https://www.facebook.com/mohammad.osama.94009"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FontAwesomeIcon icon={faInstagram} className="w-[50px] h-[50px]  text-black dark:text-white" />
         </a>
         <a
           className="hover:opacity-[0.99] transition duration-500 hover:scale-[1.5] "
@@ -28,7 +36,7 @@ const SocialMediaIcons = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img alt="facebook-link" src={Instagram} />
+          <FontAwesomeIcon icon={faFacebook} className="w-[50px] h-[50px]  text-black dark:text-white" />
         </a>
         <a
           className="hover:opacity-[0.99] transition duration-500 hover:scale-[1.5]"
@@ -36,7 +44,7 @@ const SocialMediaIcons = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img className="w-9 h-8" alt="github-link" src={Github} />
+          <FontAwesomeIcon icon={faGithub} className="w-[50px] h-[50px]  text-black dark:text-white " />
         </a>
       </div>
     );
