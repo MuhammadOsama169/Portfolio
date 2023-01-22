@@ -44,3 +44,7 @@
           margin:0px !important;
           animation: 150s linear 0s infinite normal none running ;
         }
+         .swiper-button-next,
+         .swiper-button-prev {
+           color: #FF165D !important;
+          }

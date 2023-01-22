@@ -52,18 +52,18 @@ export const Landing = ({ setSelectedPage }) => {
           }}
           >
 
-          <span className="text-6xl font-playfair z-10 text-center md:text-start flex flex-col  dark:text-white text-black">
+          <span className="text-6xl font-playfair z-10 text-center md:text-start flex flex-col  dark:text-[#F3EFE0] text-black">
             Muhammad {""}
             <Typewriter
               className="text-4xl"
               options={{
-              strings: ['< Osama > '],
+              strings: ['< Osama /> '],
               autoStart: true,
               loop: true,
               }}
               />
           </span>
-          <p className="mt-10 pt-5 mb-7 text-lg text-center md:text-start  dark:text-white text-black">
+          <p className="mt-10 pt-5 mb-7 text-lg text-center md:text-start font-opensans dark:text-[#BEE0D6] text-[#30475E]">
           Muhammad has 5 years+ of experience writing web apps in trave-related industries. She has extensive knowledge of JavaScript and browser APIs as well as significant experience with popular frameworks and libraries like React and Redux.
           </p>
 
@@ -84,7 +84,7 @@ export const Landing = ({ setSelectedPage }) => {
 
 
           <button
-            className="bg-[#FF165D] text-white rounded-sm py-5 px-7 font-semibold
+            className="dark:bg-[#00FFB9] bg-redhot dark:text-black text-white rounded-sm py-5 px-7 font-semibold
               hover:bg-blue hover:text-white transition duration-500 shadow-[10px_20px_20px_rgba(255,0,0,30%)]"
             onClick={handleClick}
           >

@@ -18,8 +18,8 @@ export const MySkills = () => {
                 transition={{ duration: 0.5 }}
                 variants={{ hidden: { opacity: 0, x: -50 },visible: { opacity: 1, x: 0 },}}
             >
-                <p className="font-playfair font-semibold text-4xl mb-5  dark:text-white text-black">
-                    MY <span className="text-redhot">SKILLS</span>
+                <p className="font-playfair font-semibold text-4xl mb-5  dark:text-[#F3EFE0] text-black">
+                    MY <span className="dark:text-[#00FFB9] text-redhot">SKILLS</span>
                 </p>
                 <LineGradient width="w-1/3"/>
             </motion.div>
@@ -41,12 +41,12 @@ export const MySkills = () => {
         >
           <div className="relative h-32  dark:text-white text-black">
             <div className="z-10">
-              <p className="font-playfair font-semibold text-5xl">01</p>
-              <p className="font-playfair font-semibold text-3xl mt-3">
+              <p className="font-playfair font-semibold text-5xl text-[#F8485E] dark:text-black">01</p>
+              <p className="font-playfair font-semibold text-3xl mt-3 dark:text-[#F3EFE0] text-[#30475E]">
                 Experienced
               </p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-[#8a508f] absolute right-0 top-0 z-[-1]" />
+            <div className="w-1/2 md:w-3/4 h-32 dark:bg-[#8a508f] bg-[#CDF0EA] absolute right-0 top-0 z-[-1]" />
           </div>
 
         </motion.div>
@@ -65,12 +65,12 @@ export const MySkills = () => {
         >
           <div className="relative h-32 ">
             <div className="z-10">
-              <p className="font-playfair font-semibold text-5xl">02</p>
-              <p className="font-playfair font-semibold text-3xl mt-3">
+              <p className="font-playfair font-semibold text-5xl text-[#F8485E] dark:text-black">02</p>
+              <p className="font-playfair font-semibold text-3xl mt-3 dark:text-[#F3EFE0] text-[#30475E]">
                 Innovative
               </p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-[#ff6361] absolute right-0 top-0 z-[-1]" />
+            <div className="w-1/2 md:w-3/4 h-32 dark:bg-[#ff6361] bg-[#F6C6EA] absolute right-0 top-0 z-[-1]" />
           </div>
 
         </motion.div>
@@ -88,18 +88,18 @@ export const MySkills = () => {
         >
           <div className="relative h-32">
             <div className="z-10">
-              <p className="font-playfair font-semibold text-5xl">03</p>
-              <p className="font-playfair font-semibold text-3xl mt-3">
+              <p className="font-playfair font-semibold text-5xl text-[#F8485E] dark:text-black">03</p>
+              <p className="font-playfair font-semibold text-3xl mt-3 dark:text-[#F3EFE0] text-[#30475E]">
                 Imaginative
-              </p>
+              </p> 
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-[#ff8531] absolute right-0 top-0 z-[-1]" />
+            <div className="w-1/2 md:w-3/4 h-32 dark:bg-[#ff8531] bg-[#C490E4] absolute right-0 top-0 z-[-1]" />
           </div>
 
         </motion.div>
         </div>
         {/* TEXT */}
-        <p className="font-nunitosans font-semibold text-center pt-20  dark:text-white text-black">
+        <p className="font-nunitosans font-semibold text-center pt-20  dark:text-[#F3EFE0] text-black text-2xl mb-5">
           I USE
         </p>
         <motion.div
@@ -114,17 +114,17 @@ export const MySkills = () => {
         >
         <Slider/>
         </motion.div>
-        <p className="font-nunitosans text-center text-lg p-4 py-20 font-medium flex flex-col md:flex-row justify-center  dark:text-white text-black">
+        <p className="font-nunitosans text-center text-lg p-4 py-20 font-medium flex flex-col md:flex-row justify-center  dark:text-[#F3EFE0] text-black">
           <span className="">
             TO CREATE &nbsp;
           </span>
-          <span className=" text-[#FF165D] font-bold text-2xl">
+          <span className=" text-[#30475E] font-bold text-2xl">
           BEUTIFUL &nbsp; 
           </span>
-          <span>
+          <span className="dark:text-[#F3EFE0]">
             &
           </span>
-          <span className=" font-bold text-2xl text-[#6FE7DD] hover:underline underline-offset-1">
+          <span className=" font-bold text-2xl dark:text-[#00FFB9] text-redhot hover:underline underline-offset-1">
             &nbsp; RESPONSIVE WEBSITES
           </span>
         </p>

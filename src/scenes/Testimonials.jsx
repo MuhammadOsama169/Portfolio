@@ -19,11 +19,11 @@ export const Testimonials = () => {
           visible: { opacity: 1, x: 0 },
         }}
       >
-        <p className="font-playfair font-semibold text-4xl mb-5 text-[#FF165D]">
+        <p className="font-playfair font-semibold text-4xl mb-5 dark:text-[#00FFB9] text-redhot">
           TESTIMONIALS
         </p>
         <LineGradient width="mx-auto w-2/5" />
-        <p className="mt-10 mb-14 text-l text-xl dark:text-white text-black">
+        <p className="mt-10 mb-14 text-l text-xl dark:text-[#BEE0D6] text-black">
           Here's What People are Saying About My Work. 
         </p>
       </motion.div>
@@ -50,7 +50,7 @@ export const Testimonials = () => {
             visible: { opacity: 1, scale: 1 },
           }}
         >
-        <div className="flex flex-col border-solid rounded-3xl bg-[#52057B] pb-10 ">
+        <div className="flex flex-col border-solid rounded-3xl dark:bg-[#F3EFE0] bg-[#CDF0EA] pb-10 text-black ">
           <img className="max-w-sm h-auto rounded-b-lg " alt="" src={marinPhoto}/>
           <div className="flex flex-row">
             <p className="font-playfair text-6xl">“</p>
@@ -80,7 +80,7 @@ export const Testimonials = () => {
             visible: { opacity: 1, scale: 1 },
           }}
         >
-        <div className="flex flex-col border-solid rounded-3xl bg-[#00ADB5] pb-10  ">
+        <div className="flex flex-col border-solid rounded-3xl dark:bg-[#BEE0D6] bg-[#C490E4] text-black  pb-10  ">
           <img className="max-w-sm h-auto rounded-b-lg " alt="" src={juxhinaPhoto}/>
           <div className="flex flex-row">
             <p className="font-playfair text-6xl pl-2">“</p>
@@ -109,7 +109,7 @@ export const Testimonials = () => {
             visible: { opacity: 1, scale: 1 },
           }}
         >
-        <div className="flex flex-col border-solid rounded-3xl bg-[#52057B] pb-5 ">
+        <div className="flex flex-col border-solid rounded-3xl dark:bg-[#F3EFE0] bg-[#CDF0EA] text-black pb-5 ">
           <img className="max-w-sm h-auto rounded-b-lg " alt="" src={bernardPhoto}/>
           <div className="flex flex-row">
             <p className="font-playfair text-6xl pl-2">“</p>
