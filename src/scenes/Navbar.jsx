@@ -12,8 +12,8 @@ import CloseIcon from "../assets/close-icon.svg"
 const Link =({page,selectedPage,setSelectedPage}) =>{
     const lowerCasePage = page.toLowerCase();
     return (
-        <AnchorLink className={`${selectedPage === lowerCasePage ? "text-gradient-rainblue" : "" }
-        hover:text-yellow transition duration-500 `}
+        <AnchorLink className={`${selectedPage === lowerCasePage ? "dark:text-[#00FFB9] text-redhot"  : "" }
+        hover:text-[#FF165D] transition duration-500 `}
         href={`#${lowerCasePage}`}
         onClick={()=>(lowerCasePage)}
         >
@@ -27,7 +27,7 @@ const Link =({page,selectedPage,setSelectedPage}) =>{
 export const Navbar = ({IsTopOfPage,selectedPage,setSelectedPage}) => {
     const [isMenuToggled, setIsMediaToggled]=useState(false);
     const isAboveSmallScreens =useMediaQuery("(min-width:768px)");
-    const NavBarBackground = IsTopOfPage ? "" : "dark:bg-[#d5624f] bg-[#EAC408]";
+    const NavBarBackground = IsTopOfPage ? "" : "dark:bg-[#222222] bg-[#E5E4E2]";
 
     const [isOn, setIsOn] = useState(() => {
         if (localStorage.getItem('theme') === 'light') {
@@ -64,14 +64,14 @@ export const Navbar = ({IsTopOfPage,selectedPage,setSelectedPage}) => {
 
   return (
     <nav className={`${NavBarBackground} z-40 w-full fixed top-0 py-6`}>
-        <div className="flex items-center justify-between mx-auto w-5/6  dark:text-white text-black">
-            <h4 className="font-playfair text-3xl font-bold dark:text-white text-black"> MO.</h4>
+        <div className="flex items-center justify-between mx-auto w-5/6  dark:text-black text-white">
+            <h4 className="font-playfair text-3xl font-bold dark:text-[#F3EFE0] text-[#30475E]"> MO.</h4>
 
             {/* Desktop */}
 
             {isAboveSmallScreens ? (
  
-                <div className="flex justify-between gap-16 font-opensans font-semibold text-sm items-center">
+                <div className="flex justify-between gap-16 font-playfair font-semibold text-base items-center dark:text-[#F3EFE0] text-[#30475E]">
             {/* TOGGLE SWITCH */}
                 <div className="switch" data-isOn={isOn} onClick={toggleSwitch}>
                     <motion.div className="handle" layout transition={spring} />

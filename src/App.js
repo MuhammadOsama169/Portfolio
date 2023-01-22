@@ -10,7 +10,6 @@ import { MyProjects } from './scenes/MyProjects';
 import { Testimonials } from './scenes/Testimonials';
 import { SliderAboutMe } from './scenes/SliderAboutMe';
 import { motion } from 'framer-motion';
-import { RiMoonClearFill, RiSunFill } from 'react-icons/ri';
 import './App.css';
 
 function App() {
@@ -60,7 +59,7 @@ function App() {
   };
 
   return (
-    <div className={`dark:bg-deep-blue bg-[#e8eef1]`}>
+    <div className={`dark:bg-[#27232C] bg-[#e8eef1]`}>
       <Navbar
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
