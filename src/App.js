@@ -8,7 +8,7 @@ import { LineGradient } from './components/LineGradient';
 import { MySkills } from './scenes/MySkills';
 import { MyProjects } from './scenes/MyProjects';
 import { Testimonials } from './scenes/Testimonials';
-import { SliderAboutMe } from './scenes/SliderAboutMe';
+import { About } from './scenes/About';
 import { motion } from 'framer-motion';
 import './App.css';
 
@@ -127,7 +127,7 @@ function App() {
           amount="all"
           onViewportEnter={() => setSelectedPage('about')}
         >
-          <SliderAboutMe setSelectedPage={setSelectedPage} />
+          <About setSelectedPage={setSelectedPage} />
         </motion.div>
       </div>
     </div>

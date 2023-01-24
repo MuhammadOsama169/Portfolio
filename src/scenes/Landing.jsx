@@ -1,33 +1,35 @@
 import { React, useState } from 'react';
 import useMediaQuery from '../hooks/useMediaQuery'
 import {motion} from 'framer-motion'
-import { BasicModal } from '../components/BasicModal';
 import SocialMediaIcons from '../components/SocialMediaIcons'
-import CoverGif from '../assets/cover.gif'
-import ProfileImg from '../assets/profile.png'
+import ProfileImg from '../assets/cover-image.jpg'
 import Typewriter from 'typewriter-effect';
+import Lottie from "lottie-react";
+import Animation from "../assets/background-cover-dark.json";
 
 export const Landing = ({ setSelectedPage }) => {
 
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
-      const [isShown, setIsShown] = useState(false);
-      const handleClick = (event) => {
-        setIsShown((current) => !current);
-      };
   return (
     
     <section
     id="home" 
-    className="md:flex md:justify-between md:items-center gap-16 md:h-full py-10"
+    className="md:flex md:justify-between md:h-full py-10"
     >
-        <div className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32">
+        <div className="md:order-2 flex basis-1/2 md:mt-[200px] mt-16 z-10 ">
             {isAboveMediumScreens ? (
-                <div className=" z-0 ml-20 ">
-                    <img alt="profile.gif"
-                    src={CoverGif}
+              <div >
+                <Lottie className="absolute mt-[350px]" animationData={Animation} loop={true} />
+                <div className="absolute" >
+                  <img className=" rounded-lg w-[500px] top-0" alt="profile"
+                    src={ProfileImg}
                     />
                 </div>
+
+              </div>
+
+                
             ) : (
                 <div  className="z-10 w-full max-w-[400px] md:max-w-[500px]">
                     <img alt="profile"
@@ -82,21 +84,17 @@ export const Landing = ({ setSelectedPage }) => {
           }}
         >
 
-
-          <button
-            className="dark:bg-[#00FFB9] bg-redhot dark:text-black text-white rounded-sm py-5 px-7 font-semibold
-              hover:bg-blue hover:text-white transition duration-500 shadow-[10px_20px_20px_rgba(255,0,0,30%)]"
-            onClick={handleClick}
-          >
-            Contact Me
-          </button>
+          <a  href="mailto:m.osama169@gmail.com" className="hover:opacity-[0.98] transition duration-500 hover:scale-[1.1]">
+            <button
+                className="dark:bg-[#00FFB9] bg-redhot dark:text-black text-white rounded-sm py-5 px-7 font-semibold
+                 shadow-[10px_20px_20px_rgba(255,0,0,30%)]"
+            >
+              Get In Touch With Me
+            </button>
+          </a>
 
         </motion.div>
-        {isShown && (
-              <div>
-                <BasicModal openModal={setIsShown} closeModal={handleClick} />
-              </div>
-            )}
+
 
 
 

@@ -1,9 +1,8 @@
 import {useState} from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import useMediaQuery from '../hooks/useMediaQuery';
-import { GooglyEyes } from '../components/GooglyEyes';
 import {motion} from 'framer-motion'
-
+import {RiMoonClearFill, RiSunFill} from 'react-icons/ri'
 import MenuIcon from "../assets/menu-icon.svg"
 import CloseIcon from "../assets/close-icon.svg"
 
@@ -63,7 +62,7 @@ export const Navbar = ({IsTopOfPage,selectedPage,setSelectedPage}) => {
       }
 
   return (
-    <nav className={`${NavBarBackground} z-40 w-full fixed top-0 py-6`}>
+    <nav className={`${NavBarBackground} z-40 w-full fixed top-0  py-6`}>
         <div className="flex items-center justify-between mx-auto w-5/6  dark:text-black text-white">
             <h4 className="font-playfair text-3xl font-bold dark:text-[#F3EFE0] text-[#30475E]"> MO.</h4>
 
@@ -73,8 +72,18 @@ export const Navbar = ({IsTopOfPage,selectedPage,setSelectedPage}) => {
  
                 <div className="flex justify-between gap-16 font-playfair font-semibold text-base items-center dark:text-[#F3EFE0] text-[#30475E]">
             {/* TOGGLE SWITCH */}
-                <div className="switch" data-isOn={isOn} onClick={toggleSwitch}>
-                    <motion.div className="handle" layout transition={spring} />
+
+                <div onClick={toggleSwitch} className={`flex-start flex h-[35px] w-[55px] rounded-full bg-zinc-100 p-[2px] shadow-inner hover:cursor-pointer dark:bg-zinc-700 ${ isOn && 'place-content-end'}`}>
+                  <motion.div
+                      className="flex h-[30px] w-[30px] items-center justify-center rounded-full bg-black/90"
+                      layout
+                      transition={spring}
+                  >
+                      <motion.div whileTap={{rotate: 360}}>
+                          {isOn ? (<RiSunFill className="h-6 w-6 text-yellow" />) : (<RiMoonClearFill className="h-6 w-6 text-slate-200" />)}
+                      </motion.div>
+
+                  </motion.div> 
                 </div>
                 
                     <Link 
@@ -98,11 +107,11 @@ export const Navbar = ({IsTopOfPage,selectedPage,setSelectedPage}) => {
                     setSelectedPage={setSelectedPage}
                     />
                     <Link 
-                    page="Contact"
+                    page="About"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                     />
-                    <GooglyEyes />
+
                 </div>
             ) : (<button 
                    className="rounded-full bg-redhot p-2" 
@@ -116,7 +125,7 @@ export const Navbar = ({IsTopOfPage,selectedPage,setSelectedPage}) => {
 
             {!isAboveSmallScreens && isMenuToggled && (
                 
-                <div className="fixed right-0 bottom-0 h-full bg-[#00337C] w-[200px] ss:w-[300px] ">
+                <div className="fixed right-0 bottom-0 h-full bg-[#222222] w-[200px] ss:w-[300px] ">
 
             {/* Close Icon */}
 
@@ -163,9 +172,18 @@ export const Navbar = ({IsTopOfPage,selectedPage,setSelectedPage}) => {
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                     />
-                <div className="switch" data-isOn={isOn} onClick={toggleSwitch}>
-                    <motion.div className="handle" layout transition={spring} />
-                </div>
+                    <div onClick={toggleSwitch} className={`flex-start flex h-[35px] w-[55px] rounded-full bg-zinc-100 p-[2px] shadow-inner hover:cursor-pointer dark:bg-zinc-700 ${ isOn && 'place-content-end'}`}>
+                      <motion.div
+                          className="flex h-[30px] w-[30px] items-center justify-center rounded-full bg-black/90"
+                          layout
+                          transition={spring}
+                      >
+                          <motion.div whileTap={{rotate: 360}}>
+                              {isOn ? (<RiSunFill className="h-6 w-6 text-yellow" />) : (<RiMoonClearFill className="h-6 w-6 text-slate-200" />)}
+                          </motion.div>
+
+                      </motion.div> 
+                    </div>
                     
                     </div>
                     </motion.div>
