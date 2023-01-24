@@ -41,7 +41,7 @@ export const MySkills = () => {
         >
           <div className="relative h-32  dark:text-white text-black">
             <div className="z-10">
-              <p className="font-playfair font-semibold text-5xl text-[#F8485E] dark:text-black">01</p>
+              <p className="font-playfair font-semibold text-5xl text-[#F8485E]  dark:text-white">01</p>
               <p className="font-playfair font-semibold text-3xl mt-3 dark:text-[#F3EFE0] text-[#30475E]">
                 Experienced
               </p>
@@ -65,7 +65,7 @@ export const MySkills = () => {
         >
           <div className="relative h-32 ">
             <div className="z-10">
-              <p className="font-playfair font-semibold text-5xl text-[#F8485E] dark:text-black">02</p>
+              <p className="font-playfair font-semibold text-5xl text-[#F8485E] dark:text-white">02</p>
               <p className="font-playfair font-semibold text-3xl mt-3 dark:text-[#F3EFE0] text-[#30475E]">
                 Innovative
               </p>
@@ -88,7 +88,7 @@ export const MySkills = () => {
         >
           <div className="relative h-32">
             <div className="z-10">
-              <p className="font-playfair font-semibold text-5xl text-[#F8485E] dark:text-black">03</p>
+              <p className="font-playfair font-semibold text-5xl text-[#F8485E] dark:text-white">03</p>
               <p className="font-playfair font-semibold text-3xl mt-3 dark:text-[#F3EFE0] text-[#30475E]">
                 Imaginative
               </p> 

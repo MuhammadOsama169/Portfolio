@@ -10,12 +10,12 @@
     cursor: pointer;
   }
   
-  .switch[data-isOn="true"] {
+  .switch[data-ison="true"] {
     justify-content: flex-end;
     align-items: center;
-    background-color: rgba(225, 225, 67, 0.774);
+    background-color: #f9d71c;
   }
-  .switch[data-isOn="false"] {
+  .switch[data-ison="false"] {
     justify-content: flex-start;
     align-items: center;
     background-color: rgba(67, 99, 225, 0.774);
