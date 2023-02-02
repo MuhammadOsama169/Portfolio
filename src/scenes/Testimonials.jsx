@@ -51,17 +51,17 @@ export const Testimonials = () => {
           }}
         >
         <div className="flex flex-col border-solid rounded-3xl dark:bg-[#F3EFE0] bg-[#CDF0EA] pb-10 text-black ">
-          <img className="max-w-sm h-auto rounded-b-lg " alt="" src={marinPhoto}/>
+          <img className="max-w-sm h-auto rounded-b-lg " alt="" src={bernardPhoto}/>
           <div className="flex flex-row">
             <p className="font-playfair text-6xl">“</p>
-
             <p className="text-center text-xl mt-5 ">
             Muhammad extraordinarily contributed to the successful results. I thus can recommend Muhammad as an enduring, focused, and creative team player that is essential for successful innovation challenges.
             </p>
           </div>
-          <p className="text-center text-l italic mt-5">
-          Copyeditor at CNN en Español
+          <p className="text-center text-l italic mt-5 ">
+          R&D - Fachexperte Produktdigitalisierung bei Lindner Recyclingtech
           </p>
+
         </div>
         </motion.a>
 
@@ -110,16 +110,17 @@ export const Testimonials = () => {
           }}
         >
         <div className="flex flex-col border-solid rounded-3xl dark:bg-[#F3EFE0] bg-[#CDF0EA] text-black pb-5 ">
-          <img className="max-w-sm h-auto rounded-b-lg " alt="" src={bernardPhoto}/>
+          <img className="max-w-sm h-auto rounded-b-lg " alt="" src={marinPhoto}/>
           <div className="flex flex-row">
             <p className="font-playfair text-6xl pl-2">“</p>
 
-            <p className="text-center text-xl mt-5 ">
-            Muhammad extraordinarily contributed to the successful results. I thus can recommend Muhammad as an enduring, focused, and creative team player that is essential for successful innovation challenges.
+
+          <p className="text-center text-xl mt-5 ">
+            I was positively surprised by how quickly he could adapt to changes and new ideas and by how he could always put his tech and design skills into practice. But most importantly, he is a kind and committed fellow who will bring great energy to any team.
             </p>
           </div>
-          <p className="text-center text-l italic mt-5 ">
-          R&D - Fachexperte Produktdigitalisierung bei Lindner Recyclingtech
+          <p className="text-center text-l italic mt-5">
+          Copyeditor at CNN en Español
           </p>
         </div>
         </motion.a>

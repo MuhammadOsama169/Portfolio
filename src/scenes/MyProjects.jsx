@@ -8,9 +8,6 @@ import homerunLogo from "../assets/logo-homerun.png"
 import renewbeLogo from "../assets/logo-renewbe.png"
 import githubLogo from "../assets/github-logo.png"
 
-
-
-
 export const MyProjects = () => {
   return (
     <section id="projects" className="pt-20 pb-48">
@@ -129,7 +126,7 @@ export const MyProjects = () => {
                 <p className="dark:text-[#BEE0D6] text-black text-xl">HomeRun: Is a E-commerce website with custom backend entries and secure payemnt linked with STRIPE payment method. </p>
                 <div className="flex flex-col xs:flex-row gap-2 pt-5">
 
-                <a  href="https://superkickbranding.netlify.app/">
+                <a  href="https://homerun-muhammad.netlify.app/">
                   <button className="p-3 w-full xs:p-3.5 dark:bg-[#00FFB9] bg-redhot dark:text-black text-white  rounded-sm py-5 px-7 font-semibold
               hover:bg-blue hover:text-white transition duration-500">Demo website</button> 
                 </a>
@@ -160,7 +157,7 @@ export const MyProjects = () => {
           
               <div className="flex flex-col xs:flex-row gap-2 pt-5">
 
-                <a target="_blank" rel="noreferrer" href="https://superkickbranding.netlify.app/">
+                <a target="_blank" rel="noreferrer" href="https://renewbe.netlify.app/">
                   <button className="p-3 w-full xs:p-3.5 dark:bg-[#00FFB9] bg-redhot dark:text-black text-white  rounded-sm py-5 px-7 font-semibold
               hover:bg-blue hover:text-white transition duration-500">Demo website</button> 
                 </a>
