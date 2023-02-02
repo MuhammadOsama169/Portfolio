@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React } from 'react';
 import useMediaQuery from '../hooks/useMediaQuery'
 import {motion} from 'framer-motion'
 import SocialMediaIcons from '../components/SocialMediaIcons'
@@ -66,7 +66,7 @@ export const Landing = ({ setSelectedPage }) => {
               />
           </span>
           <p className="mt-10 pt-5 mb-7 text-lg text-center md:text-start font-opensans dark:text-[#BEE0D6] text-[#30475E]">
-          Muhammad has 5 years+ of experience writing web apps in trave-related industries. She has extensive knowledge of JavaScript and browser APIs as well as significant experience with popular frameworks and libraries like React and Redux.
+          Enthusiastic individual with a strong understanding of front-end development and design. Seeking an entry-level Front-End Developer role to apply my skills and gain experience in a professional setting. Strong problem-solving skills and a passion for creating user-friendly websites.
           </p>
 
 
