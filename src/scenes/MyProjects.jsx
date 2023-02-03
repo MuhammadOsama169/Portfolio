@@ -71,16 +71,7 @@ export const MyProjects = () => {
 
       </div>
 
-      <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0, duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, y: 50 },
-            visible: { opacity: 1, y: 0 },
-          }}
-        >
+
       <div className="flex flex-col gap-10 pt-20 ">
           {/* PROJECT 1 */}
           <div className="flex flex-col md:flex-row gap-1 pb-5">
@@ -97,13 +88,13 @@ export const MyProjects = () => {
               <p className="dark:text-[#BEE0D6] text-black text-xl "> SuperKick Branding designs clear brand messaging to help your business stand out. For a business to stand out today the brand has to be unique and impactful.</p> 
           
               <div className="flex flex-col xs:flex-row gap-2 pt-5">
-                <a  href="https://superkickbranding.netlify.app/">
+                <a  href="https://superkickbranding.netlify.app/" className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]">
                   <button className="p-3 w-full xs:p-3.5 dark:bg-[#00FFB9] bg-redhot dark:text-black text-white rounded-sm py-5 px-7 font-semibold
               hover:bg-blue hover:text-white transition duration-500">Demo website</button> 
                 </a>
                 
-                <a target="_blank" rel="noreferrer" href="https://github.com/MuhammadOsama169/project-outlaw">
-                  <button className="dark:bg-[#F3EFE0] bg-white w-full p-3 flex flex-row text-black hover:bg-blue hover:text-white transition duration-500 text-center align-middle items-center justify-center">
+                <a target="_blank" rel="noreferrer" href="https://github.com/MuhammadOsama169/project-outlaw" className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]">
+                  <button className="dark:bg-[#F3EFE0] bg-white w-full p-3 flex flex-row text-black hover:bg-blue  transition duration-500 text-center align-middle items-center justify-center">
                     <img className="w-[30px] xs:w-[30px] xs:h-[27px] mr-2" alt="github.png" src={githubLogo}/>
                     View Code
                   </button> 
@@ -126,13 +117,13 @@ export const MyProjects = () => {
                 <p className="dark:text-[#BEE0D6] text-black text-xl">HomeRun: Is a E-commerce website with custom backend entries and secure payemnt linked with STRIPE payment method. </p>
                 <div className="flex flex-col xs:flex-row gap-2 pt-5">
 
-                <a  href="https://homerun-muhammad.netlify.app/">
+                <a  href="https://homerun-muhammad.netlify.app/" className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]">
                   <button className="p-3 w-full xs:p-3.5 dark:bg-[#00FFB9] bg-redhot dark:text-black text-white  rounded-sm py-5 px-7 font-semibold
               hover:bg-blue hover:text-white transition duration-500">Demo website</button> 
                 </a>
 
-                <a target="_blank" rel="noreferrer" href="https://github.com/MuhammadOsama169/HomeRun">
-                  <button className="dark:bg-[#F3EFE0]  text-black bg-white w-full p-3 flex flex-row  hover:bg-blue hover:text-white transition duration-500 text-center align-middle items-center justify-center">
+                <a target="_blank" rel="noreferrer" href="https://github.com/MuhammadOsama169/HomeRun" className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]">
+                  <button className="dark:bg-[#F3EFE0]  text-black bg-white w-full p-3 flex flex-row  hover:bg-blue  transition duration-500 text-center align-middle items-center justify-center">
                       <img className="w-[30px] xs:w-[30px] xs:h-[27px] mr-2" alt="github.png" src={githubLogo}/>
                       View Code
                     </button> 
@@ -157,13 +148,13 @@ export const MyProjects = () => {
           
               <div className="flex flex-col xs:flex-row gap-2 pt-5">
 
-                <a target="_blank" rel="noreferrer" href="https://renewbe.netlify.app/">
+                <a target="_blank" rel="noreferrer" href="https://renewbe.netlify.app/" className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]">
                   <button className="p-3 w-full xs:p-3.5 dark:bg-[#00FFB9] bg-redhot dark:text-black text-white  rounded-sm py-5 px-7 font-semibold
               hover:bg-blue hover:text-white transition duration-500">Demo website</button> 
                 </a>
 
-                <a target="_blank" rel="noreferrer" href="https://github.com/MuhammadOsama169/Renewbe">
-                  <button className="dark:bg-[#F3EFE0] text-black bg-white w-full p-3 flex flex-row  hover:bg-blue hover:text-white transition duration-500 text-center align-middle items-center justify-center">
+                <a target="_blank" rel="noreferrer" href="https://github.com/MuhammadOsama169/Renewbe" className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]">
+                  <button className="dark:bg-[#F3EFE0] text-black bg-white w-full p-3 flex flex-row  hover:bg-blue transition duration-500 text-center align-middle items-center justify-center">
                       <img className="w-[30px] xs:w-[30px] xs:h-[27px] mr-2" alt="github.png" src={githubLogo}/>
                       View Code
                     </button> 
@@ -174,7 +165,7 @@ export const MyProjects = () => {
           </div>
           </div>
         </div>
-        </motion.div>
+
 
     </section>
   );

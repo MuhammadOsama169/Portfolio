@@ -124,7 +124,7 @@ export const MySkills = () => {
           <span className="dark:text-[#F3EFE0]">
             &
           </span>
-          <span className=" font-bold text-2xl dark:text-[#00FFB9] text-redhot hover:underline underline-offset-1">
+          <span className=" font-bold text-2xl dark:text-[#00FFB9] text-redhot">
             &nbsp; RESPONSIVE WEBSITES
           </span>
         </p>

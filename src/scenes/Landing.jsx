@@ -66,10 +66,8 @@ export const Landing = ({ setSelectedPage }) => {
               />
           </span>
           <p className="mt-10 pt-5 mb-7 text-lg text-center md:text-start font-opensans dark:text-[#BEE0D6] text-[#30475E]">
-          Enthusiastic individual with a strong understanding of front-end development and design. Seeking an entry-level Front-End Developer role to apply my skills and gain experience in a professional setting. Strong problem-solving skills and a passion for creating user-friendly websites.
+          Self-Taught Frontend Developer with a passion for creating visually appealing and user-friendly websites. Enthusiastic problem solver who is always looking for new challenges to tackle and expand my skills. Bringing a unique blend of technical expertise and creative thinking to every project. <span className="font-semibold text-2xl"> Let's work together to bring your next website to life!.</span>
           </p>
-
-
         </motion.div>
         {/* CALL TO ACTIONS */}
           <motion.div
