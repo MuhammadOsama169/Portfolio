@@ -119,7 +119,7 @@ export const MySkills = () => {
             TO CREATE &nbsp;
           </span>
           <span className=" text-[#30475E] font-bold text-2xl">
-          BEUTIFUL &nbsp; 
+          BEAUTIFUL  &nbsp; 
           </span>
           <span className="dark:text-[#F3EFE0]">
             &
