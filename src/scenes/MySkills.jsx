@@ -99,7 +99,7 @@ export const MySkills = () => {
         </motion.div>
         </div>
         {/* TEXT */}
-        <p className="font-nunitosans font-semibold text-center pt-20  dark:text-[#F3EFE0] text-black text-2xl mb-5">
+        <p className="font-opensans font-semibold text-center pt-20  dark:text-[#F3EFE0] text-black text-2xl mb-5">
           I USE
         </p>
         <motion.div
@@ -114,7 +114,7 @@ export const MySkills = () => {
         >
         <Slider/>
         </motion.div>
-        <p className="font-nunitosans text-center text-lg p-4 py-20 font-medium flex flex-col md:flex-row justify-center  dark:text-[#F3EFE0] text-black">
+        <p className="font-opensans text-center text-lg p-4 py-20 font-medium flex flex-col md:flex-row justify-center  dark:text-[#F3EFE0] text-black">
           <span className="">
             TO CREATE &nbsp;
           </span>
