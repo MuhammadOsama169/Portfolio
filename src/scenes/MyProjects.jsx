@@ -74,7 +74,7 @@ export const MyProjects = () => {
 
       <div className="flex flex-col gap-10 pt-20 ">
           {/* PROJECT 1 */}
-          <div className="flex flex-col md:flex-row gap-1 pb-5">
+          {/* <div className="flex flex-col md:flex-row gap-1 pb-5">
             
             <div className="md:basis-[40%] md:order-1"> 
               <img  alt="SuperKickProject.png" src={superkickProject} />
@@ -100,9 +100,9 @@ export const MyProjects = () => {
                   </button> 
                 </a>
 
+               </div>
               </div>
-            </div>
-          </div>
+            </div> */}
           <div>
             {/* SECOND PROJECT */}
             <div className="flex flex-col xs:flex-row gap-2 pt-5">

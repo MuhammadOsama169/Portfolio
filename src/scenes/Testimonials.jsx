@@ -37,14 +37,14 @@ export const Testimonials = () => {
         {/* IMAGE CONTAINER */}
         <motion.a
           className="flex mx-auto flex-col justify-between max-w-xs mb-8 "
-          whileHover={{ scale: 0.85 }}
+          whileHover={{ scale: 1.05 }}
           onHoverStart={e => {}}
           onHoverEnd={e => {}}
 
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.4, duration: 0.3 }}
+          transition={{ delay: 0.1, duration: 0.3 }}
           variants={{
             hidden: { opacity: 0, scale: 0.8 },
             visible: { opacity: 1, scale: 1 },
@@ -67,14 +67,14 @@ export const Testimonials = () => {
 
         <motion.a
           className="flex mx-auto flex-col justify-between max-w-xs mb-8"
-          whileHover={{ scale: 0.85}}
+          whileHover={{ scale: 1.05}}
           onHoverStart={e => {}}
           onHoverEnd={e => {}}
 
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.4, duration: 0.3 }}
+          transition={{ delay: 0.1, duration: 0.3 }}
           variants={{
             hidden: { opacity: 0, scale: 0.8 },
             visible: { opacity: 1, scale: 1 },
@@ -97,13 +97,13 @@ export const Testimonials = () => {
 
         <motion.a
           className="flex mx-auto flex-col justify-between max-w-xs mb-8"
-          whileHover={{ scale: 0.85 }}
+          whileHover={{ scale: 1.05 }}
           onHoverStart={e => {}}
           onHoverEnd={e => {}}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.4, duration: 0.3 }}
+          transition={{ delay: 0.1, duration: 0.3 }}
           variants={{
             hidden: { opacity: 0, scale: 0.8 },
             visible: { opacity: 1, scale: 1 },

@@ -17,6 +17,8 @@ module.exports = {
         'gradient-purple':
           'linear-gradient(89.75deg, #CDF0EA 15.36%, rgba(196, 144, 228, 0.61) 50.11%, #CDF0EA 81.74%);',
 
+        'gradient-redish':
+          'linear-gradient(90deg, #d53369 0%, #daae51 100%, rgba(190,48,246,1) 60%, rgba(0,255,205,1) 100%)',
         'gradient-rainblue':
           'linear-gradient(176deg, rgba(0,255,185,1) 0%, rgba(192,0,255,1) 52%, rgba(190,48,246,1) 60%, rgba(0,255,205,1) 100%)',
       }),

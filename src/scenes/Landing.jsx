@@ -4,8 +4,6 @@ import {motion} from 'framer-motion'
 import SocialMediaIcons from '../components/SocialMediaIcons'
 import ProfileImg from '../assets/cover-image.jpg'
 import Typewriter from 'typewriter-effect';
-import Lottie from "lottie-react";
-import Animation from "../assets/background-cover-dark.json";
 
 export const Landing = ({ setSelectedPage }) => {
 
@@ -20,7 +18,6 @@ export const Landing = ({ setSelectedPage }) => {
         <div className="md:order-2 flex basis-1/2 md:mt-[200px] mt-16 z-10 ">
             {isAboveMediumScreens ? (
               <div >
-                <Lottie className="absolute mt-[350px]" animationData={Animation} loop={true} />
                 <div className="absolute" >
                   <img className=" rounded-lg w-[500px] top-0" alt="profile"
                     src={ProfileImg}
@@ -38,8 +35,6 @@ export const Landing = ({ setSelectedPage }) => {
                 </div>
             )}
         </div>
-
-
 
 {/* MAIN SECTION */}
         <div className="z-30 basis-2/5 mt-12 md:mt-32">
@@ -85,7 +80,7 @@ export const Landing = ({ setSelectedPage }) => {
           <a  href="mailto:m.osama169@gmail.com" className="hover:opacity-[0.98] transition duration-500 hover:scale-[1.1]">
             <button
                 className="dark:bg-[#00FFB9] bg-redhot dark:text-black text-white rounded-sm py-5 px-7 font-semibold
-                 shadow-[10px_20px_20px_rgba(255,0,0,30%)]"
+                 shadow-[10px_20px_20px_rgba(48,30,103,100%)] dark:shadow-[10px_20px_20px_rgba(255,0,0,30%)]"
             >
               Get In Touch With Me
             </button>
