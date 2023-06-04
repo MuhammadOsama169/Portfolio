@@ -11,6 +11,8 @@ import ImginifyLogo from '..//assets/imginifyLogo.png';
 import githubLogo from '../assets/github-logo.png';
 import ImaginifyProject from '../assets/imaginify.png';
 import SeriesOnlineProject from '../assets/series.png';
+import travelProject from '../assets/travel-guide-preview.png';
+import travelLogo from '../assets/travelguide-logo.svg';
 
 export const MyProjects = () => {
   return (
@@ -127,38 +129,37 @@ export const MyProjects = () => {
         </div>
       </div>
       <div>
-        {/* Open Ai */}
+        {/* travel_guide */}
         <div className="flex flex-col xs:flex-col md:flex-row gap-1 pb-5 mt-10">
           <div className=" md:basis-[40%] md:order-2 lg:order-1">
-            <img alt="ImaginifyProject.png" src={ImaginifyProject} />
+            <img alt="HomerunProject.png" src={travelProject} />
           </div>
 
           <div className="md:basis-[60%] px-10 md:mb-10">
             <div className=" md:basis-[40%] md:order-1 mb-3">
               <img
                 className="pt-10 md:pt-0 w-[200px]"
-                alt="ImginifyLogo.png"
-                src={ImginifyLogo}
+                alt="SeriesOnlineLogo.png"
+                src={travelLogo}
               />
             </div>
             <p className="dark:text-[#BEE0D6] text-black text-xl">
-              Imaginify: Is a web platform that utilizes OpenAI's DALL-E API to
-              generate images based on prompts provided by the user.<br></br>In
-              addition to the AI-generated images, the app also provides a
-              library of high-definition, royalty-free images from Unsplash,
-              allowing users to browse and download images to use in their
-              projects.
+              Discover a captivating travel website that showcases real-time
+              posts from fellow travelers. This impressive full-stack app,
+              powered by Next.js 13, TypeScript, Prisma, and MongoDB, enables
+              users to store and explore a wide range of travel experiences
+              shared by new members joining the platform.
             </p>
             <div className="flex flex-col xs:flex-row gap-2 pt-5">
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://imaginify.netlify.app/"
+                href="https://travelguide1.netlify.app/"
                 className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
               >
                 <button
                   className="p-3 w-full xs:p-3.5 dark:bg-[#00FFB9] bg-redhot dark:text-black text-white  rounded-sm py-5 px-7 font-semibold
-              hover:bg-blue hover:text-white transition duration-500"
+                  hover:bg-blue hover:text-white transition duration-500"
                 >
                   Demo website
                 </button>
@@ -167,12 +168,12 @@ export const MyProjects = () => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://github.com/MuhammadOsama169/Imaginify"
+                href="https://github.com/MuhammadOsama169/travel_guide"
                 className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
               >
                 <button className="dark:bg-[#F3EFE0]  text-black bg-white w-full p-3 flex flex-row  hover:bg-blue  transition duration-500 text-center align-middle items-center justify-center">
                   <img
-                    className="w-[30px] xs:w-[30px] xs:h-[27px] mr-2"
+                    className="w-[30px] xs:w-[25px] xs:h-[27px] mr-2"
                     alt="github.png"
                     src={githubLogo}
                   />
@@ -278,6 +279,63 @@ export const MyProjects = () => {
                   target="_blank"
                   rel="noreferrer"
                   href="https://github.com/MuhammadOsama169/HomeRun"
+                  className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
+                >
+                  <button className="dark:bg-[#F3EFE0]  text-black bg-white w-full p-3 flex flex-row  hover:bg-blue  transition duration-500 text-center align-middle items-center justify-center">
+                    <img
+                      className="w-[30px] xs:w-[30px] xs:h-[27px] mr-2"
+                      alt="github.png"
+                      src={githubLogo}
+                    />
+                    View Code
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          {/* Open Ai */}
+          <div className="flex flex-col xs:flex-col md:flex-row gap-1 pb-5 mt-10">
+            <div className=" md:basis-[40%] md:order-2 lg:order-1">
+              <img alt="ImaginifyProject.png" src={ImaginifyProject} />
+            </div>
+
+            <div className="md:basis-[60%] px-10 md:mb-10">
+              <div className=" md:basis-[40%] md:order-1 mb-3">
+                <img
+                  className="pt-10 md:pt-0 w-[200px]"
+                  alt="ImginifyLogo.png"
+                  src={ImginifyLogo}
+                />
+              </div>
+              <p className="dark:text-[#BEE0D6] text-black text-xl">
+                Imaginify: Is a web platform that utilizes OpenAI's DALL-E API
+                to generate images based on prompts provided by the user.
+                <br></br>In addition to the AI-generated images, the app also
+                provides a library of high-definition, royalty-free images from
+                Unsplash, allowing users to browse and download images to use in
+                their projects.
+              </p>
+              <div className="flex flex-col xs:flex-row gap-2 pt-5">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://imaginify.netlify.app/"
+                  className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
+                >
+                  <button
+                    className="p-3 w-full xs:p-3.5 dark:bg-[#00FFB9] bg-redhot dark:text-black text-white  rounded-sm py-5 px-7 font-semibold
+              hover:bg-blue hover:text-white transition duration-500"
+                  >
+                    Demo website
+                  </button>
+                </a>
+
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://github.com/MuhammadOsama169/Imaginify"
                   className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
                 >
                   <button className="dark:bg-[#F3EFE0]  text-black bg-white w-full p-3 flex flex-row  hover:bg-blue  transition duration-500 text-center align-middle items-center justify-center">
