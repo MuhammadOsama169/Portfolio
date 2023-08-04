@@ -31,7 +31,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className={`dark:bg-[#27232C] bg-[#e8eef1]`}>
+    <div className={`dark:bg-[#27232C] bg-[#d3d8dc]`}>
       <Navbar
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
