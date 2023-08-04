@@ -14,6 +14,10 @@ import SeriesOnlineProject from '../assets/series.png';
 import travelProject from '../assets/travel-guide-preview.png';
 import travelLogo from '../assets/travelguide-logo.svg';
 
+const projectBox = `flex justify-center text-center items-center p-10 rounded-l-lg dark:bg-[#F3EFE0] bg-[#CDF0EA]
+max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold text-[#30475E]`;
+
+const buttons = `hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]`;
 export const MyProjects = () => {
   return (
     <section id="projects" className="pt-20 pb-48">
@@ -53,12 +57,7 @@ export const MyProjects = () => {
           }}
         >
           {/* ROW 1 */}
-          <div
-            className="flex justify-center text-center items-center p-10 rounded-l-lg dark:bg-[#F3EFE0] bg-[#CDF0EA]
-              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold text-[#30475E]"
-          >
-            BEAUTIFUL USER INTERFACES
-          </div>
+          <div className={projectBox}>BEAUTIFUL USER INTERFACES</div>
 
           <div
             className="flex justify-center text-center items-center p-10 dark:bg-gradient-mint bg-gradient-purple
@@ -66,12 +65,7 @@ export const MyProjects = () => {
           >
             SMOOTH USER EXPERIENCE
           </div>
-          <div
-            className="flex justify-center text-center items-center p-10 rounded-r-lg dark:bg-[#F3EFE0] bg-[#CDF0EA]
-              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold text-[#30475E]"
-          >
-            DYANAMIC & STATIC
-          </div>
+          <div className={projectBox}>DYANAMIC & STATIC</div>
         </motion.div>
       </div>
 
@@ -108,7 +102,7 @@ export const MyProjects = () => {
                 target="_blank"
                 rel="noreferrer"
                 href="https://travelguide1.netlify.app/"
-                className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
+                className={buttons}
               >
                 <button
                   className="p-3 w-full xs:p-3.5 dark:bg-[#00FFB9] bg-redhot dark:text-black text-white  rounded-sm py-5 px-7 font-semibold
@@ -122,7 +116,7 @@ export const MyProjects = () => {
                 target="_blank"
                 rel="noreferrer"
                 href="https://github.com/MuhammadOsama169/travel_guide"
-                className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
+                className={buttons}
               >
                 <button className="dark:bg-[#F3EFE0]  text-black bg-white w-full p-3 flex flex-row  hover:bg-blue  transition duration-500 text-center align-middle items-center justify-center">
                   <img
@@ -167,7 +161,7 @@ export const MyProjects = () => {
                 target="_blank"
                 rel="noreferrer"
                 href="https://seriesonline.netlify.app/"
-                className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
+                className={buttons}
               >
                 <button
                   className="p-3 w-full xs:p-3.5 dark:bg-[#00FFB9] bg-redhot dark:text-black text-white  rounded-sm py-5 px-7 font-semibold
@@ -181,7 +175,7 @@ export const MyProjects = () => {
                 target="_blank"
                 rel="noreferrer"
                 href="https://github.com/MuhammadOsama169/Series_Online"
-                className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
+                className={buttons}
               >
                 <button className="dark:bg-[#F3EFE0]  text-black bg-white w-full p-3 flex flex-row  hover:bg-blue  transition duration-500 text-center align-middle items-center justify-center">
                   <img
