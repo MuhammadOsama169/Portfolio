@@ -13,6 +13,8 @@ import ImaginifyProject from '../assets/imaginify.png';
 import SeriesOnlineProject from '../assets/series.png';
 import travelProject from '../assets/travel-guide-preview.png';
 import travelLogo from '../assets/travelguide-logo.svg';
+import CodeRacerLogo from '../assets/code-reacer-logo.png';
+import CodeRacerProject from '../assets/code-reacer-project.png';
 
 const projectBox = `flex justify-center text-center items-center p-10 rounded-l-lg dark:bg-[#F3EFE0] bg-[#CDF0EA]
 max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold text-[#30475E]`;
@@ -78,7 +80,7 @@ export const MyProjects = () => {
               rel="noreferrer"
               href="https://travelguide1.netlify.app/"
             >
-              <img alt="HomerunProject.png" src={travelProject} />
+              <img alt="TravelProject.png" src={travelProject} />
             </a>
           </div>
 
@@ -130,6 +132,62 @@ export const MyProjects = () => {
             </div>
           </div>
         </div>
+        {/* HomeRun */}
+        <div className="flex flex-col xs:flex-col md:flex-row gap-1 pb-5 mt-10">
+          <div className=" md:basis-[40%] md:order-2 lg:order-1">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://homerun-muhammad.netlify.app/"
+            >
+              <img alt="HomerunProject.png" src={homerunProject} />
+            </a>
+          </div>
+
+          <div className="md:basis-[60%] px-10">
+            <div className=" md:basis-[40%] md:order-1 mb-3">
+              <img
+                className="pt-10 md:pt-0"
+                alt="HomeRunLogo.png"
+                src={homerunLogo}
+              />
+            </div>
+            <p className="dark:text-[#BEE0D6] text-black text-xl">
+              HomeRun: Is a E-commerce website with custom backend entries and
+              secure payemnt linked with STRIPE payment method.It utilizes Redux
+              toolkit as state managment tool, Prisma and Tailwind CSS
+            </p>
+            <div className="flex flex-col xs:flex-row gap-2 pt-5">
+              <a
+                href="https://homerun-muhammad.netlify.app/"
+                className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
+              >
+                <button
+                  className="p-3 w-full xs:p-3.5 dark:bg-[#00FFB9] bg-redhot dark:text-black text-white  rounded-sm py-5 px-7 font-semibold
+              hover:bg-blue hover:text-white transition duration-500"
+                >
+                  Demo website
+                </button>
+              </a>
+
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/MuhammadOsama169/HomeRun"
+                className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
+              >
+                <button className="dark:bg-[#F3EFE0]  text-black bg-white w-full p-3 flex flex-row  hover:bg-blue  transition duration-500 text-center align-middle items-center justify-center">
+                  <img
+                    className="w-[30px] xs:w-[30px] xs:h-[27px] mr-2"
+                    alt="github.png"
+                    src={githubLogo}
+                  />
+                  View Code
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
       <div>
         {/* SeriesOnline */}
@@ -153,8 +211,10 @@ export const MyProjects = () => {
               />
             </div>
             <p className="dark:text-[#BEE0D6] text-black text-xl">
-              Series Online: Is a clone of Series Online, A website where you
-              can check trending movies and their details.{' '}
+              A modern movie website that showcases upcoming movies, provides
+              reviews and ratings and allows users to search. It utilizes Redux
+              Toolkit for state management and OAuth with Firebase for
+              authentication of users.
             </p>
             <div className="flex flex-col xs:flex-row gap-2 pt-5">
               <a
@@ -191,6 +251,72 @@ export const MyProjects = () => {
         </div>
       </div>
       <div>
+        {/* CodeRacer */}
+        <div className="flex flex-col xs:flex-col md:flex-row gap-1 pb-5 mt-10">
+          <div className="md:basis-[40%] md:order-1 basis-0 flex-col">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://superkickbranding.netlify.app/"
+            >
+              <img
+                alt="Coderacer.png"
+                src={CodeRacerProject}
+                className=" md:w-auto"
+              />
+            </a>
+          </div>
+
+          <div className="md:basis-[60%] px-10 ">
+            <div className=" md:basis-[40%] md:order-1 mb-3 ">
+              <img
+                className="pt-10 md:pt-0 h-[80px]"
+                alt="SuperKickLogo.png"
+                src={CodeRacerLogo}
+              />
+            </div>
+            <p className="dark:text-[#BEE0D6] text-black text-xl ">
+              Contributed to an open source project. Code Racer, a community
+              project built with Next.js, Tailwind CSS, and TypeScript. Code
+              Racer is a multiplayer coding game where developers can compete
+              against each other to solve programming challenges in real-time.
+              Sharpen your coding skills, challenge your peers, and have fun
+              while racing against the clock!
+            </p>
+
+            <div className="flex flex-col xs:flex-row gap-2 pt-5">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://code-racer-eight.vercel.app/"
+                className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
+              >
+                <button
+                  className="p-3 w-full xs:p-3.5 dark:bg-[#00FFB9] bg-redhot dark:text-black text-white rounded-sm py-5 px-7 font-semibold
+              hover:bg-blue hover:text-white transition duration-500"
+                >
+                  Demo website
+                </button>
+              </a>
+
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/MuhammadOsama169/code-racer"
+                className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
+              >
+                <button className="dark:bg-[#F3EFE0] bg-white w-full p-3 flex flex-row text-black hover:bg-blue  transition duration-500 text-center align-middle items-center justify-center">
+                  <img
+                    className="w-[30px] xs:w-[30px] xs:h-[27px] mr-2"
+                    alt="github.png"
+                    src={githubLogo}
+                  />
+                  View Code
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
         {/* Superkick */}
         <div className="flex flex-col xs:flex-col md:flex-row gap-1 pb-5 mt-10">
           <div className="md:basis-[40%] md:order-1 basis-0 flex-col">
@@ -216,10 +342,9 @@ export const MyProjects = () => {
               />
             </div>
             <p className="dark:text-[#BEE0D6] text-black text-xl ">
-              {' '}
-              SuperKick Branding designs clear brand messaging to help your
-              business stand out. For a business to stand out today the brand
-              has to be unique and impactful.
+              As part of the Superkick Branding team, I contributed to the
+              development of multiple modern websites that effectively rebranded
+              companies and aligned them with their missions.
             </p>
 
             <div className="flex flex-col xs:flex-row gap-2 pt-5">
@@ -370,61 +495,6 @@ export const MyProjects = () => {
                   className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
                 >
                   <button className="dark:bg-[#F3EFE0] text-black bg-white w-full p-3 flex flex-row  hover:bg-blue transition duration-500 text-center align-middle items-center justify-center">
-                    <img
-                      className="w-[30px] xs:w-[30px] xs:h-[27px] mr-2"
-                      alt="github.png"
-                      src={githubLogo}
-                    />
-                    View Code
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-          {/* HomeRun */}
-          <div className="flex flex-col xs:flex-col md:flex-row gap-1 pb-5 mt-10">
-            <div className=" md:basis-[40%] md:order-2 lg:order-1">
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://homerun-muhammad.netlify.app/"
-              >
-                <img alt="HomerunProject.png" src={homerunProject} />
-              </a>
-            </div>
-
-            <div className="md:basis-[60%] px-10">
-              <div className=" md:basis-[40%] md:order-1 mb-3">
-                <img
-                  className="pt-10 md:pt-0"
-                  alt="HomeRunLogo.png"
-                  src={homerunLogo}
-                />
-              </div>
-              <p className="dark:text-[#BEE0D6] text-black text-xl">
-                HomeRun: Is a E-commerce website with custom backend entries and
-                secure payemnt linked with STRIPE payment method.{' '}
-              </p>
-              <div className="flex flex-col xs:flex-row gap-2 pt-5">
-                <a
-                  href="https://homerun-muhammad.netlify.app/"
-                  className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
-                >
-                  <button
-                    className="p-3 w-full xs:p-3.5 dark:bg-[#00FFB9] bg-redhot dark:text-black text-white  rounded-sm py-5 px-7 font-semibold
-              hover:bg-blue hover:text-white transition duration-500"
-                  >
-                    Demo website
-                  </button>
-                </a>
-
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://github.com/MuhammadOsama169/HomeRun"
-                  className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
-                >
-                  <button className="dark:bg-[#F3EFE0]  text-black bg-white w-full p-3 flex flex-row  hover:bg-blue  transition duration-500 text-center align-middle items-center justify-center">
                     <img
                       className="w-[30px] xs:w-[30px] xs:h-[27px] mr-2"
                       alt="github.png"
