@@ -1,45 +1,57 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Autoplay} from "swiper";
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Autoplay } from 'swiper';
 
-import Img1 from "../assets/java-logo.png";
-import Img3 from "../assets/tailwind-logo.png";
-import Img4 from "../assets/stripe-logo.png";
-import Img5 from "../assets/nodejs-logo.png";
-import Img6 from "../assets/rest-api-logo.jpg";
-import Img7 from "../assets/styledcomponent-logo.png";
-import Img8 from "../assets/redux-logo.png";
-import Img9 from "../assets/css-logo.webp";
-import Img10 from "../assets/html-logo.webp";
-import Img11 from "../assets/figma-logo.png";
-import Img12 from "../assets/github-logo-2.png";
-import Img13 from "../assets/react-logo.png";
-import Img14 from "../assets/pstgres-logo.png";
-import Img15 from "../assets/MongoDB-Logo.jpg";
+import Img1 from '../assets/java-logo.png';
+import Img16 from '../assets/typescript-icon.png';
+import Img17 from '../assets/prisma-icon.jpg';
+import Img18 from '../assets/nextjs-icon.png';
+import Img3 from '../assets/tailwind-logo.png';
+import Img4 from '../assets/stripe-logo.png';
+import Img5 from '../assets/nodejs-logo.png';
+import Img6 from '../assets/rest-api-logo.jpg';
+import Img7 from '../assets/styledcomponent-logo.png';
+import Img8 from '../assets/redux-logo.png';
+import Img9 from '../assets/css-logo.webp';
+import Img10 from '../assets/html-logo.webp';
+import Img11 from '../assets/figma-logo.png';
+import Img12 from '../assets/github-logo-2.png';
+import Img13 from '../assets/react-logo.png';
+import Img14 from '../assets/pstgres-logo.png';
+import Img15 from '../assets/MongoDB-Logo.jpg';
 
-
-import "./skills.css";
+import './skills.css';
 
 export const Slider = () => {
   return (
     <>
       <div className="container">
-        <Swiper modules={[Autoplay]} style={{width: '100vw', marginRight: '0px'}}
-        slidesPerView={4}
+        <Swiper
+          modules={[Autoplay]}
+          style={{ width: '100vw', marginRight: '0px' }}
+          slidesPerView={4}
           spaceBetween={0}
           loop={true}
           centeredSlides
           autoplay={{
             delay: 950,
-            speed: 1000
+            speed: 1000,
           }}
-
         >
           <SwiperSlide>
             <img src={Img1} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={Img16} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={Img17} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={Img18} alt="" />
           </SwiperSlide>
           <SwiperSlide>
             <img src={Img3} alt="" />
