@@ -138,7 +138,7 @@ export const MyProjects = () => {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://homerun-muhammad.netlify.app/"
+              href="https://homerun-next.vercel.app/"
             >
               <img alt="HomerunProject.png" src={homerunProject} />
             </a>
@@ -159,7 +159,7 @@ export const MyProjects = () => {
             </p>
             <div className="flex flex-col xs:flex-row gap-2 pt-5">
               <a
-                href="https://homerun-muhammad.netlify.app/"
+                href="https://homerun-next.vercel.app/"
                 className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
               >
                 <button
