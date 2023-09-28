@@ -14,7 +14,9 @@ import SeriesOnlineProject from '../assets/series.png';
 import travelProject from '../assets/travel-guide-preview.png';
 import travelLogo from '../assets/travelguide-logo.svg';
 import CodeRacerLogo from '../assets/code-reacer-logo.png';
+import HackathonLogo from '../assets/detective.jpg';
 import CodeRacerProject from '../assets/code-reacer-project.png';
+import HackathonProject from '../assets/Ai-murder.png';
 
 const projectBox = `flex justify-center text-center items-center p-10 rounded-l-lg dark:bg-[#F3EFE0] bg-[#CDF0EA]
 max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold text-[#30475E]`;
@@ -132,7 +134,7 @@ export const MyProjects = () => {
             </div>
           </div>
         </div>
-        {/* HomeRun */}
+        {/* AI Murder Mystery */}
         <div className="flex flex-col xs:flex-col md:flex-row gap-1 pb-5 mt-10">
           <div className=" md:basis-[40%] md:order-2 lg:order-1">
             <a
@@ -190,6 +192,66 @@ export const MyProjects = () => {
         </div>
       </div>
       <div>
+        <div className="flex flex-col xs:flex-col md:flex-row gap-1 pb-5 mt-10">
+          <div className=" md:basis-[40%] md:order-2 lg:order-1">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://hackathon-pearl-theta.vercel.app/"
+            >
+              <img
+                alt="HomerunProject.png"
+                className="md:w-[500px] md:h-[300px]"
+                src={HackathonProject}
+              />
+            </a>
+          </div>
+
+          <div className="md:basis-[60%] px-10">
+            <div className=" md:basis-[40%] md:order-1 mb-3">
+              <img
+                className="pt-10 md:pt-0 max-w-[100px]"
+                alt="HomeRunLogo.png"
+                src={HackathonLogo}
+              />
+            </div>
+            <p className="dark:text-[#BEE0D6] text-black text-xl">
+              Step into the shoes of a detective tasked with solving a
+              high-stakes case involving an AI culprit. Interrogate,
+              investigate, and uncover the truth to bring the rogue AI to
+              justice
+            </p>
+            <div className="flex flex-col xs:flex-row gap-2 pt-5">
+              <a
+                href="https://hackathon-pearl-theta.vercel.app/"
+                className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
+              >
+                <button
+                  className="p-3 w-full xs:p-3.5 dark:bg-[#00FFB9] bg-redhot dark:text-black text-white  rounded-sm py-5 px-7 font-semibold
+              hover:bg-blue hover:text-white transition duration-500"
+                >
+                  Demo website
+                </button>
+              </a>
+
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/MuhammadOsama169/hackathon"
+                className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
+              >
+                <button className="dark:bg-[#F3EFE0]  text-black bg-white w-full p-3 flex flex-row  hover:bg-blue  transition duration-500 text-center align-middle items-center justify-center">
+                  <img
+                    className="w-[30px] xs:w-[30px] xs:h-[27px] mr-2"
+                    alt="github.png"
+                    src={githubLogo}
+                  />
+                  View Code
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
         {/* SeriesOnline */}
         <div className="flex flex-col xs:flex-col md:flex-row gap-1 pb-5 mt-10">
           <div className=" md:basis-[40%] md:order-2 lg:order-1">
