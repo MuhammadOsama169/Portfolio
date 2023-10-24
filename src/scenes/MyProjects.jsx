@@ -1,5 +1,6 @@
 import { LineGradient } from '../components/LineGradient';
 import { motion } from 'framer-motion';
+import Video from '../../components/Video';
 import homerunProject from '../assets/homerun-website.png';
 import renewbeProject from '../assets/renewbe-project.png';
 import superkickProject from '../assets/superkick-branding.png';
