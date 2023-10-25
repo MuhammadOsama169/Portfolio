@@ -1,23 +1,15 @@
 import { LineGradient } from '../components/LineGradient';
 import { motion } from 'framer-motion';
-import Video from '../../components/Video';
-import homerunProject from '../assets/homerun-website.png';
-import renewbeProject from '../assets/renewbe-project.png';
-import superkickProject from '../assets/superkick-branding.png';
+import VideoComponent from './VideoComponent';
 import superkickLogo from '../assets/logo-superkick.png';
 import homerunLogo from '../assets/logo-homerun.png';
 import renewbeLogo from '../assets/logo-renewbe.png';
 import SeriesOnlineLogo from '../assets/Serieslogo.png';
 import ImginifyLogo from '..//assets/imginifyLogo.png';
 import githubLogo from '../assets/github-logo.png';
-import ImaginifyProject from '../assets/imaginify.png';
-import SeriesOnlineProject from '../assets/series.png';
-import travelProject from '../assets/travel-guide-preview.png';
 import travelLogo from '../assets/travelguide-logo.svg';
 import CodeRacerLogo from '../assets/code-reacer-logo.png';
 import HackathonLogo from '../assets/detective.jpg';
-import CodeRacerProject from '../assets/code-reacer-project.png';
-import HackathonProject from '../assets/Ai-murder.png';
 
 const projectBox = `flex justify-center text-center items-center p-10 rounded-l-lg dark:bg-[#F3EFE0] bg-[#CDF0EA]
 max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold text-[#30475E]`;
@@ -83,7 +75,13 @@ export const MyProjects = () => {
               rel="noreferrer"
               href="https://travelguide1.netlify.app/"
             >
-              <img alt="TravelProject.png" src={travelProject} />
+              <VideoComponent
+                className="w-full rounded-[40px] h-[300px] "
+                src={
+                  'https://res.cloudinary.com/dwz4buven/video/upload/v1698214506/travelguide_xfxigd.mp4'
+                }
+                type="video/mp4"
+              />
             </a>
           </div>
 
@@ -143,7 +141,13 @@ export const MyProjects = () => {
               rel="noreferrer"
               href="https://homerun-next.vercel.app/"
             >
-              <img alt="HomerunProject.png" src={homerunProject} />
+              <VideoComponent
+                className="w-full rounded-[40px] h-[300px] "
+                src={
+                  'https://res.cloudinary.com/dwz4buven/video/upload/v1698250579/home_ci9brp.mp4'
+                }
+                type="video/mp4"
+              />
             </a>
           </div>
 
@@ -200,10 +204,12 @@ export const MyProjects = () => {
               rel="noreferrer"
               href="https://hackathon-pearl-theta.vercel.app/"
             >
-              <img
-                alt="HomerunProject.png"
-                className="md:w-[500px] md:h-[300px]"
-                src={HackathonProject}
+              <VideoComponent
+                className="w-full rounded-[40px] h-[300px] "
+                src={
+                  'https://res.cloudinary.com/dwz4buven/video/upload/v1698251127/crime_rfyjho.mp4'
+                }
+                type="video/mp4"
               />
             </a>
           </div>
@@ -217,10 +223,13 @@ export const MyProjects = () => {
               />
             </div>
             <p className="dark:text-[#BEE0D6] text-black text-xl">
-              Step into the shoes of a detective tasked with solving a
-              high-stakes case involving an AI culprit. Interrogate,
-              investigate, and uncover the truth to bring the rogue AI to
-              justice
+              A 3D game that uses Threejs and Convex as a backend. The game is
+              responsive AI which allows for better immersion. You can look at
+              the crime scene, Speack with the medical examinar and then
+              confront the suspect!. Step into the shoes of a detective tasked
+              with solving a high-stakes case involving an AI culprit.
+              Interrogate, investigate, and uncover the truth to bring the rogue
+              AI to justice
             </p>
             <div className="flex flex-col xs:flex-row gap-2 pt-5">
               <a
@@ -261,7 +270,13 @@ export const MyProjects = () => {
               rel="noreferrer"
               href="https://seriesonline.netlify.app/"
             >
-              <img alt="HomerunProject.png" src={SeriesOnlineProject} />
+              <VideoComponent
+                className="w-full rounded-[40px] h-[300px] "
+                src={
+                  'https://res.cloudinary.com/dwz4buven/video/upload/v1698214502/seies_qiempa.mp4'
+                }
+                type="video/mp4"
+              />
             </a>
           </div>
 
@@ -322,10 +337,12 @@ export const MyProjects = () => {
               rel="noreferrer"
               href="https://superkickbranding.netlify.app/"
             >
-              <img
-                alt="Coderacer.png"
-                src={CodeRacerProject}
-                className=" md:w-auto"
+              <VideoComponent
+                className="w-full rounded-[40px] h-[300px] "
+                src={
+                  'https://res.cloudinary.com/dwz4buven/video/upload/v1698214501/code_tlk5p8.mp4'
+                }
+                type="video/mp4"
               />
             </a>
           </div>
@@ -388,10 +405,12 @@ export const MyProjects = () => {
               rel="noreferrer"
               href="https://superkickbranding.netlify.app/"
             >
-              <img
-                alt="SuperKickProject.png"
-                src={superkickProject}
-                className=" md:w-auto"
+              <VideoComponent
+                className="w-full rounded-[40px] h-[300px] "
+                src={
+                  'https://res.cloudinary.com/dwz4buven/video/upload/v1698214503/superkick_siilnu.mp4'
+                }
+                type="video/mp4"
               />
             </a>
           </div>
@@ -452,7 +471,13 @@ export const MyProjects = () => {
                 rel="noreferrer"
                 href="https://imaginify.netlify.app/"
               >
-                <img alt="ImaginifyProject.png" src={ImaginifyProject} />
+                <VideoComponent
+                  className="w-full rounded-[40px] h-[300px] "
+                  src={
+                    'https://res.cloudinary.com/dwz4buven/video/upload/v1698214502/ai_mv5qfj.mp4'
+                  }
+                  type="video/mp4"
+                />
               </a>
             </div>
 
@@ -515,7 +540,13 @@ export const MyProjects = () => {
                 rel="noreferrer"
                 href="https://renewbe.netlify.app/"
               >
-                <img alt="RenewbeProject.png" src={renewbeProject} />
+                <VideoComponent
+                  className="w-full rounded-[40px] h-[300px] "
+                  src={
+                    'https://res.cloudinary.com/dwz4buven/video/upload/v1698214502/renewbe_xgnvu0.mp4'
+                  }
+                  type="video/mp4"
+                />
               </a>
             </div>
 
