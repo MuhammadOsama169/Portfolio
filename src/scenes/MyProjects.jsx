@@ -15,6 +15,9 @@ const projectBox = `flex justify-center text-center items-center p-10 rounded-l-
 max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold text-[#30475E]`;
 
 const buttons = `hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]`;
+const demoButtons = `p-3 w-full xs:p-3.5 dark:bg-[#00FFB9] bg-redhot dark:text-black text-white  rounded-sm py-5 px-7 font-semibold
+hover:bg-blue hover:text-white transition duration-500`;
+
 export const MyProjects = () => {
   return (
     <section id="projects" className="pt-20 pb-48">
@@ -76,7 +79,7 @@ export const MyProjects = () => {
               href="https://travelguide1.netlify.app/"
             >
               <VideoComponent
-                className="w-full rounded-[40px] h-[300px] "
+                className="w-full md:rounded-[40px] h-auto md:h-[300px] md:hover:scale-[1.5] duration-200"
                 src={
                   'https://res.cloudinary.com/dwz4buven/video/upload/v1698214506/travelguide_xfxigd.mp4'
                 }
@@ -107,12 +110,7 @@ export const MyProjects = () => {
                 href="https://travelguide1.netlify.app/"
                 className={buttons}
               >
-                <button
-                  className="p-3 w-full xs:p-3.5 dark:bg-[#00FFB9] bg-redhot dark:text-black text-white  rounded-sm py-5 px-7 font-semibold
-                  hover:bg-blue hover:text-white transition duration-500"
-                >
-                  Demo website
-                </button>
+                <button className={demoButtons}>Demo website</button>
               </a>
 
               <a
@@ -142,7 +140,7 @@ export const MyProjects = () => {
               href="https://homerun-next.vercel.app/"
             >
               <VideoComponent
-                className="w-full rounded-[40px] h-[300px] "
+                className="w-full md:rounded-[40px] h-auto md:h-[300px] hover:scale-[1.5] duration-200"
                 src={
                   'https://res.cloudinary.com/dwz4buven/video/upload/v1698250579/home_ci9brp.mp4'
                 }
@@ -169,12 +167,7 @@ export const MyProjects = () => {
                 href="https://homerun-next.vercel.app/"
                 className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
               >
-                <button
-                  className="p-3 w-full xs:p-3.5 dark:bg-[#00FFB9] bg-redhot dark:text-black text-white  rounded-sm py-5 px-7 font-semibold
-              hover:bg-blue hover:text-white transition duration-500"
-                >
-                  Demo website
-                </button>
+                <button className={demoButtons}>Demo website</button>
               </a>
 
               <a
@@ -205,7 +198,7 @@ export const MyProjects = () => {
               href="https://hackathon-pearl-theta.vercel.app/"
             >
               <VideoComponent
-                className="w-full rounded-[40px] h-[300px] "
+                className="w-full md:rounded-[40px] h-auto md:h-[300px] hover:scale-[1.5] duration-200"
                 src={
                   'https://res.cloudinary.com/dwz4buven/video/upload/v1698251127/crime_rfyjho.mp4'
                 }
@@ -217,7 +210,7 @@ export const MyProjects = () => {
           <div className="md:basis-[60%] px-10">
             <div className=" md:basis-[40%] md:order-1 mb-3">
               <img
-                className="pt-10 md:pt-0 max-w-[100px]"
+                className="pt-10 md:pt-0 md:max-w-[100px] max-w-[80px]"
                 alt="HomeRunLogo.png"
                 src={HackathonLogo}
               />
@@ -236,12 +229,7 @@ export const MyProjects = () => {
                 href="https://hackathon-pearl-theta.vercel.app/"
                 className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
               >
-                <button
-                  className="p-3 w-full xs:p-3.5 dark:bg-[#00FFB9] bg-redhot dark:text-black text-white  rounded-sm py-5 px-7 font-semibold
-              hover:bg-blue hover:text-white transition duration-500"
-                >
-                  Demo website
-                </button>
+                <button className={demoButtons}>Demo website</button>
               </a>
 
               <a
@@ -271,7 +259,7 @@ export const MyProjects = () => {
               href="https://seriesonline.netlify.app/"
             >
               <VideoComponent
-                className="w-full rounded-[40px] h-[300px] "
+                className="w-full md:rounded-[40px] h-auto md:h-[300px] hover:scale-[1.5] duration-200"
                 src={
                   'https://res.cloudinary.com/dwz4buven/video/upload/v1698214502/seies_qiempa.mp4'
                 }
@@ -301,12 +289,7 @@ export const MyProjects = () => {
                 href="https://seriesonline.netlify.app/"
                 className={buttons}
               >
-                <button
-                  className="p-3 w-full xs:p-3.5 dark:bg-[#00FFB9] bg-redhot dark:text-black text-white  rounded-sm py-5 px-7 font-semibold
-                  hover:bg-blue hover:text-white transition duration-500"
-                >
-                  Demo website
-                </button>
+                <button className={demoButtons}>Demo website</button>
               </a>
 
               <a
@@ -338,7 +321,7 @@ export const MyProjects = () => {
               href="https://superkickbranding.netlify.app/"
             >
               <VideoComponent
-                className="w-full rounded-[40px] h-[300px] "
+                className="w-full md:rounded-[40px] h-auto md:h-[300px] hover:scale-[1.5] duration-200"
                 src={
                   'https://res.cloudinary.com/dwz4buven/video/upload/v1698214501/code_tlk5p8.mp4'
                 }
@@ -371,12 +354,7 @@ export const MyProjects = () => {
                 href="https://code-racer-eight.vercel.app/"
                 className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
               >
-                <button
-                  className="p-3 w-full xs:p-3.5 dark:bg-[#00FFB9] bg-redhot dark:text-black text-white rounded-sm py-5 px-7 font-semibold
-              hover:bg-blue hover:text-white transition duration-500"
-                >
-                  Demo website
-                </button>
+                <button className={demoButtons}>Demo website</button>
               </a>
 
               <a
@@ -406,7 +384,7 @@ export const MyProjects = () => {
               href="https://superkickbranding.netlify.app/"
             >
               <VideoComponent
-                className="w-full rounded-[40px] h-[300px] "
+                className="w-full md:rounded-[40px] h-auto md:h-[300px] hover:scale-[1.5] duration-200"
                 src={
                   'https://res.cloudinary.com/dwz4buven/video/upload/v1698214503/superkick_siilnu.mp4'
                 }
@@ -436,12 +414,7 @@ export const MyProjects = () => {
                 href="https://superkickbranding.netlify.app/"
                 className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
               >
-                <button
-                  className="p-3 w-full xs:p-3.5 dark:bg-[#00FFB9] bg-redhot dark:text-black text-white rounded-sm py-5 px-7 font-semibold
-              hover:bg-blue hover:text-white transition duration-500"
-                >
-                  Demo website
-                </button>
+                <button className={demoButtons}>Demo website</button>
               </a>
 
               <a
@@ -472,7 +445,7 @@ export const MyProjects = () => {
                 href="https://imaginify.netlify.app/"
               >
                 <VideoComponent
-                  className="w-full rounded-[40px] h-[300px] "
+                  className="w-full md:rounded-[40px] h-auto md:h-[300px] hover:scale-[1.5] duration-200"
                   src={
                     'https://res.cloudinary.com/dwz4buven/video/upload/v1698214502/ai_mv5qfj.mp4'
                   }
@@ -504,12 +477,7 @@ export const MyProjects = () => {
                   href="https://imaginify.netlify.app/"
                   className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
                 >
-                  <button
-                    className="p-3 w-full xs:p-3.5 dark:bg-[#00FFB9] bg-redhot dark:text-black text-white  rounded-sm py-5 px-7 font-semibold
-              hover:bg-blue hover:text-white transition duration-500"
-                  >
-                    Demo website
-                  </button>
+                  <button className={demoButtons}>Demo website</button>
                 </a>
 
                 <a
@@ -541,7 +509,7 @@ export const MyProjects = () => {
                 href="https://renewbe.netlify.app/"
               >
                 <VideoComponent
-                  className="w-full rounded-[40px] h-[300px] "
+                  className="w-full md:rounded-[40px] h-auto md:h-[300px] hover:scale-[1.5] duration-200"
                   src={
                     'https://res.cloudinary.com/dwz4buven/video/upload/v1698214502/renewbe_xgnvu0.mp4'
                   }
@@ -574,12 +542,7 @@ export const MyProjects = () => {
                   href="https://renewbe.netlify.app/"
                   className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
                 >
-                  <button
-                    className="p-3 w-full xs:p-3.5 dark:bg-[#00FFB9] bg-redhot dark:text-black text-white  rounded-sm py-5 px-7 font-semibold
-              hover:bg-blue hover:text-white transition duration-500"
-                  >
-                    Demo website
-                  </button>
+                  <button className={demoButtons}>Demo website</button>
                 </a>
 
                 <a
