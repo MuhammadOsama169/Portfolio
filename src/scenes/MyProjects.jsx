@@ -10,6 +10,7 @@ import githubLogo from '../assets/github-logo.png';
 import travelLogo from '../assets/travelguide-logo.svg';
 import CodeRacerLogo from '../assets/code-reacer-logo.png';
 import HackathonLogo from '../assets/detective.jpg';
+import SfbLogo from '../assets/sfb.png';
 
 const projectBox = `flex justify-center text-center items-center p-10 rounded-l-lg dark:bg-[#F3EFE0] bg-[#CDF0EA]
 max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold text-[#30475E]`;
@@ -70,6 +71,48 @@ export const MyProjects = () => {
       </div>
 
       <div className="flex flex-col gap-10 pt-20 ">
+                {/* sfb */}
+                <div className="flex flex-col xs:flex-col md:flex-row gap-1 pb-5 mt-10">
+          <div className=" md:basis-[40%] md:order-2 lg:order-1">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://client-testing.sfb-app.com/workspace"
+            >
+              <VideoComponent
+                className="w-full md:rounded-[40px] h-auto md:h-[300px] md:hover:scale-[1.5] duration-200"
+                src={
+                  'https://res.cloudinary.com/dwz4buven/video/upload/v1733494751/sfb_kkohp2.mp4'
+                }
+                type="video/mp4"
+              />
+            </a>
+          </div>
+
+          <div className="md:basis-[60%] px-10 md:mb-10">
+            <div className=" md:basis-[40%] md:order-1 mb-3">
+              <img
+                className="pt-10 md:pt-0 w-[80px]"
+                alt="sfb.png"
+                src={SfbLogo}
+              />
+            </div>
+            <p className="dark:text-[#BEE0D6] text-black text-xl">
+Built a Drag-and-drop form builder, similar to Canva. Utilized technologies like Redux, Tailwind, OTP, and displayed data through graphs. Collaborated with cross-functional teams on multiple microservices. Acquired knowledge about libraries for internationalization, implementing changes for English and Arabic (Right to Left). Demonstrated experience in integrating and managing payment systems (Moyassar) within web applications. Wrote clean, maintainable code and developed helper functions and reusable components.
+            </p>
+            <div className="flex flex-col xs:flex-row gap-2 pt-5">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://client-testing.sfb-app.com/workspace"
+                className={buttons}
+              >
+                <button className={demoButtons}>Client Website</button>
+              </a>
+
+            </div>
+          </div>
+        </div>
         {/* travel_guide */}
         <div className="flex flex-col xs:flex-col md:flex-row gap-1 pb-5 mt-10">
           <div className=" md:basis-[40%] md:order-2 lg:order-1">

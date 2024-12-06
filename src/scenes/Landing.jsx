@@ -53,15 +53,7 @@ export const Landing = ({ setSelectedPage }) => {
             />
           </span>
           <p className="mt-10 pt-5 mb-7 text-lg text-center md:text-start font-opensans dark:text-[#BEE0D6] text-[#30475E]">
-            Self-Taught Frontend Developer with a passion for creating visually
-            appealing and user-friendly websites. Enthusiastic problem solver
-            who is always looking for new challenges to tackle and expand my
-            skills. Bringing a unique blend of technical expertise and creative
-            thinking to every project.{' '}
-            <span className="font-semibold text-2xl">
-              {' '}
-              Let's work together to bring your next website to life!.
-            </span>
+          Frontend Developer with expertise in React, Next.js, Redux Toolkit, and Tailwind CSS. Experienced in delivering scalable, user-friendly web solutions across diverse industries. Passionate about creating impactful digital experiences. Let’s build something great together!      
           </p>
         </motion.div>
         {/* CALL TO ACTIONS */}
