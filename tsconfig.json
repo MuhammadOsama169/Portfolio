@@ -23,7 +23,7 @@
         "@/*": ["./src/*"]
       }
     },
-    "include": ["src", "custom.d.ts"],
+    "include": ["src", "custom.d.ts", "i18n.ts"],
     "exclude": ["node_modules"],
   }
   

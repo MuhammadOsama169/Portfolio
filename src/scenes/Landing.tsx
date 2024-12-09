@@ -1,15 +1,24 @@
-import  React  from 'react';
-import useMediaQuery from '../hooks/useMediaQuery';
-import { motion } from 'framer-motion';
-import SocialMediaIcons from '../components/SocialMediaIcons';
-import ProfileImg from '../assets/cover-image.jpg';
-import Typewriter from 'typewriter-effect';
+import React from "react";
+import useMediaQuery from "../hooks/useMediaQuery";
+import { motion } from "framer-motion";
+import SocialMediaIcons from "../components/SocialMediaIcons";
+import ProfileImg from "../assets/cover-image.jpg";
+import Typewriter from "typewriter-effect";
+import { useTranslation } from "react-i18next";
+import { getLangDir } from "../helpers/getLang-service";
 
 export const Landing = () => {
-  const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)');
+  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
+
+  const { t } = useTranslation();
+  const staticData: any = t("lists");
 
   return (
-    <section id="home" className="md:flex md:justify-between md:h-full py-10">
+    <section
+      id="home"
+      className="md:flex md:justify-between md:h-full py-10"
+      style={{ direction: getLangDir() }}
+    >
       <div className="md:order-2 flex basis-1/2 md:mt-[200px] mt-16 z-10 ">
         {isAboveMediumScreens ? (
           <div>
@@ -42,17 +51,17 @@ export const Landing = () => {
           }}
         >
           <span className="text-6xl font-playfair z-10 text-center md:text-start flex flex-col  dark:text-[#F3EFE0] text-black">
-            Muhammad {''}
+            {staticData.muhammad}
             <Typewriter
               options={{
-                strings: ['< Osama /> '],
+                strings: [`< ${staticData.osama}/>`],
                 autoStart: true,
                 loop: true,
               }}
             />
           </span>
           <p className="mt-10 pt-5 mb-7 text-lg text-center md:text-start font-opensans dark:text-[#BEE0D6] text-[#30475E]">
-          Frontend Developer with expertise in React, Next.js, Redux Toolkit, and Tailwind CSS. Experienced in delivering scalable, user-friendly web solutions across diverse industries. Passionate about creating impactful digital experiences. Let’s build something great together!      
+            {staticData.bio}
           </p>
         </motion.div>
         {/* CALL TO ACTIONS */}
@@ -73,9 +82,9 @@ export const Landing = () => {
           >
             <button
               className="dark:bg-[#00FFB9] bg-redhot dark:text-black text-white rounded-sm py-5 px-7 font-semibold
-                 shadow-[10px_20px_20px_rgba(48,30,103,100%)] dark:shadow-[10px_20px_20px_rgba(255,0,0,30%)] animate-bounce"
+                 shadow-[10px_20px_20px_rgba(48,30,103,100%)] dark:shadow-[10px_20px_20px_rgba(255,0,0,30%)] "
             >
-              Get In Touch With Me
+              {staticData.actions.get_in_touch}
             </button>
           </a>
         </motion.div>

@@ -14,6 +14,7 @@ import CodeRacerLogo from '../assets/code-reacer-logo.png';
 import HackathonLogo from '../assets/detective.jpg';
 import SfbLogo from '../assets/sfb.png';
 import { useTranslation } from "react-i18next";
+import { getLangDir } from '../helpers/getLang-service';
 
 const projectBox = `flex justify-center text-center items-center p-10 rounded-l-lg dark:bg-[#F3EFE0] bg-[#CDF0EA]
 max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold text-[#30475E]`;
@@ -23,9 +24,11 @@ const demoButtons = `p-3 w-full xs:p-3.5 dark:bg-[#00FFB9] bg-redhot dark:text-b
 hover:bg-blue hover:text-white transition duration-500`;
 
 export const MyProjects = () => {
+  const { t } = useTranslation();
+  const staticData: any = t("lists");
 
   return (
-    <section id="projects" className="pt-20 pb-48">
+    <section id="projects" className="pt-20 pb-48"     style={{direction:getLangDir()}}>
       {/* HEADINGS */}
       <motion.div
         className="md:w-2/5 mx-auto text-center"
@@ -40,10 +43,10 @@ export const MyProjects = () => {
       >
         <div className="mb-10">
           <p className="font-playfair font-semibold text-4xl  dark:text-[#F3EFE0] text-[#30475E]">
-            <span className="dark:text-[#00FFB9] text-redhot">PRO</span>JECTS
+            <span className="dark:text-[#00FFB9] text-redhot">{staticData.projects}</span>
           </p>
           <div className="flex justify-center mt-5">
-            <LineGradient width="w-2/3" />
+            <LineGradient />
           </div>
         </div>
       </motion.div>
@@ -62,15 +65,15 @@ export const MyProjects = () => {
           }}
         >
           {/* ROW 1 */}
-          <div className={projectBox}>BEAUTIFUL USER INTERFACES</div>
+          <div className={projectBox}> {staticData.ux}</div>
 
           <div
             className="flex justify-center text-center items-center p-10 dark:bg-gradient-mint bg-gradient-purple
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold text-[#30475E]"
           >
-            SMOOTH USER EXPERIENCE
+             {staticData.smooth}
           </div>
-          <div className={projectBox}>DYANAMIC & STATIC</div>
+          <div className={projectBox}> {staticData.dynamic}</div>
         </motion.div>
       </div>
 
@@ -102,7 +105,7 @@ export const MyProjects = () => {
               />
             </div>
             <p className="dark:text-[#BEE0D6] text-black text-xl">
-Built a Drag-and-drop form builder, similar to Canva. Utilized technologies like Redux, Tailwind, OTP, and displayed data through graphs. Collaborated with cross-functional teams on multiple microservices. Acquired knowledge about libraries for internationalization, implementing changes for English and Arabic (Right to Left). Demonstrated experience in integrating and managing payment systems (Moyassar) within web applications. Wrote clean, maintainable code and developed helper functions and reusable components.
+            {staticData.sfb_desc}
             </p>
             <div className="flex flex-col xs:flex-row gap-2 pt-5">
               <a
@@ -111,7 +114,9 @@ Built a Drag-and-drop form builder, similar to Canva. Utilized technologies like
                 href="https://client-testing.sfb-app.com/workspace"
                 className={buttons}
               >
-                <button className={demoButtons}>Client Website</button>
+                <button className={demoButtons}>
+                {staticData.actions.website}
+                </button>
               </a>
 
             </div>
@@ -144,11 +149,7 @@ Built a Drag-and-drop form builder, similar to Canva. Utilized technologies like
               />
             </div>
             <p className="dark:text-[#BEE0D6] text-black text-xl">
-              Discover a captivating travel website that showcases real-time
-              posts from fellow travelers. This impressive full-stack app,
-              powered by Next.js 13, TypeScript, Prisma, and MongoDB, enables
-              users to store and explore a wide range of travel experiences
-              shared by new members joining the platform.
+            {staticData.travel_desc}
             </p>
             <div className="flex flex-col xs:flex-row gap-2 pt-5">
               <a
@@ -157,7 +158,7 @@ Built a Drag-and-drop form builder, similar to Canva. Utilized technologies like
                 href="https://travelguide1.netlify.app/"
                 className={buttons}
               >
-                <button className={demoButtons}>Demo website</button>
+                <button className={demoButtons}> {staticData.actions.demo}</button>
               </a>
 
               <a
@@ -172,7 +173,7 @@ Built a Drag-and-drop form builder, similar to Canva. Utilized technologies like
                     alt="github.png"
                     src={githubLogo}
                   />
-                  View Code
+                   {staticData.actions.view_code}
                 </button>
               </a>
             </div>
@@ -205,16 +206,14 @@ Built a Drag-and-drop form builder, similar to Canva. Utilized technologies like
               />
             </div>
             <p className="dark:text-[#BEE0D6] text-black text-xl">
-              HomeRun: Is a E-commerce website with custom backend entries and
-              secure payemnt linked with STRIPE payment method.It utilizes Redux
-              toolkit as state managment tool, Prisma and Tailwind CSS
+            {staticData.home_desc}
             </p>
             <div className="flex flex-col xs:flex-row gap-2 pt-5">
               <a
                 href="https://homerun-next.vercel.app/"
                 className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
               >
-                <button className={demoButtons}>Demo website</button>
+                <button className={demoButtons}> {staticData.actions.demo}</button>
               </a>
 
               <a
@@ -229,7 +228,7 @@ Built a Drag-and-drop form builder, similar to Canva. Utilized technologies like
                     alt="github.png"
                     src={githubLogo}
                   />
-                  View Code
+                   {staticData.actions.view_code}
                 </button>
               </a>
             </div>
@@ -263,20 +262,14 @@ Built a Drag-and-drop form builder, similar to Canva. Utilized technologies like
               />
             </div>
             <p className="dark:text-[#BEE0D6] text-black text-xl">
-              A 3D game that uses Threejs and Convex as a backend. The game is
-              responsive AI which allows for better immersion. You can look at
-              the crime scene, Speack with the medical examinar and then
-              confront the suspect!. Step into the shoes of a detective tasked
-              with solving a high-stakes case involving an AI culprit.
-              Interrogate, investigate, and uncover the truth to bring the rogue
-              AI to justice
+            {staticData.game_desc}
             </p>
             <div className="flex flex-col xs:flex-row gap-2 pt-5">
               <a
                 href="https://hackathon-pearl-theta.vercel.app/"
                 className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
               >
-                <button className={demoButtons}>Demo website</button>
+                <button className={demoButtons}> {staticData.actions.demo}</button>
               </a>
 
               <a
@@ -291,7 +284,7 @@ Built a Drag-and-drop form builder, similar to Canva. Utilized technologies like
                     alt="github.png"
                     src={githubLogo}
                   />
-                  View Code
+                   {staticData.actions.view_code}
                 </button>
               </a>
             </div>
@@ -324,10 +317,7 @@ Built a Drag-and-drop form builder, similar to Canva. Utilized technologies like
               />
             </div>
             <p className="dark:text-[#BEE0D6] text-black text-xl">
-              A modern movie website that showcases upcoming movies, provides
-              reviews and ratings and allows users to search. It utilizes Redux
-              Toolkit for state management and OAuth with Firebase for
-              authentication of users.
+            {staticData.series_desc}
             </p>
             <div className="flex flex-col xs:flex-row gap-2 pt-5">
               <a
@@ -336,7 +326,7 @@ Built a Drag-and-drop form builder, similar to Canva. Utilized technologies like
                 href="https://seriesonline.netlify.app/"
                 className={buttons}
               >
-                <button className={demoButtons}>Demo website</button>
+                <button className={demoButtons}> {staticData.actions.demo}</button>
               </a>
 
               <a
@@ -351,8 +341,7 @@ Built a Drag-and-drop form builder, similar to Canva. Utilized technologies like
                     alt="github.png"
                     src={githubLogo}
                   />
-                  View Code
-                </button>
+                   {staticData.actions.view_code}                </button>
               </a>
             </div>
           </div>
@@ -386,12 +375,7 @@ Built a Drag-and-drop form builder, similar to Canva. Utilized technologies like
               />
             </div>
             <p className="dark:text-[#BEE0D6] text-black text-xl ">
-              Contributed to an open source project. Code Racer, a community
-              project built with Next.js, Tailwind CSS, and TypeScript. Code
-              Racer is a multiplayer coding game where developers can compete
-              against each other to solve programming challenges in real-time.
-              Sharpen your coding skills, challenge your peers, and have fun
-              while racing against the clock!
+            {staticData.code_desc}
             </p>
 
             <div className="flex flex-col xs:flex-row gap-2 pt-5">
@@ -401,7 +385,7 @@ Built a Drag-and-drop form builder, similar to Canva. Utilized technologies like
                 href="https://code-racer-eight.vercel.app/"
                 className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
               >
-                <button className={demoButtons}>Demo website</button>
+                <button className={demoButtons}> {staticData.actions.demo}</button>
               </a>
 
               <a
@@ -416,7 +400,7 @@ Built a Drag-and-drop form builder, similar to Canva. Utilized technologies like
                     alt="github.png"
                     src={githubLogo}
                   />
-                  View Code
+                   {staticData.actions.view_code}
                 </button>
               </a>
             </div>
@@ -449,9 +433,7 @@ Built a Drag-and-drop form builder, similar to Canva. Utilized technologies like
               />
             </div>
             <p className="dark:text-[#BEE0D6] text-black text-xl ">
-              As part of the Superkick Branding team, I contributed to the
-              development of multiple modern websites that effectively rebranded
-              companies and aligned them with their missions.
+            {staticData.superkick_desc}
             </p>
 
             <div className="flex flex-col xs:flex-row gap-2 pt-5">
@@ -461,7 +443,7 @@ Built a Drag-and-drop form builder, similar to Canva. Utilized technologies like
                 href="https://superkickbranding.netlify.app/"
                 className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
               >
-                <button className={demoButtons}>Demo website</button>
+                <button className={demoButtons}> {staticData.actions.demo}</button>
               </a>
 
               <a
@@ -476,7 +458,7 @@ Built a Drag-and-drop form builder, similar to Canva. Utilized technologies like
                     alt="github.png"
                     src={githubLogo}
                   />
-                  View Code
+                   {staticData.actions.view_code}
                 </button>
               </a>
             </div>
@@ -510,12 +492,7 @@ Built a Drag-and-drop form builder, similar to Canva. Utilized technologies like
                 />
               </div>
               <p className="dark:text-[#BEE0D6] text-black text-xl">
-                Imaginify: Is a web platform that utilizes OpenAI's DALL-E API
-                to generate images based on prompts provided by the user.
-                <br></br>In addition to the AI-generated images, the app also
-                provides a library of high-definition, royalty-free images from
-                Unsplash, allowing users to browse and download images to use in
-                their projects.
+              {staticData.imaginify_desc}
               </p>
               <div className="flex flex-col xs:flex-row gap-2 pt-5">
                 <a
@@ -524,7 +501,7 @@ Built a Drag-and-drop form builder, similar to Canva. Utilized technologies like
                   href="https://imaginify.netlify.app/"
                   className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
                 >
-                  <button className={demoButtons}>Demo website</button>
+                  <button className={demoButtons}> {staticData.actions.demo}</button>
                 </a>
 
                 <a
@@ -539,7 +516,7 @@ Built a Drag-and-drop form builder, similar to Canva. Utilized technologies like
                       alt="github.png"
                       src={githubLogo}
                     />
-                    View Code
+                     {staticData.actions.view_code}
                   </button>
                 </a>
               </div>
@@ -574,12 +551,7 @@ Built a Drag-and-drop form builder, similar to Canva. Utilized technologies like
                 />
               </div>
               <p className="dark:text-[#BEE0D6] text-black text-xl">
-                {' '}
-                Renewbe: A community-driven platform to support local clean
-                energy, save money and help environmental NGOs Subscribe to use
-                or rent a solar panel in a remote location to support clean
-                energy in your country and save money from your electricity
-                bill.
+              {staticData.renewbe_desc}
               </p>
 
               <div className="flex flex-col xs:flex-row gap-2 pt-5">
@@ -589,7 +561,7 @@ Built a Drag-and-drop form builder, similar to Canva. Utilized technologies like
                   href="https://renewbe.netlify.app/"
                   className="hover:opacity-[0.8] transition duration-500 hover:scale-[1.1]"
                 >
-                  <button className={demoButtons}>Demo website</button>
+                  <button className={demoButtons}> {staticData.actions.demo}</button>
                 </a>
 
                 <a
@@ -604,7 +576,7 @@ Built a Drag-and-drop form builder, similar to Canva. Utilized technologies like
                       alt="github.png"
                       src={githubLogo}
                     />
-                    View Code
+                     {staticData.actions.view_code}
                   </button>
                 </a>
               </div>

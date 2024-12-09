@@ -4,13 +4,19 @@ import marinPhoto from '../assets/marina-photo.png';
 import juxhinaPhoto from '../assets/juxhina-photo.png';
 import bernardPhoto from '../assets/bernard-photo.jfif';
 import MattPhoto from '../assets/Matt.jpeg';
+import { useTranslation } from 'react-i18next';
+import { getLangDir } from '../helpers/getLang-service';
+import { getLang } from '../helpers/localStorageService';
 
 export const Testimonials = () => {
+  const { t } = useTranslation();
+  const staticData: any = t("lists");
+
   return (
-    <section id="testimonials" className="pt-20 pb-16">
+    <section id="testimonials" className="pt-20 pb-16"     style={{direction:getLangDir()}}>
       {/* HEADING */}
       <motion.div
-        className="md:w-1/3 text-center md:text-left"
+        className={`md:w-1/3 text-center ${getLang()==="en"? "md:text-left": "md:text-right"}`}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -21,11 +27,11 @@ export const Testimonials = () => {
         }}
       >
         <p className="font-playfair font-semibold text-4xl mb-5 dark:text-[#00FFB9] text-redhot ">
-          TESTIMONIALS
+          {staticData.testimonials}
         </p>
-        <LineGradient width="mx-auto w-2/5" />
+        <LineGradient />
         <p className="mt-10 mb-14 text-l text-xl dark:text-[#BEE0D6] text-black">
-          Here's What People are Saying About My Work.
+        {staticData.testimonials_desc}      
         </p>
       </motion.div>
 
@@ -55,14 +61,11 @@ export const Testimonials = () => {
             <div className="flex flex-row">
               <p className="font-playfair text-6xl">“</p>
               <p className="text-center text-xl mt-5 ">
-                Muhammad extraordinarily contributed to the successful results.
-                I thus can recommend Muhammad as an enduring, focused, and
-                creative team player that is essential for successful innovation
-                challenges.
+              {staticData.bernard} 
               </p>
             </div>
             <p className="text-center text-l italic mt-5 ">
-              R&D - Fachexperte Produktdigitalisierung bei Lindner Recyclingtech
+            {staticData.bernard_comp} 
             </p>
           </div>
         </motion.a>
@@ -89,13 +92,11 @@ export const Testimonials = () => {
             <div className="flex flex-row">
               <p className="font-playfair text-6xl">“</p>
               <p className="text-center text-xl mt-5 ">
-                Muhammad has done excellent work for my company and its clients.
-                He takes direction well and delivers work on time and with
-                results that clients have been thrilled with.
+              {staticData.max}
               </p>
             </div>
             <p className="text-center text-l italic mt-10 ">
-              Marketing Director, Co Founder at Superkick Branding
+            {staticData.max_comp}
             </p>
           </div>
         </motion.a>
@@ -124,14 +125,11 @@ export const Testimonials = () => {
               <p className="font-playfair text-6xl pl-2">“</p>
 
               <p className="text-center text-xl mt-5 ">
-                Muhammad is a very creative web developer. His passion for his
-                profession translates into his enthusiasm to provide a great
-                service and product, his diligence and his positivism toward
-                larger goals.
+              {staticData.juxhina}
               </p>
             </div>
             <p className="text-center text-l italic mt-5">
-              Content Marketing Team Lead at Empact Partners
+            {staticData.juxhina_comp}
             </p>
           </div>
         </motion.a>
@@ -160,15 +158,11 @@ export const Testimonials = () => {
               <p className="font-playfair text-6xl pl-2">“</p>
 
               <p className="text-center text-xl mt-5 ">
-                I was positively surprised by how quickly he could adapt to
-                changes and new ideas and by how he could always put his tech
-                and design skills into practice. But most importantly, he is a
-                kind and committed fellow who will bring great energy to any
-                team.
+              {staticData.marina}
               </p>
             </div>
             <p className="text-center text-l italic mt-5">
-              Copyeditor at CNN en Español
+            {staticData.marina_comp}
             </p>
           </div>
         </motion.a>

@@ -12,7 +12,9 @@
     "cra-template": "1.2.0",
     "framer-motion": "^8.2.4",
     "gsap": "^3.11.4",
-    "i18next": "^23.5.1",
+    "i18next": "^23.16.8",
+    "i18next-browser-languagedetector": "^8.0.1",
+    "i18next-http-backend": "^3.0.1",
     "mouse-follower": "^1.1.2",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
@@ -50,6 +52,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-anchor-link-smooth-scroll": "^1.0.5",
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.25.3",

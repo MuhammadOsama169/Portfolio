@@ -1,21 +1,20 @@
-import './App.css';
-import React, { useState, useEffect } from 'react';
-import useMediaQuery from './hooks/useMediaQuery';
-import { Navbar } from './scenes/Navbar';
-import DotGroup from './scenes/DotGroup';
-import { Landing } from './scenes/Landing';
-import { LineGradient } from './components/LineGradient';
-import { MySkills } from './scenes/MySkills';
-import { Testimonials } from './scenes/Testimonials';
-import { About } from './scenes/About';
-import { motion } from 'framer-motion';
-import { MyProjects } from './scenes/MyProjects';
+import "./App.css";
+import React, { useState, useEffect } from "react";
+import useMediaQuery from "./hooks/useMediaQuery";
+import { Navbar } from "./scenes/Navbar";
+import DotGroup from "./scenes/DotGroup";
+import { Landing } from "./scenes/Landing";
+import { LineGradient } from "./components/LineGradient";
+import { MySkills } from "./scenes/MySkills";
+import { Testimonials } from "./scenes/Testimonials";
+import { About } from "./scenes/About";
+import { motion } from "framer-motion";
+import { MyProjects } from "./scenes/MyProjects";
 
 export const App = () => {
-
   // Scroll
-  const [selectedPage, setSelectedPage] = useState('home');
-  const isAboveMediumScreens = useMediaQuery('(min-width:1080px)');
+  const [selectedPage, setSelectedPage] = useState("home");
+  const isAboveMediumScreens = useMediaQuery("(min-width:1080px)");
 
   const [IsTopOfPage, setIsTopOfPage] = useState(true);
 
@@ -23,12 +22,12 @@ export const App = () => {
     const handleScroll = () => {
       if (window.scrollY === 0) {
         setIsTopOfPage(true);
-        setSelectedPage('home');
+        setSelectedPage("home");
       }
       if (window.scrollY !== 0) setIsTopOfPage(false);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -48,7 +47,7 @@ export const App = () => {
         )}
         <motion.div
           viewport={{ once: true, amount: 1 }}
-          onViewportEnter={() => setSelectedPage('home')}
+          onViewportEnter={() => setSelectedPage("home")}
         >
           <Landing />
         </motion.div>
@@ -57,7 +56,7 @@ export const App = () => {
       <div className=" w-5/6 mx-auto md:h-full">
         <motion.div
           viewport={{ once: true, amount: 1 }}
-          onViewportEnter={() => setSelectedPage('skills')}
+          onViewportEnter={() => setSelectedPage("skills")}
         >
           <MySkills />
         </motion.div>
@@ -66,7 +65,7 @@ export const App = () => {
       <div className=" w-5/6 mx-auto ">
         <motion.div
           viewport={{ once: true, amount: 1 }}
-          onViewportEnter={() => setSelectedPage('projects')}
+          onViewportEnter={() => setSelectedPage("projects")}
         >
           <MyProjects />
         </motion.div>
@@ -76,7 +75,7 @@ export const App = () => {
       <div className=" w-5/6 mx-auto ">
         <motion.div
           viewport={{ once: true, amount: 1 }}
-          onViewportEnter={() => setSelectedPage('testimonials')}
+          onViewportEnter={() => setSelectedPage("testimonials")}
         >
           <Testimonials />
         </motion.div>
@@ -86,7 +85,7 @@ export const App = () => {
       <div className=" w-5/6 mx-auto ">
         <motion.div
           viewport={{ once: true, amount: 1 }}
-          onViewportEnter={() => setSelectedPage('about')}
+          onViewportEnter={() => setSelectedPage("about")}
         >
           <About />
         </motion.div>

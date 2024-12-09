@@ -1,27 +1,36 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { Autoplay, Pagination, Navigation } from 'swiper';
-import { motion } from 'framer-motion';
-import { LineGradient } from '../components/LineGradient';
-import { Journey } from '../components/Journey';
-import SocialMediaIcons from '../components/SocialMediaIcons';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Autoplay, Pagination, Navigation } from "swiper";
+import { motion } from "framer-motion";
+import { LineGradient } from "../components/LineGradient";
+import SocialMediaIcons from "../components/SocialMediaIcons";
 
-import Img1 from '../assets/efa.jpg';
-import Img3 from '../assets/team.jpg';
-import Img4 from '../assets/climathon.jpg';
-import Img5 from '../assets/efa-trophy.jpg';
-import Img6 from '../assets/tech-lead.jpg';
-import Img7 from '../assets/mena.png';
-import Img8 from '../assets/leap.jpg';
+import Img1 from "../assets/efa.jpg";
+import Img3 from "../assets/team.jpg";
+import Img4 from "../assets/climathon.jpg";
+import Img5 from "../assets/efa-trophy.jpg";
+import Img6 from "../assets/tech-lead.jpg";
+import Img7 from "../assets/mena.png";
+import Img8 from "../assets/leap.jpg";
 
-import './AboutMe.css';
+import "./AboutMe.css";
+import { useTranslation } from "react-i18next";
+import { getLangDir } from "../helpers/getLang-service";
+import { getLang } from "../helpers/localStorageService";
 
 export const About = () => {
+  const { t } = useTranslation();
+  const staticData: any = t("lists");
+
   return (
-    <section id="about" className="md:w-[80%] mx-auto text-center mt-5">
+    <section
+      id="about"
+      className="md:w-[80%] mx-auto text-center mt-5"
+      style={{ direction: getLangDir() }}
+    >
       {/* <p className="font-playfair font-semibold text-4xl  dark:text-white text-black md:mt-0 mt-10">
         About
         <span className="dark:text-[#00FFB9] text-[#FF165D]">&nbsp;Me</span>
@@ -41,14 +50,15 @@ export const About = () => {
         >
           <div className="mb-10">
             <p className="font-playfair font-semibold text-4xl  dark:text-white text-black text-start md:mt-0 mt-10 break-words">
-              My
+              {staticData.my}
               <span className="dark:text-[#00FFB9] text-[#FF165D]">
-                &nbsp;ACHIEVEMENTS&nbsp;
+                &nbsp;{staticData.my_achivements}&nbsp;
               </span>
-              & More!
             </p>
-            <div className="flex justify-end mt-5">
-              <LineGradient  />
+            <div className="flex  mt-5">
+              <LineGradient
+                width={`${getLang() === "en" ? "w-[80%]" : "w-[60%]"}`}
+              />
             </div>
           </div>
         </motion.div>
@@ -66,10 +76,10 @@ export const About = () => {
             navigation
             modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper "
-          > 
-                  <SwiperSlide className="flex flex-col">
+          >
+            <SwiperSlide className="flex flex-col">
               <p className=" mb-[50px] md:mb-[20px] font-light md:text-3xl  dark:text-white text-black">
-                Presented Sustainable Form Builder at
+                {staticData.present_sfb}
                 <span className="dark:text-[#00FFB9] text-[#C490E4] font-medium">
                   &nbsp; MENA 2024
                 </span>
@@ -78,65 +88,64 @@ export const About = () => {
             </SwiperSlide>
             <SwiperSlide className="flex flex-col">
               <p className=" mb-[50px] md:mb-[20px] font-light md:text-3xl  dark:text-white text-black">
-                Presented Sustainable Form Builder at
+                {staticData.present_sfb}
                 <span className="dark:text-[#00FFB9] text-[#C490E4] font-medium">
                   &nbsp; LEAP 2024
                 </span>
               </p>
               <img src={Img8} alt="" />
             </SwiperSlide>
-          <SwiperSlide className="flex flex-col">
-          <p className=" mb-[50px] md:mb-[20px] font-light md:text-3xl  dark:text-white text-black">
-            Experience in working with
-            <span className="dark:text-[#00FFB9] text-[#C490E4] font-medium">
-              &nbsp;Teams.
-            </span>
-          </p>
-          <img src={Img3} alt="" />
-        </SwiperSlide>
+            <SwiperSlide className="flex flex-col">
+              <p className=" mb-[50px] md:mb-[20px] font-light md:text-3xl  dark:text-white text-black">
+                {staticData.exp_working}
+                <span className="dark:text-[#00FFB9] text-[#C490E4] font-medium">
+                  &nbsp;{staticData.teams}
+                </span>
+              </p>
+              <img src={Img3} alt="" />
+            </SwiperSlide>
 
             <SwiperSlide className="flex flex-col ">
-              <p className=" mb-[20px] font-light md:text-3xl  dark:text-[#BEE0D6] text-black text-center md:text-left">
-                Tech lead for Renewbe , Co-founder and
+              <p
+                className={`mb-[20px] font-light md:text-3xl  dark:text-[#BEE0D6] text-black text-center `}
+              >
+                {staticData.tech_lead_renewbe}
                 <span className="dark:text-[#00FFB9] text-[#C490E4]  font-medium">
-                  &nbsp; Developer &nbsp;
+                  &nbsp; {staticData.developer} &nbsp;
                 </span>
-                for Renewbe
+                {staticData.for_renewbe}
               </p>
               <img className="swiper-first-slide" src={Img1} alt="" />
             </SwiperSlide>
 
             <SwiperSlide className="flex flex-col">
               <p className=" mb-[20px] font-light md:text-3xl dark:text-white text-black">
-                Participated in
+                {staticData.participated}
                 <span className="dark:text-[#00FFB9] text-[#C490E4]  font-medium">
                   &nbsp; Climathon Zurich &nbsp;
                 </span>
-                with other team mates
               </p>
               <img src={Img4} alt="" />
             </SwiperSlide>
             <SwiperSlide className="flex flex-col">
               <p className=" mb-[20px] font-light md:text-3xl  dark:text-white text-black text-center">
-                Renewbe compnay I
+                {staticData.renewbe_company_i}
                 <b className="dark:text-[#00FFB9] text-[#C490E4]  font-medium">
-                  &nbsp;Co-founded &nbsp;
+                  &nbsp;{staticData.won} &nbsp;
                 </b>
-                won{' '}
                 <b className="text-[#FFD700] font-medium">
-                  &nbsp;First Prize&nbsp;
+                  &nbsp;{staticData.first_prize}&nbsp;
                 </b>
-                in the European Forum Alpbach along with seed fund, Renewbe was
-                the first prize winner during the European Forum Alpbach
+                {staticData.efa}
               </p>
               <img src={Img5} alt="" />
             </SwiperSlide>
             <SwiperSlide className="flex flex-col">
               <p className=" mb-[20px] font-light md:text-3xl  dark:text-white text-black">
                 <span className="dark:text-[#00FFB9] text-[#C490E4]  font-medium">
-                  &nbsp; Tech Lead &nbsp;
-                </span>{' '}
-                for Hult Prize Austria
+                  &nbsp; {staticData.tech_lead}&nbsp;
+                </span>
+                {staticData.for_hult}
               </p>
               <img src={Img6} alt="" />
             </SwiperSlide>
@@ -145,8 +154,7 @@ export const About = () => {
       </div>
       <div className="md:mt-10 mt-5">
         <p className="font-playfair font-semibold text-4xl  dark:text-white text-black md:mt-0 ">
-          Discover More About
-          <span className="dark:text-[#00FFB9] text-[#FF165D]">&nbsp;Me</span>
+          {staticData.discover}
         </p>
         <div className="flex justify-center">
           <SocialMediaIcons />
