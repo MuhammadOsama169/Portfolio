@@ -24,6 +24,7 @@
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.11.0",
     "react-scripts": "5.0.1",
+    "react-scroll-parallax": "^3.4.5",
     "swiper": "^8.4.5",
     "typewriter-effect": "^2.19.0"
   },

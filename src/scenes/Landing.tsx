@@ -6,6 +6,8 @@ import ProfileImg from "../assets/cover-image.jpg";
 import Typewriter from "typewriter-effect";
 import { useTranslation } from "react-i18next";
 import { getLangDir } from "../helpers/getLang-service";
+import Card from "../components/Card";
+import { Parallax } from "react-scroll-parallax";
 
 export const Landing = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
@@ -19,54 +21,23 @@ export const Landing = () => {
       className="md:flex md:justify-between md:h-full py-10"
       style={{ direction: getLangDir() }}
     >
-      <div className="md:order-2 flex basis-1/2 md:mt-[200px] mt-16 z-10 ">
-        {isAboveMediumScreens ? (
-          <div>
-            <div className="absolute">
-              <img
-                className=" rounded-lg w-[500px] top-0"
-                alt="profile"
-                src={ProfileImg}
-              />
-            </div>
-          </div>
-        ) : (
-          <div className="z-10 w-full max-w-[400px] md:max-w-[500px]">
-            <img alt="profile" src={ProfileImg} />
-          </div>
-        )}
+      <div className=" basis-2/5 flex justify-end  md:mt-32">
+        <Card />
       </div>
-
-      {/* MAIN SECTION */}
-      <div className="z-30 basis-2/5 mt-12 md:mt-32">
-        {/* HEADING */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, x: -50 },
-            visible: { opacity: 1, x: 0 },
-          }}
-        >
-          <span className="text-6xl font-playfair z-10 text-center md:text-start flex flex-col  dark:text-[#F3EFE0] text-black">
-            {staticData.muhammad}
-            <Typewriter
-              options={{
-                strings: [`< ${staticData.osama}/>`],
-                autoStart: true,
-                loop: true,
-              }}
-            />
-          </span>
-          <p className="mt-10 pt-5 mb-7 text-lg text-center md:text-start font-opensans dark:text-[#BEE0D6] text-[#30475E]">
-            {staticData.bio}
-          </p>
-        </motion.div>
+      <section className="md:order-2 flex flex-col font-popins basis-1/2 mt-28 h-full">
+        <h1 className="font-bold text-[94px]">FRONTEND</h1>
+        <h1 className="text-[#353334] font-bold text-[94px]">DEVELOPER</h1>
+        <p>
+          With expertise in React, Next.js, Redux Toolkit, and Tailwind CSS.
+          Recently, I led a team of three developers at Sustainable Star LLC,
+          delivering innovative solutions for microservices and data
+          visualization. I am Passionate about creating impactful digital
+          experiences.
+        </p>
+        <p>Let’s build something great together!</p>
         {/* CALL TO ACTIONS */}
         <motion.div
-          className="flex mt-5 justify-center md:justify-start"
+          className="flex gap-4 justify-center md:justify-start mt-4"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -88,22 +59,7 @@ export const Landing = () => {
             </button>
           </a>
         </motion.div>
-
-        {/* SOCIAL MEDIAL SECTION */}
-        <motion.div
-          className="flex mt-5 justify-center md:justify-start"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, x: -50 },
-            visible: { opacity: 1, x: 0 },
-          }}
-        >
-          <SocialMediaIcons />
-        </motion.div>
-      </div>
+      </section>
     </section>
   );
 };

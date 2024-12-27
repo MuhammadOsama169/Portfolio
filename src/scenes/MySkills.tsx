@@ -1,146 +1,35 @@
 import React from "react";
-import { LineGradient } from "../components/LineGradient";
-import { motion } from "framer-motion";
-import { Slider } from "../components/Slider";
 import { useTranslation } from "react-i18next";
 import { getLangDir } from "../helpers/getLang-service";
+import { Parallax } from "react-scroll-parallax";
+import { SkillCards } from "../components/SkillCards";
+import { motion } from "framer-motion";
 
 export const MySkills = () => {
   const { t } = useTranslation();
   const staticData: any = t("lists");
 
   return (
-
-      <section
-        id="skills"
-        className="pt-0 pb-24"
-        style={{ direction: getLangDir() }}
-      >
-        <div className="md:flex md:justify-between md:gap-16 mt-32">
-          <motion.div
-            className="md:w-1/3"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.5 }}
-            variants={{
-              hidden: { opacity: 0, x: -50 },
-              visible: { opacity: 1, x: 0 },
-            }}
-          >
-            <p className="font-playfair font-semibold text-4xl mb-5  dark:text-[#F3EFE0] text-black">
-              {staticData.my}
-              <span className="dark:text-[#00FFB9] text-redhot">
-                {" "}
-                {staticData.skills}
-              </span>
-            </p>
-            <LineGradient />
-          </motion.div>
-        </div>
-
-        {/* SKILLS */}
-        <div className="md:flex md:justify-between mt-16 gap-32">
-          {/* EXPERIENCE */}
-          <motion.div
-            className="md:w-1/3 mt-10"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.5 }}
-            variants={{
-              hidden: { opacity: 0, y: 50 },
-              visible: { opacity: 1, y: 0 },
-            }}
-          >
-            <div className="relative h-32  dark:text-white text-black">
-              <div className="z-10">
-                <p className="font-playfair font-semibold text-5xl text-[#F8485E]  dark:text-white">
-                  01
-                </p>
-                <p className="font-playfair font-semibold text-3xl mt-3 dark:text-[#F3EFE0] text-[#30475E]">
-                  {staticData.exp}
-                </p>
-              </div>
-              <div className="w-1/2 md:w-3/4 h-32 dark:bg-[#8a508f] bg-[#CDF0EA] absolute right-0 top-0 z-[-1]" />
-            </div>
-          </motion.div>
-
-          {/* INNOVATIVE */}
-          <motion.div
-            className="md:w-1/3 mt-10  dark:text-white text-black"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            variants={{
-              hidden: { opacity: 0, y: 50 },
-              visible: { opacity: 1, y: 0 },
-            }}
-          >
-            <div className="relative h-32 ">
-              <div className="z-10">
-                <p className="font-playfair font-semibold text-5xl text-[#F8485E] dark:text-white">
-                  02
-                </p>
-                <p className="font-playfair font-semibold text-3xl mt-3 dark:text-[#F3EFE0] text-[#30475E]">
-                  {staticData.innovation}
-                </p>
-              </div>
-              <div className="w-1/2 md:w-3/4 h-32 dark:bg-[#ff6361] bg-[#F6C6EA] absolute right-0 top-0 z-[-1]" />
-            </div>
-          </motion.div>
-          {/* IMAGINATIVE */}
-          <motion.div
-            className="md:w-1/3 mt-10  dark:text-white text-black"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.4, duration: 0.5 }}
-            variants={{
-              hidden: { opacity: 0, y: 50 },
-              visible: { opacity: 1, y: 0 },
-            }}
-          >
-            <div className="relative h-32">
-              <div className="z-10">
-                <p className="font-playfair font-semibold text-5xl text-[#F8485E] dark:text-white">
-                  03
-                </p>
-                <p className="font-playfair font-semibold text-3xl mt-3 dark:text-[#F3EFE0] text-[#30475E]">
-                  {staticData.imaginative}
-                </p>
-              </div>
-              <div className="w-1/2 md:w-3/4 h-32 dark:bg-[#ff8531] bg-[#C490E4] absolute right-0 top-0 z-[-1]" />
-            </div>
-          </motion.div>
-        </div>
-        {/* TEXT */}
-        <p className="font-opensans font-semibold text-center pt-20  dark:text-[#F3EFE0] text-black text-2xl mb-5">
-          {staticData.use}
-        </p>
+    <main className=" flex flex-col font-popins  mt-28 ">
+      <section className="grid grid-cols-2">
         <motion.div
+          className="font-bold text-[94px] "
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
+          transition={{ duration: 0.5 }}
           variants={{
-            hidden: { opacity: 0, y: 50 },
+            hidden: { opacity: 0, y: -50 },
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <Slider />
+          <h1>USED TOOLS</h1>
+          <h1 className="text-[#353334]"> AND SKILLS</h1>
         </motion.div>
-        <p className="font-opensans text-center text-lg p-4 py-20 font-medium flex flex-col md:flex-row justify-center  dark:text-[#F3EFE0] text-black items-center">
-          <span className="">{staticData.to_create}&nbsp;</span>
-          <span className=" text-[#30475E] font-bold text-2xl">
-            {staticData.beautiful} &nbsp;
-          </span>
-          <span className="dark:text-[#F3EFE0]">&</span>
-          <span className=" font-bold text-2xl dark:text-[#00FFB9] text-redhot">
-            &nbsp; {staticData.responsive}
-          </span>
-        </p>
+        <div className=" grid grid-cols-2 gap-4">
+          <SkillCards />
+        </div>
       </section>
+    </main>
   );
 };
