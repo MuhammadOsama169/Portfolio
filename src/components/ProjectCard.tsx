@@ -1,5 +1,4 @@
 import React from "react";
-
 import githubLogo from "../assets/github-logo.png";
 import { useTranslation } from "react-i18next";
 import { projectType } from "../types/ProjectType";
@@ -31,7 +30,7 @@ hover:bg-blue hover:text-white transition duration-500`;
       <div className="md:basis-[60%]  md:mb-10">
         <div className=" md:basis-[40%] md:order-1 mb-3">
           <img
-            className="pt-10 md:pt-0 w-[80px]"
+            className="pt-10 md:pt-0 max-h-[80px] max-w-[200px]"
             alt="sfb.png"
             src={data.logo}
           />
@@ -39,7 +38,7 @@ hover:bg-blue hover:text-white transition duration-500`;
         <p className="dark:text-[#BEE0D6] text-black text-xl">
           {staticData[data.title]}
         </p>
-        <p className="dark:text-[#BEE0D6] text-black text-xl">
+        <p className="dark:text-[#BEE0D6] text-black text-xl w-[90%]">
           {staticData[data.description]}
         </p>
         <div className="flex flex-col xs:flex-row gap-2 pt-5">
@@ -51,22 +50,23 @@ hover:bg-blue hover:text-white transition duration-500`;
           >
             <button className={demoButtons}>{staticData.actions.demo}</button>
           </a>
-
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href={data.githubUrl}
-            className={buttons}
-          >
-            <button className="dark:bg-[#F3EFE0]  text-black bg-white w-full p-3 flex flex-row  hover:bg-blue  transition duration-500 text-center align-middle items-center justify-center">
-              <img
-                className="w-[30px] xs:w-[25px] xs:h-[27px] mr-2"
-                alt="github.png"
-                src={githubLogo}
-              />
-              {staticData.actions.view_code}
-            </button>
-          </a>
+          {data.githubUrl && (
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href={data.githubUrl}
+              className={buttons}
+            >
+              <button className="dark:bg-[#F3EFE0]  text-black bg-white w-full p-3 flex flex-row  hover:bg-blue  transition duration-500 text-center align-middle items-center justify-center">
+                <img
+                  className="w-[30px] xs:w-[25px] xs:h-[27px] mr-2"
+                  alt="github.png"
+                  src={githubLogo}
+                />
+                {staticData.actions.view_code}
+              </button>
+            </a>
+          )}
         </div>
       </div>
     </div>

@@ -9,11 +9,13 @@ export const SkillCards = () => {
           <img
             alt={skill.title}
             src={skill.image}
-            className="rounded-sm w-[60px] "
+            className="rounded-sm w-[60px] h-[50px] xl:h-auto"
           />
           <div className="font-popins">
-            <p className="font-bold text-md">{skill.title}</p>
-            <p className="text-sm text-[#757575]">{skill.description}</p>
+            <p className="font-bold xl:text-md text-sm">{skill.title}</p>
+            <p className="xl:text-sm text-[10px] text-[#757575]">
+              {skill.description}
+            </p>
           </div>
         </div>
       ))}

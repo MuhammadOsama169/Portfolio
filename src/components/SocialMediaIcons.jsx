@@ -4,8 +4,6 @@ import {
   faGitlab,
   faLinkedin,
   faInstagram,
-  faFacebook,
-  faBehance,
 } from "@fortawesome/fontawesome-free-brands";
 
 const SocialMediaIcons = () => {

@@ -8,19 +8,16 @@ export const LinkComponent = ({
   setSelectedPage,
   keyName,
 }: LinkTypes) => {
-    console.log(page,'page')
-
-    const handleNavigate = ()=>{
-        console.log(keyName,'keyName')
-        setSelectedPage(keyName)
-    }
+  const handleNavigate = () => {
+    setSelectedPage(keyName);
+  };
   return (
     <AnchorLink
       className={`${
         selectedPage === keyName ? "dark:text-[#00FFB9] text-redhot" : ""
       }
           hover:text-[#FF165D] transition duration-500 `}
-    //   href={`#${keyName}`}
+      href={`#${keyName}`}
       onClick={handleNavigate}
     >
       {page}
