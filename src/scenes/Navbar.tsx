@@ -13,7 +13,6 @@ import { useTranslation } from "react-i18next";
 import { getLangDir } from "../helpers/getLang-service";
 import { LinkComponent } from "../components/LinkComponent";
 
-
 export const Navbar = ({
   IsTopOfPage,
   selectedPage,
@@ -177,7 +176,7 @@ export const Navbar = ({
           >
             {/* Close Icon */}
 
-            <div className="flex justify-end p-12">
+            <div className="flex justify-end p-6">
               <button onClick={() => setIsMediaToggled(!isMenuToggled)}>
                 <img className=" h-[40px]" alt="close icon" src={CloseIcon} />
               </button>
@@ -193,7 +192,6 @@ export const Navbar = ({
               }}
               transition={{ type: "spring", bounce: 0, duration: 0.8 }}
             >
-              ''
               <div
                 className={`flex flex-col gap-10  text-2xl text-white ${
                   getLang() === "en" ? "ml-[25%]" : "mr-[25%]"
@@ -259,7 +257,7 @@ export const Navbar = ({
                       direction: `${getLang() === "ar" ? "ltr" : "rtl"}`,
                     }}
                   >
-                    <p className="p-2 text-primary">{langTitle}</p>
+                    <p className="p-2 text-sm">{langTitle}</p>
                   </button>
                 </div>
               </div>

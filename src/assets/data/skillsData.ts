@@ -29,7 +29,7 @@ export const skills = [
     level: "Advanced",
   },
   {
-    title: "Moyasser Payment Gateway",
+    title: "Moyasser",
     image: moyassar,
     description: "Secure payment processing.",
     level: "Intermediate",

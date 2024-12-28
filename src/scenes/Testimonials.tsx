@@ -1,22 +1,28 @@
-import { LineGradient } from '../components/LineGradient';
-import { motion } from 'framer-motion';
-import marinPhoto from '../assets/marina-photo.png';
-import juxhinaPhoto from '../assets/juxhina-photo.png';
-import bernardPhoto from '../assets/bernard-photo.jfif';
-import MattPhoto from '../assets/Matt.jpeg';
-import { useTranslation } from 'react-i18next';
-import { getLangDir } from '../helpers/getLang-service';
-import { getLang } from '../helpers/localStorageService';
+import { LineGradient } from "../components/LineGradient";
+import { motion } from "framer-motion";
+import marinPhoto from "../assets/marina-photo.png";
+import juxhinaPhoto from "../assets/juxhina-photo.png";
+import bernardPhoto from "../assets/bernard-photo.jfif";
+import MattPhoto from "../assets/Matt.jpeg";
+import { useTranslation } from "react-i18next";
+import { getLangDir } from "../helpers/getLang-service";
+import { getLang } from "../helpers/localStorageService";
 
 export const Testimonials = () => {
   const { t } = useTranslation();
   const staticData: any = t("lists");
 
   return (
-    <section id="testimonials" className="pt-20 pb-16"     style={{direction:getLangDir()}}>
+    <section
+      id="testimonial"
+      className="pt-20 pb-16"
+      style={{ direction: getLangDir() }}
+    >
       {/* HEADING */}
       <motion.div
-        className={`md:w-1/3 text-center ${getLang()==="en"? "md:text-left": "md:text-right"}`}
+        className={`md:w-1/3 text-center ${
+          getLang() === "en" ? "md:text-left" : "md:text-right"
+        }`}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -31,7 +37,7 @@ export const Testimonials = () => {
         </p>
         <LineGradient />
         <p className="mt-10 mb-14 text-l text-xl dark:text-[#BEE0D6] text-black">
-        {staticData.testimonials_desc}      
+          {staticData.testimonials_desc}
         </p>
       </motion.div>
 
@@ -60,12 +66,10 @@ export const Testimonials = () => {
             />
             <div className="flex flex-row">
               <p className="font-playfair text-6xl">“</p>
-              <p className="text-center text-xl mt-5 ">
-              {staticData.bernard} 
-              </p>
+              <p className="text-center text-xl mt-5 ">{staticData.bernard}</p>
             </div>
             <p className="text-center text-l italic mt-5 ">
-            {staticData.bernard_comp} 
+              {staticData.bernard_comp}
             </p>
           </div>
         </motion.a>
@@ -91,12 +95,10 @@ export const Testimonials = () => {
             />
             <div className="flex flex-row">
               <p className="font-playfair text-6xl">“</p>
-              <p className="text-center text-xl mt-5 ">
-              {staticData.max}
-              </p>
+              <p className="text-center text-xl mt-5 ">{staticData.max}</p>
             </div>
             <p className="text-center text-l italic mt-10 ">
-            {staticData.max_comp}
+              {staticData.max_comp}
             </p>
           </div>
         </motion.a>
@@ -124,12 +126,10 @@ export const Testimonials = () => {
             <div className="flex flex-row">
               <p className="font-playfair text-6xl pl-2">“</p>
 
-              <p className="text-center text-xl mt-5 ">
-              {staticData.juxhina}
-              </p>
+              <p className="text-center text-xl mt-5 ">{staticData.juxhina}</p>
             </div>
             <p className="text-center text-l italic mt-5">
-            {staticData.juxhina_comp}
+              {staticData.juxhina_comp}
             </p>
           </div>
         </motion.a>
@@ -157,12 +157,10 @@ export const Testimonials = () => {
             <div className="flex flex-row">
               <p className="font-playfair text-6xl pl-2">“</p>
 
-              <p className="text-center text-xl mt-5 ">
-              {staticData.marina}
-              </p>
+              <p className="text-center text-xl mt-5 ">{staticData.marina}</p>
             </div>
             <p className="text-center text-l italic mt-5">
-            {staticData.marina_comp}
+              {staticData.marina_comp}
             </p>
           </div>
         </motion.a>

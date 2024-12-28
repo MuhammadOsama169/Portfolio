@@ -67,7 +67,7 @@ export const App = () => {
         <div className=" w-5/6 mx-auto ">
           <motion.div
             viewport={{ once: true, amount: 1 }}
-            onViewportEnter={() => setSelectedPage("projects")}
+            onViewportEnter={() => setSelectedPage("project")}
           >
             <MyProjects />
           </motion.div>

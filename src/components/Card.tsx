@@ -14,7 +14,7 @@ const Card = () => {
             alt="Profile"
             className="w-[280px] h-[280px]  py-4 px-8 rounded-xl "
           />
-          <div className="absolute top-0 right-10 transform translate-x-[-90%] -translate-y-1/2 w-[150px] h-[150px] border-[3px] border-dashed border-orange-500 rounded-full"></div>
+          <div className="absolute top-0 right-10 transform translate-x-[-90%] -translate-y-1/2 w-[150px] h-[150px] border-[5px] border-dashed border-orange-500 rounded-full"></div>
         </div>
       </section>
 

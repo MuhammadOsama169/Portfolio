@@ -10,8 +10,8 @@ export const MyProjects = () => {
 
   return (
     <section
-      id="projects"
-      className="pt-20 pb-48"
+      id="project"
+      className="pt-20 md:pb-48 pb-10"
       style={{ direction: getLangDir() }}
     >
       <Parallax
@@ -23,7 +23,7 @@ export const MyProjects = () => {
         <h1 className="text-[#353334]">IN ACTION</h1>
       </Parallax>
 
-      <div className="flex flex-col gap-10 ">
+      <div className="flex flex-col gap-2 ">
         {projectsData.map((project) => (
           <ProjectCard key={project.description} data={project} />
         ))}
