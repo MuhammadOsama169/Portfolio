@@ -2,8 +2,12 @@ import React from "react";
 import ProfileImg from "../assets/muhammad.jpg";
 import SocialMediaIcons from "./SocialMediaIcons";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const Card = () => {
+  const { t } = useTranslation();
+  const staticData: any = t("lists");
+
   return (
     <div className="bg-white rounded-lg shadow-lg w-80 text-center overflow-hidden py-4">
       {/* Image Container */}
@@ -21,10 +25,10 @@ const Card = () => {
       {/* Card Content */}
       <div className="pb-5">
         <h2 className="text-black text-xl font-bold font-popins pb-2">
-          Muhammad Osama
+          {staticData.my_name}
         </h2>
         <p className="text-gray-600 text-md  font-popins">
-          Experienced Frontend Developer, UI Architect, and Code Enthusiast.
+          {staticData.card_bio}
         </p>
       </div>
       {/* SOCIAL MEDIAL SECTION */}

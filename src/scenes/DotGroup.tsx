@@ -1,6 +1,11 @@
+import { Dispatch, SetStateAction } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
-const DotGroup = ({ selectedPage, setSelectedPage }) => {
+interface DotGroupProps {
+  selectedPage: string;
+  setSelectedPage: Dispatch<SetStateAction<string>>;
+}
+const DotGroup = ({ selectedPage, setSelectedPage }: DotGroupProps) => {
   const selectedStyles = `relative dark:bg-[#00FFB9] bg-redhot before:absolute before:w-6 before:h-6 before:rounded-full
 
     before:border-2 dark:before:border-[#00FFB9]  before:border-redhot before:left-[-50%] before:top-[-50%]`;
@@ -15,29 +20,29 @@ const DotGroup = ({ selectedPage, setSelectedPage }) => {
         onClick={() => setSelectedPage("home")}
       />
       <AnchorLink
-        href="#skills"
+        href="#skill"
         className={`${
-          selectedPage === "skills"
+          selectedPage === "skill"
             ? selectedStyles
             : "dark:bg-[#F3EFE0] bg-[#C490E4]"
         }
         w-3 h-3 rounded-full `}
-        onClick={() => setSelectedPage("skills")}
+        onClick={() => setSelectedPage("skill")}
       />
       <AnchorLink
-        href="#projects"
+        href="#project"
         className={`${
-          selectedPage === "projects"
+          selectedPage === "project"
             ? selectedStyles
             : "dark:bg-[#F3EFE0] bg-[#C490E4]"
         }
         w-3 h-3 rounded-full `}
-        onClick={() => setSelectedPage("projects")}
+        onClick={() => setSelectedPage("project")}
       />
       <AnchorLink
-        href="#testimonials"
+        href="#testimonial"
         className={`${
-          selectedPage === "testimonials"
+          selectedPage === "testimonial"
             ? selectedStyles
             : "dark:bg-[#F3EFE0] bg-[#C490E4]"
         }

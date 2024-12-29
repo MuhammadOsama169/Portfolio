@@ -35,10 +35,10 @@ hover:bg-blue hover:text-white transition duration-500`;
             src={data.logo}
           />
         </div>
-        <p className="dark:text-[#BEE0D6] text-black text-xl">
+        <p className="dark:text-white text-black text-xl">
           {staticData[data.title]}
         </p>
-        <p className="dark:text-[#BEE0D6] text-black text-xl w-[90%]">
+        <p className="dark:text-white text-black text-xl w-[90%]">
           {staticData[data.description]}
         </p>
         <div className="flex flex-col xs:flex-row gap-2 pt-5">

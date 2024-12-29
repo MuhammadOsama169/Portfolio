@@ -5,7 +5,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import { motion } from "framer-motion";
-import { LineGradient } from "../components/LineGradient";
+
 import SocialMediaIcons from "../components/SocialMediaIcons";
 
 import Img1 from "../assets/efa.jpg";
@@ -19,7 +19,6 @@ import Img8 from "../assets/leap.jpg";
 import "./AboutMe.css";
 import { useTranslation } from "react-i18next";
 import { getLangDir } from "../helpers/getLang-service";
-import { getLang } from "../helpers/localStorageService";
 
 export const About = () => {
   const { t } = useTranslation();
@@ -38,7 +37,7 @@ export const About = () => {
       {/* <Journey /> */}
       <div className="margin-gap">
         <motion.div
-          className="md:w-[60%] mx-auto text-center"
+          className="md:w-[60%] mx-auto text-center flex justify-center"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -49,17 +48,13 @@ export const About = () => {
           }}
         >
           <div className="mb-10">
-            <p className="font-playfair font-semibold text-4xl  dark:text-white text-black text-start md:mt-0 mt-10 break-words">
+            <p className="font-popins font-semibold text-4xl  dark:text-white text-black text-start md:mt-0 mt-10 break-words">
               {staticData.my}
-              <span className="dark:text-[#00FFB9] text-[#FF165D]">
+              <span className="dark:text-white text-[#FF165D] ">
                 &nbsp;{staticData.my_achivements}&nbsp;
               </span>
             </p>
-            <div className="flex  mt-5">
-              <LineGradient
-                width={`${getLang() === "en" ? "w-[80%]" : "w-[60%]"}`}
-              />
-            </div>
+            <div className="flex  mt-5"></div>
           </div>
         </motion.div>
         <div className="container-1">

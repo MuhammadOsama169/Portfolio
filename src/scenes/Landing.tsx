@@ -19,21 +19,17 @@ export const Landing = () => {
         <Card />
       </div>
       <section className="md:order-2 flex flex-col font-popins basis-1/2 md:mt-36 mt-5 h-full ">
-        <h1 className="font-bold md:text-[80px] text-[50px] md:text-start text-center">
-          FRONTEND
+        <h1 className="font-bold md:text-[80px] text-[50px] md:text-start text-center uppercase ">
+          {staticData.frontend}
         </h1>
-        <h1 className="text-[#353334] font-bold md:text-[80px] text-[50px] md:text-start text-center">
-          DEVELOPER
+        <h1 className="text-[#353334] font-bold md:text-[80px] text-[50px] md:text-start text-center uppercase">
+          {staticData.dev}
         </h1>
         <p className="px-4 md:px-0 dark:text-white text-black">
-          With expertise in React, Next.js, Redux Toolkit, and Tailwind CSS.
-          Recently, I led a team of three developers at Sustainable Star LLC,
-          delivering innovative solutions for microservices and data
-          visualization. I am Passionate about creating impactful digital
-          experiences.
+          {staticData.bio}
         </p>
         <p className="px-4 md:px-0 font-bold dark:text-white text-black">
-          Let’s build something great together!
+          {staticData.lets}
         </p>
         {/* CALL TO ACTIONS */}
 
@@ -59,7 +55,7 @@ export const Landing = () => {
               className="dark:bg-[#00FFB9] bg-redhot dark:text-black text-white rounded-sm py-5 px-7 font-semibold
                  shadow-[10px_20px_20px_rgba(48,30,103,100%)] dark:shadow-[10px_20px_20px_rgba(255,0,0,30%)] "
             >
-              View My Resume
+              {staticData.actions.view_resume}
             </button>
           </a>
         </motion.div>

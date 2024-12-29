@@ -4,6 +4,7 @@ import { getLangDir } from "../helpers/getLang-service";
 import { SkillCards } from "../components/SkillCards";
 import { motion } from "framer-motion";
 import ppperspective from "../assets/ppperspective.svg";
+import { getLang } from "../helpers/localStorageService";
 
 export const MySkills = () => {
   const { t } = useTranslation();
@@ -18,7 +19,7 @@ export const MySkills = () => {
       <section className="grid md:grid-cols-2 ">
         <div>
           <motion.div
-            className="font-bold md:text-[80px] text-[50px] "
+            className="font-bold md:text-[80px] text-[50px] uppercase"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -28,10 +29,14 @@ export const MySkills = () => {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <h1>USED TOOLS</h1>
-            <h1 className="text-[#353334] "> AND SKILLS</h1>
+            <h1>{staticData.used}</h1>
+            <h1 className="text-[#353334] "> {staticData.and_skills}</h1>
           </motion.div>
-          <div className="md:flex justify-end hidden">
+          <div
+            className={`md:flex justify-end hidden ${
+              getLang() === "en" ? "" : "rotate-180"
+            }`}
+          >
             <img src={ppperspective} alt="icon" className="w-[230px] " />
           </div>
         </div>
