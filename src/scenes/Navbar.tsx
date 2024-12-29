@@ -1,35 +1,17 @@
 import { useEffect, useState } from "react";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import { RiMoonClearFill, RiSunFill } from "react-icons/ri";
 import MenuIcon from "../assets/menu-icon.svg";
 import CloseIcon from "../assets/close-icon.svg";
 import { ChangeLanguage } from "../helpers/lang-service";
-import { LinkTypes } from "../types/Link";
+
 import { NavbarTypes } from "../types/Navbar";
 import { langList } from "../assets/data/lang";
 import { getLang } from "../helpers/localStorageService";
 import { useTranslation } from "react-i18next";
 import { getLangDir } from "../helpers/getLang-service";
-
-const Link = ({ page, selectedPage, setSelectedPage }: LinkTypes) => {
-  const lowerCasePage = page.toLowerCase();
-  return (
-    <AnchorLink
-      className={`${
-        selectedPage === lowerCasePage ? "dark:text-[#00FFB9] text-redhot" : ""
-      }
-        hover:text-[#FF165D] transition duration-500 `}
-      href={`#${lowerCasePage}`}
-      onClick={() => lowerCasePage}
-    >
-      {page}
-    </AnchorLink>
-  );
-};
-
-// isTopOfPage,selectedPage,setSelectedPage from App.js
+import { LinkComponent } from "../components/LinkComponent";
 
 export const Navbar = ({
   IsTopOfPage,
@@ -144,28 +126,33 @@ export const Navbar = ({
               </button>
             </div>
 
-            <Link
-              page="Home"
+            <LinkComponent
+              page={staticData.nav_bar.home}
+              keyName={"home"}
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
-              page="Skills"
+            <LinkComponent
+              page={staticData.nav_bar.skills}
+              keyName={"skill"}
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
-              page="Projects"
+            <LinkComponent
+              page={staticData.nav_bar.projects}
+              keyName={"project"}
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
-              page="Testimonials"
+            <LinkComponent
+              page={staticData.nav_bar.testimonial}
+              keyName={"testimonial"}
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
-              page="About"
+            <LinkComponent
+              page={staticData.nav_bar.about}
+              keyName={"about"}
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
@@ -182,10 +169,14 @@ export const Navbar = ({
         {/* Mobile View */}
 
         {!isAboveSmallScreens && isMenuToggled && (
-          <div className={`fixed ${getLang()==="en" ?"right-0 " : "left-0 "} bottom-0 h-full bg-[#222222] w-[200px] ss:w-[300px] `}>
+          <div
+            className={`fixed ${
+              getLang() === "en" ? "right-0 " : "left-0 "
+            } bottom-0 h-full bg-[#222222] w-[200px] ss:w-[300px] `}
+          >
             {/* Close Icon */}
 
-            <div className="flex justify-end p-12">
+            <div className="flex justify-end p-6">
               <button onClick={() => setIsMediaToggled(!isMenuToggled)}>
                 <img className=" h-[40px]" alt="close icon" src={CloseIcon} />
               </button>
@@ -200,26 +191,40 @@ export const Navbar = ({
                 x: "100%",
               }}
               transition={{ type: "spring", bounce: 0, duration: 0.8 }}
-            >''
-              <div className={`flex flex-col gap-10  text-2xl text-white ${getLang()==="en" ?"ml-[25%]" : "mr-[25%]"}`}>
+            >
+              <div
+                className={`flex flex-col gap-10  text-2xl text-white ${
+                  getLang() === "en" ? "ml-[25%]" : "mr-[25%]"
+                }`}
+              >
                 {/* MENU ITEMS */}
-                <Link
+                <LinkComponent
                   page={staticData.nav_bar.home}
+                  keyName={"home"}
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                 />
-                <Link
-                   page={staticData.nav_bar.skills}
+                <LinkComponent
+                  page={staticData.nav_bar.skills}
+                  keyName={"skill"}
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                 />
-                <Link
-                   page={staticData.nav_bar.projects}
+                <LinkComponent
+                  page={staticData.nav_bar.projects}
+                  keyName={"project"}
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                 />
-                <Link
-                   page={staticData.nav_bar.testimonial}
+                <LinkComponent
+                  page={staticData.nav_bar.testimonial}
+                  keyName={"testimonial"}
+                  selectedPage={selectedPage}
+                  setSelectedPage={setSelectedPage}
+                />
+                <LinkComponent
+                  page={staticData.nav_bar.about}
+                  keyName={"about"}
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                 />
@@ -244,17 +249,17 @@ export const Navbar = ({
                   </motion.div>
                 </div>
                 <div className="flex bg-white rounded-full px-2 justify-center cursor-pointer w-[60%]">
-              <button
-                onClick={toggleLanguage}
-                className="flex items-center cursor-pointer "
-                style={{
-                  color: "#6D6D6D",
-                  direction: `${getLang() === "ar" ? "ltr" : "rtl"}`,
-                }}
-              >
-                <p className="p-2 text-primary">{langTitle}</p>
-              </button>
-            </div>
+                  <button
+                    onClick={toggleLanguage}
+                    className="flex items-center cursor-pointer "
+                    style={{
+                      color: "#6D6D6D",
+                      direction: `${getLang() === "ar" ? "ltr" : "rtl"}`,
+                    }}
+                  >
+                    <p className="p-2 text-sm">{langTitle}</p>
+                  </button>
+                </div>
               </div>
             </motion.div>
           </div>

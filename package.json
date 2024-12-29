@@ -24,8 +24,8 @@
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.11.0",
     "react-scripts": "5.0.1",
-    "swiper": "^8.4.5",
-    "typewriter-effect": "^2.19.0"
+    "react-scroll-parallax": "^3.4.5",
+    "swiper": "^8.4.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -59,7 +59,8 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "tailwindcss": "^3.2.4"
+    "tailwindcss": "^3.2.4",
+    "vite-tsconfig-paths": "^5.1.4"
   },
   "description": "![Frame 245 (1)](https://user-images.githubusercontent.com/71230686/214513305-38b5d8cf-4f1b-41c1-a45d-dad423cf208c.png)",
   "main": "tailwind.config.js",
