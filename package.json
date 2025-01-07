@@ -8,6 +8,7 @@
     "@fortawesome/fontawesome-free-brands": "^5.0.13",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@microsoft/clarity": "^1.0.0",
     "@mui/material": "^5.11.4",
     "cra-template": "1.2.0",
     "framer-motion": "^8.2.4",
