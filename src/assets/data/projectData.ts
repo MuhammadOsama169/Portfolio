@@ -46,12 +46,12 @@ export const projectsData: projectType[] = [
   },
   {
     logo: seriesonline,
-    title: "Series Online",
+    title: "Watch Insights",
     description: "series_desc",
     videoUrl:
-      "https://res.cloudinary.com/dwz4buven/video/upload/v1698214502/seies_qiempa.mp4",
-    demoUrl: "https://seriesonline.netlify.app/",
-    githubUrl: "https://github.com/MuhammadOsama169/Series_Online",
+      "https://res.cloudinary.com/dwz4buven/video/upload/v1738479520/Untitled_Project_jms36x.mp4",
+    demoUrl: "https://watchinsights.netlify.app/",
+    githubUrl: "https://github.com/MuhammadOsama169/movie-insights-dashboard",
   },
   {
     logo: codeRacer,
