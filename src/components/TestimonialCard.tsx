@@ -26,7 +26,12 @@ export const TestimonialCard = ({ data }: TestimonialCardProps) => {
         visible: { opacity: 1, scale: 1 },
       }}
     >
-      <div className="flex flex-col border-solid  rounded-3xl dark:bg-[#F3EFE0] bg-[#CDF0EA] pb-10 text-black ">
+      <a
+        className="flex flex-col border-solid  rounded-3xl dark:bg-[#F3EFE0] bg-[#CDF0EA] pb-10 text-black "
+        href={data.href}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <img
           className="max-w-sm h-[250px] rounded-b-xl "
           alt=""
@@ -39,7 +44,7 @@ export const TestimonialCard = ({ data }: TestimonialCardProps) => {
         <p className="text-center text-sm italic mt-5 ">
           {staticData[data.companyInfo]}
         </p>
-      </div>
+      </a>
     </motion.a>
   );
 };
