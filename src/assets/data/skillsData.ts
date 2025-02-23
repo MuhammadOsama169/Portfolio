@@ -8,6 +8,8 @@ import moyassar from "../skillIcons/moyasar-logo.png";
 import postman from "../skillIcons/postman.png";
 import json from "../skillIcons/json.png";
 import chart from "../skillIcons/chart-js.png";
+import nuxt from "../skillIcons/NuxtJS_Logo.png";
+import pinia from "../skillIcons/Pinialogo.png";
 
 export const skills = [
   {
@@ -68,6 +70,18 @@ export const skills = [
     title: "React",
     image: react,
     description: "react",
+    level: "advance",
+  },
+  {
+    title: "Nuxt",
+    image: nuxt,
+    description: "nuxt",
+    level: "inter",
+  },
+  {
+    title: "Pinia",
+    image: pinia,
+    description: "pinia",
     level: "advance",
   },
 ];
